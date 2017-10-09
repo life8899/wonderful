@@ -1,0 +1,806 @@
+%% ---------------------------------------------------
+%% CIS 400 project 3
+%% this is the work of Xiaozhi Li for class CIS 400 CSBD
+%% this file is writen under the guidence of the course, which is taught
+%% by Professor Shiu-Kai Chin
+
+%% 2017/9/19
+%% ---------------------------------------------------
+\documentclass{report}
+\title{Report for Project3}
+\author{\textbf{Xiaozhi Li}}
+\date{\textbf{19 September 2017}}
+
+
+
+%% Formats:
+%% ---------------------------------------------------
+%% 634format specifies the format of our reports
+%% ---------------------------------------------------
+\usepackage{634format}
+
+%% ---------------------------------------------------
+%% enumerate
+%% ---------------------------------------------------
+\usepackage{enumerate}
+
+%% ---------------------------------------------------
+%% listings is used for including our source code in reports
+%% ---------------------------------------------------
+\usepackage{listings}
+\usepackage{textcomp}
+
+%% ---------------------------------------------------
+%% Packages for math environments
+%% ---------------------------------------------------
+\usepackage{amsmath}
+
+%% ---------------------------------------------------
+%% Packages for URLs and hotlinks in the table of contents
+%% and symbolic cross references using \ref
+%% ---------------------------------------------------
+\usepackage{hyperref}
+
+%% ---------------------------------------------------
+%% Packages for using HOL-generated macros and displays
+%% ---------------------------------------------------
+%% end of formats
+
+\usepackage{holtex}
+\usepackage{holtexbasic}
+\input{commands}
+
+\begin{document}
+%% --------------------------------------------------- the listings
+%% parameter "language" is set to "ML"
+%% ---------------------------------------------------
+\lstset{language=ML}
+
+
+\maketitle{}
+
+\begin{abstract}
+  Project 3 using \LaTeX{}. This project demonstrate some equations using ML.
+  \begin{itemize}
+  \item Problem statement
+  \item Relevant code
+  \item Test results
+  \end{itemize}
+
+ For each problem there will be a source code included in the Appendix. They are generated directly using the original source file, hence the changes in the file are represent on the report.
+
+The style files we use:
+  \begin{itemize}
+  \item a style file for the course, \emph{634format.sty},
+  \item the \emph{listings} package for displaying and inputting ML
+    source code, and
+  \item HOL style files and commands to display interactive ML/HOL
+    sessions.
+  \end{itemize}
+
+
+ \end{abstract}
+\begin{acknowledgments}
+ This report follows the hand book Certified Security by Design Using Higer Order Logic, and course instructions from CIS400-CSBD.
+\end{acknowledgments}
+
+
+%% ---------------------------------------------------
+%% table of contents
+%% ---------------------------------------------------
+\tableofcontents{}
+
+\chapter{Executive Summary}
+\label{cha:executive-summary-1}
+
+\textbf{All requirements for this project are satisfied}.
+Specifically,
+\begin{description}
+\item[Report Contents] \ \\
+  Our report has the following content:
+  Our report has the following content:
+  \begin{enumerate}[{}]
+
+%% ---------------------------------------------------
+%% summary
+%% ---------------------------------------------------
+  \item Chapter~\ref{cha:executive-summary-1}: Executive Summary
+
+%% ---------------------------------------------------
+%% chapters 4.6.3
+%% ---------------------------------------------------
+  \item Chapter~\ref{cha:exercise-4.6.3}
+\label{item:1}
+
+
+    \begin{enumerate}[{}]
+
+
+    \item Section~\ref{sec:problem-statement-5}: Problem Statement
+      \begin{enumerate}[{}]
+      \item Sub-section~\ref{sec:4.6.3a}
+      \item Sub-section~\ref{sec:4.6.3a-relevent-code}: Code for 4.6.3A
+      \item Sub-section~\ref{sec:4.6.3b}: 4.6.3B
+      \item Sub-section~\ref{sec:4.6.3b-relevent-code}: Code for 4.6.3B
+      \item Sub-section~\ref{sec:4.6.3c}: 4.6.3C
+      \item Sub-section~\ref{sec:4.6.3c-relevent-code}: Code for 4.6.3C
+      \item Sub-section~\ref{sec:4.6.3d}: 4.6.3D
+      \item Sub-section~\ref{sec:4.6.3d-relevent-code}: Code for 4.6.3D
+      \item Sub-section~\ref: 4.6.3E
+      \item Sub-section~: Code for 4.6.3E
+
+      \item Sub-section~: 4.6.3E
+      \item Sub-section~: 4.6.3E
+      \item Sub-section~: 4.6.3E
+      \end{enumerate}[{}]
+    \item Section~\ref{sec:test-cases}: Test results
+    \end{enumerate}
+
+%% ---------------------------------------------------
+%% chapters 4.6.4
+%% ---------------------------------------------------
+
+    \item Chapter~\ref{cha:exercise-3.4.1}
+    \begin{enumerate}[{}]
+    \item Section~\ref{sec:problem-statement-6}: Problem Statement
+    \item Section~\ref{sec:relevant-code-3}: Relevant code
+    \item Section~\ref{sec:test-result}: Test results
+    \end{enumerate}
+
+%% ---------------------------------------------------
+%% chapters 3
+%% ---------------------------------------------------
+
+  \item Chapter~\ref{cha:exercise-3.4.2}
+   \begin{enumerate}[{}]
+   \item Section~\ref{sec:problem-statement-7}
+   \item Section~\ref{sec:relevant-code-3}
+   \item Section~\ref{sec:test-cases-1}
+     \item Section~\ref{sec:explain-error}
+   \end{enumerate}
+
+%% ---------------------------------------------------
+%% appendix
+%% ---------------------------------------------------
+ \item Chapter~\ref{cha:appendix-a:-exercise}:Appendix A: Exercise
+   2.5.1 Source Cod
+  \item Chapter~\ref{cha:appendix-b:-exercise}:Appendix B: Exercise 3.4.1 Source Cod
+  \item Chapter~\ref{cha:appendix-c:-exercise}:Appendix C: Exercise 3.4.2 Source Cod
+
+  \end{enumerate}
+\item[Reproducibility in ML and \LaTeX{}] \ \\
+  Our ML and \LaTeX{} source files compile with no errors.
+\end{description}
+
+%% ---------------------------------------------------
+%% end of table of contents and begin the contents
+%% ---------------------------------------------------
+
+%% for fomating: each section will have:
+%% ---------------------------------------------------
+%% problem statement
+%% ---------------------------------------------------
+%% ---------------------------------------------------
+%% relevent code
+%% ---------------------------------------------------
+%% ---------------------------------------------------
+%% test cases
+%% ---------------------------------------------------
+%% ---------------------------------------------------
+%% execution transcripts
+%% ---------------------------------------------------
+
+\chapter{Exercise 4.6.3}
+\label{cha:exercise-4.6.3}
+
+%% ---------------------------------------------------
+%% problem statement
+%% ---------------------------------------------------
+\section{Problem Statement}
+\label{sec:problem-statement-5}
+
+In this exercise we declared 10 functions to evaluate 5 problems from
+Exercise 4.6.2 in the Text book, each of the problems has two ML
+functions, the first using \emph{fn} and \emph{val} to define and name the function,
+the second using \emph{fun} to define and name the function.
+
+
+
+%% ---------------------------------------------------
+%% problem A
+%% ---------------------------------------------------
+
+\subsection{4.6.3A}
+\label{sec:4.6.3a}
+%% ---------------------------------------------------
+%% subsection 4.6.3a
+%% ---------------------------------------------------
+In problem A, we have A function that takes a 3-tuple of integers (x, y, z) as input and returns the value corresponding to the sum x + y + z. Though we will demonstrate in two different forms later, the original function is still:
+
+\begin{align*}
+  funA\;\; (x,\; y,\; z) \;&= \;(x\;+\;y\;+\;z)\\
+\end{align*}
+
+%% ---------------------------------------------------
+%% relevent code
+%% ---------------------------------------------------
+\subsection{4.6.3A relevent code}
+\label{sec:4.6.3a-relevent-code}
+
+The following code are used in ML, notice there are two functions, funA1 and funA2, and they are supposed to have the same result.
+\lstset{frameround=fftt}
+\begin{lstlisting}[frame=tRBL]
+
+val funA1 = (fn (x,y,z) => x*y*z);
+fun funA2 (x,y,z) = x*y*z;
+\end{lstlisting}
+
+%% ---------------------------------------------------
+%% problem B
+%% ---------------------------------------------------
+
+
+\subsection{4.6.3B}
+\label{sec:4.6.3b}
+%% ---------------------------------------------------
+%% problem statement B
+%% ---------------------------------------------------
+In problem B, we have A function that takes two integer inputs x and y
+(where x is supplied first followed by y) and returns the boolean
+value corresponding to /emph{x larger than y}.Though we will demonstrate in two different forms later, the original function is still:
+\begin{align*}
+  funB\;\; x\;y \;&= \;x\;>\;y\;\\
+\end{align*}
+
+%% ---------------------------------------------------
+%% relevent code
+%% ---------------------------------------------------
+\subsection{4.6.3B relevent code}
+\label{sec:4.6.3b-relevent-code}
+
+The following code are used in ML, notice there are two functions, funB1 and funB2, and they are supposed to have the same result.
+\lstset{frameround=tttt}
+\begin{lstlisting}[frame=tRBL]
+
+val funB1 = (fn x=> (fn y => x<y));
+fun funB2 x y = x<y;
+\end{lstlisting}
+%% ---------------------------------------------------
+%% problem C
+%% ---------------------------------------------------
+
+\subsection{4.6.3C}
+\label{sec:4.6.3c}
+%% ---------------------------------------------------
+%% problem statement C
+%% ---------------------------------------------------
+In problem C, we hgave A function that takes two strings s1 and s2 (where s1 is supplied first followed by s2 ) and concatentates
+them, where “ˆ” denotes string concatenation:
+\begin{align*}
+  funC\;\; s1\;s2\;&=\;s1\wedge s2\\
+\end{align*}
+
+%% ---------------------------------------------------
+%% relevent code
+%% ---------------------------------------------------
+\subsection{4.6.3C relevent code}
+\label{sec:4.6.3c-relevent-code}
+The following code are used in ML, notice there are two functions, funC1 and funC2, and they are supposed to have the same result.
+\lstset{frameround=tttt}
+\begin{lstlisting}[frame=tRBL]
+
+val funC1 = (fn s1=> (fn s2 => s1^s2));
+fun funC2 s1 s2=s1^s2;
+\end{lstlisting}
+
+%% ---------------------------------------------------
+%% problem D
+%% ---------------------------------------------------
+
+\subsection{4.6.3D}
+\label{sec:4.6.3d}
+In proiblem D, we have:
+\lstset{frameround=ffff}
+\begin{lstlisting}[frame=trbl]
+  A function that takes two lists list 1 and list 2 (where list 1
+  comes first) and appends them, where '@' denotes list append. For
+  example [true,false] @ [false, false, false] results in the list
+  [true,false,false,false,false].
+\end{lstlisting}
+hence the function should be:
+\begin{align*}
+funD\;\; list1\;list2\;&=\;list1\;@\;list2\\
+\end{align*}
+
+\subsection{4.6.3D relevent code}
+\label{sec:4.6.3d-relevent-code}
+The following code are used in ML, notice there are two functions, funD1 and funD2, and they are supposed to have the same result.
+\lstset{frameround=tttt}
+\begin{lstlisting}[frame=TRBl]
+
+val funD1= ( fn list1 => (fn list2 => list1@list2));
+fun funD2 list1 list2 = list1@list2;
+\end{lstlisting}
+
+
+
+%% ---------------------------------------------------
+%% problem E
+%% ---------------------------------------------------
+
+\subsection{4.6.3E}
+\label{sec:4.6.3e}
+
+\lstset{frameround=ffff}
+\begin{lstlisting}[frame=trbl]
+  function that takes a pair of integers (x, y) and returns the larger
+  of the two values. You note that the conditional statement if
+  condition then a else b returns a if condition is true, otherwise
+  it returns b.
+\end{lstlisting}
+\subsection{4.6.3E relevent code}
+\label{sec:4.6.3e-relevent-code}
+
+
+
+The following code are used in ML, notice there are two functions, funE1 and funE2, and they are supposed to have the same result.
+\lstset{frameround=tttt}
+\begin{lstlisting}[frame=TRBL]
+
+val funE1= (fn (x,y) => if (x>y) then x else y);
+fun funE2 (x,y) = if (x>y) then x else y;
+\end{lstlisting}
+
+
+The following code are for testing our results:
+
+\lstset{frameround=fftt}
+\begin{lstlisting}[frame=tRBL]
+
+  fun test463A f1 f2 inList =
+let
+  val list1 = map f1 inList
+  val list2 = map f2 inList
+in
+ foldr
+  (fn (x,y)  => (x andalso y))
+ true
+  (ListPair.map (fn (x,y) => x = y) (list1,list2))
+end;
+
+fun f2P f (x,y) = f x y
+
+fun test463B f1 f2 inList =
+let
+ val list1 = map (f2P f1) inList
+ val list2 = map (f2P f2) inList
+in
+ foldr
+ (fn (x,y)  => (x andalso y))
+ true
+ (ListPair.map (fn (x,y) => x = y) (list1,list2))
+end
+\end{lstlisting}
+
+The following is the test case functions for each problem, notice the final results will generate a boolean equation, if that equation evaluates to be true, then the test is passed:
+\begin{lstlisting}[frame = TB]
+
+(* Part A *)
+(**********)
+
+(* ========================================================================== *)
+val testListA = [(1,2,3),(4,5,6),(7,8,9)]
+
+val outputsA = map funA2 testListA
+
+val testResultA = test463A funA1 funA2 testListA
+
+
+(**********)
+(* Part B *)
+(**********)
+
+(* ========================================================================== *)
+
+val testListB = [(0,0),(1,2),(4,3)]
+
+val outputsB = map (f2P funB1) testListB
+
+val testResultB = test463B funB1 funB2 testListB
+
+
+(**********)
+(* Part C *)
+(**********)
+
+(* ========================================================================== *)
+
+val testListC = [("Hi"," there!"),("Oh ","no!"),("What"," the ...")]
+
+val outputsC = map (f2P funC1) testListC
+
+val testResultC = test463B funC1 funC2 testListC
+
+
+(**********)
+(* Part D *)
+(**********)
+
+(* ========================================================================== *)
+
+val testListD1 = [([0,1],[2,3,4]),([],[0,1])]
+val testListD2 = [([true,true],[])]
+
+val outputsD1 = map (f2P funD1) testListD1
+val outputsD2 = map (f2P funD2) testListD2
+
+val testResultD1 = test463B funD1 funD2 testListD1
+val testResultD2 = test463B funD1 funD2 testListD2
+
+
+(**********)
+(* Part E *)
+(**********)
+
+(* ========================================================================== *)
+
+val testListE = [(2,1),(5,5),(5,10)]
+
+val sampleResultE = map funE1 testListE
+
+val testResultE = test463A funE1 funE2 testListE
+
+val finalResult= [testResultA,testResultB,testResultC,testResultD1,testResultD2,testResultE]
+\end{lstlisting}
+
+\section{Execution Transcripts}
+\label{sec:exec-transcr}
+
+We sent these code to HOL, and here is the output from HOL:
+\setcounter{sessioncount}{0}
+\begin{session}
+  \begin{scriptsize}
+\begin{verbatim}
+
+---------------------------------------------------------------------
+       HOL-4 [Kananaskis 11 (stdknl, built Sat Aug 19 09:30:06 2017)]
+
+       For introductory HOL help, type: help "hol";
+       To exit type <Control>-D
+---------------------------------------------------------------------
+> > > > > > val test463A = fn: ('a -> ''b) -> ('a -> ''b) -> 'a list -> bool
+val f2P = fn: ('a -> 'b -> 'c) -> 'a * 'b -> 'c
+val test463B = fn:
+   ('a -> 'b -> ''c) -> ('a -> 'b -> ''c) -> ('a * 'b) list -> bool
+val funA1 = fn: int * int * int -> int
+val funA2 = fn: int * int * int -> int
+val funB1 = fn: int -> int -> bool
+val outputsA = [6, 120, 504]: int list
+val testListA = [(1, 2, 3), (4, 5, 6), (7, 8, 9)]: (int * int * int) list
+val testResultA = true: bool
+val funB2 = fn: int -> int -> bool
+val funC1 = fn: string -> string -> string
+val outputsB = [false, true, false]: bool list
+val testListB = [(0, 0), (1, 2), (4, 3)]: (int * int) list
+val testResultB = true: bool
+val funC2 = fn: string -> string -> string
+val funD1 = fn: 'a list -> 'a list -> 'a list
+val outputsC = ["Hi there!", "Oh no!", "What the ..."]: string list
+val testListC = [("Hi", " there!"), ("Oh ", "no!"), ("What", " the ...")]:
+   (string * string) list
+val testResultC = true: bool
+val funD2 = fn: 'a list -> 'a list -> 'a list
+val funE1 = fn: int * int -> int
+val outputsD1 = [[0, 1, 2, 3, 4], [0, 1]]: int list list
+val outputsD2 = [[true, true]]: bool list list
+val testListD1 = [([0, 1], [2, 3, 4]), ([], [0, 1])]:
+   (int list * int list) list
+val testListD2 = [([true, true], [])]: (bool list * 'a list) list
+val testResultD1 = true: bool
+val testResultD2 = true: bool
+val funE2 = fn: int * int -> int
+val sampleResultE = [2, 5, 10]: int list
+val testListE = [(2, 1), (5, 5), (5, 10)]: (int * int) list
+val testResultE = true: bool
+val it = (): unit
+> 
+*** Emacs/HOL command completed ***
+
+> val finalResult = [true, true, true, true, true, true]: bool list
+
+
+> 
+
+\end{verbatim}
+  \end{scriptsize}
+\end{session}
+
+\section{4.6.3 Test results}
+\label{sec:4.6.3-test-results}
+4.6.3 A-E all evaluated to be true.
+\subsection{explain of result}
+\label{sec:explain-result}
+The overall result script is messy, but we can look at \emph{testResult} by utilizing the \emph{finalResult} function's result, this is a list of all the results we have, since it is all true, that means our evaluations all passed HOL.
+
+
+\chapter{Exercise 4.6.4}
+\label{cha:exercise-4.6.4}
+
+
+%% ---------------------------------------------------
+%% problem statement 4.6.4
+%% ---------------------------------------------------
+
+\section{Problem Statement}
+\label{sec:problem-statement}
+
+In 4.6.4, we were given a problem:
+\lstset{frameround=ffff}
+\begin{lstlisting}[frame=trbl]
+  In ML, define a function listSquares that when applied to the empty
+  list of integers returns the empty list, and when applied to a
+  non-empty list of integers returns a list where each element is
+  squared. For example, listSquares [2,3,4] returns [4,9,16]. Define
+  the function using a let expression in ML. A function that takes two
+  lists list 1 and list 2 (where list 1 comes first) and appends them,
+  where '@' denotes list append. For example [true,false] @ [false,
+  false, false] results in the list [true,false,false,false,false].
+\end{lstlisting}
+
+%% ---------------------------------------------------
+%% relevent code
+%% ---------------------------------------------------
+
+\subsection{Relevent Code}
+\label{sec:relevent-code}
+
+The problem asks for a function that has ability to square a list of integers and give results as a list, and this function has to be able to accept an empty list and return an empty list as a result. Hence the followiong function was used:
+
+\lstset{frameround=tttt}
+\begin{lstlisting}[frame=TRBL]
+fun listSquares list=
+let
+ fun square x= x*x
+in
+ map square list
+end;val funE1= (fn (x,y) => if (x>y) then x else y);
+fun funE2 (x,y) = if (x>y) then x else y;
+\end{lstlisting}
+%% ---------------------------------------------------
+%% test cases
+%% ---------------------------------------------------
+
+\subsection{Test cases}
+\label{sec:test-cases-2}
+
+we used the following code for testing:
+\lstset{frameround=tttt}
+\begin{lstlisting}[frame=TRBL]
+val testList = [1,2,3,4,5]
+
+val testResults = listSquares testList
+\end{lstlisting}
+%% ---------------------------------------------------
+%% execution transcripts
+%% ---------------------------------------------------
+
+\subsection{Execution Transcripts}
+\label{sec:exec-transcr-1}
+Here is the transcripit for 4.6.4:
+\setcounter{sessioncount}{0}
+\begin{session}
+  \begin{scriptsize}
+\begin{verbatim}
+
+# # # # # val listSquares = fn: int list -> int list
+> # # # # # val testList = [1, 2, 3, 4, 5]: int list
+val testResults = [1, 4, 9, 16, 25]: int list
+> 
+\end{verbatim}
+  \end{scriptsize}
+\end{session}
+
+\subsection{Test Result}
+\label{sec:test-result-1}
+
+The transcript result shows our tests has been passed.
+\chapter{Exercise 5.3.4}
+\label{cha:exercise-5.3.4}
+
+
+
+%% ---------------------------------------------------
+%% problem statement 5.3.4
+%% ---------------------------------------------------
+
+\section{Problem Statement}
+\label{sec:problem-statement-1}
+
+In 5.3.4, we are asked to define a function that behaves as a filter.
+\lstset{frameround=ffff}
+\begin{lstlisting}[frame=trbl]
+  Define a function Filter in ML, whose behavior is identical to
+  filter. Note: you cannot use filter in the definition of
+  Filter. However, you can adapt the definition of filter and use it
+  in your definition.  Show test cases of your function returning the
+  expected results by comparing the outputs of both Filter and
+  filter. Your examples should include the cases in Exercise 5.3.3.
+\end{lstlisting}
+The problem asks for a different version of filter, and the original filter function is defined as:
+\begin{align*}
+  filter\; P\; []\; &=\; []\\
+  filter\; P\;(x::\;xs)&=\;if\;P\;x\;then\;x\;::\;(filter\;P\;xs)\;else\;(filter\;P\;xs)\\
+\end{align*}
+%% ---------------------------------------------------
+%% relevent code
+%% ---------------------------------------------------
+
+\subsection{Relevent Code}
+\label{sec:relevent-code-1}
+
+\begin{lstlisting}[frame=TRBL]
+fun Filter p list=
+let
+
+(*Helper A change x into a list of bools *)
+
+fun helperA p []=[]
+  | helperA p xs=map p xs
+
+fun helperB [] anything=[]
+  | helperB anything []=[]
+  | helperB (b::bs) (x::xs)=if b then x::(helperB bs xs) else helperB bs xs
+in
+helperB (helperA p list) list
+end;fun listSquares list=
+let
+ fun square x= x*x
+in
+ map square list
+end;val funE1= (fn (x,y) => if (x>y) then x else y);
+fun funE2 (x,y) = if (x>y) then x else y;
+\end{lstlisting}
+%% ---------------------------------------------------
+%% test cases
+%% ---------------------------------------------------
+
+\subsection{Test Cases}
+\label{sec:test-cases-3}
+we used the following code for testing:
+\lstset{frameround=tttt}
+\begin{lstlisting}[frame=TRBL]
+val testResults = Filter (fn x => x < 5) [1,2,3,4,5,6,7,8,9]
+
+val testResults2 =Filter (fn x=> x<5)[4,6]Nothing in 5.3.4
+\end{lstlisting}
+
+%% ---------------------------------------------------
+%% execution transcripts
+%% ---------------------------------------------------
+
+\subsection{Execution Transcripts}
+\label{sec:test-cases-4}
+\setcounter{sessioncount}{0}
+\begin{session}
+  \begin{scriptsize}
+\begin{verbatim}
+
+val Filter = fn: ('a -> bool) -> 'a list -> 'a list
+val testResults = [1, 2, 3, 4]: int list
+val testResults2 = [4]: int list
+val it = (): unit
+> 
+*** Emacs/HOL command completed ***
+
+> 
+\end{verbatim}
+  \end{scriptsize}
+\end{session}
+\subsection{Test result}
+\label{sec:test-result-2}
+The test result shows that all of our tests have been passed.
+
+
+
+\chapter{Exercise 5.3.5}
+\label{cha:exercise-5.3.5}
+
+
+%% ---------------------------------------------------
+%% problem statement 5.3.5
+%% ---------------------------------------------------
+
+\section{Problem Statement}
+\label{sec:problem-statement-2}
+
+In 5.3.5 we are asked to define an ML function, addPairsGreaterThan n
+list, which takes an interger n, a list of pairs of integers list,
+then the function will return a list of integers where each element is
+the sum of integer pairs in list, while both elements in the pair are
+greater than n.
+
+\subsection{Solution}
+\label{sec:solution}
+
+This problem can be break into two parts, part one takes a list of
+pairs and filter out the ones that both of the pair is greater than n.
+part two gives the sum of those pairs and return them as a list.
+%% ---------------------------------------------------
+%% relevent code
+%% ---------------------------------------------------
+
+\section{Relevent Code}
+\label{sec:relevent-code-2}
+
+The following code was then created:
+\begin{lstlisting}[frame=TRBL]
+fun addPairsGreaterThan n list=
+let
+fun sumList []=[]
+  | sumList ((x,y)::xs)=(x+y):: (sumList xs)
+fun helper n (x,y)= (x>n andalso y>n)
+in
+sumList( filter (helper n) list)
+end;
+\end{lstlisting}
+%% ---------------------------------------------------
+%% test cases
+%% ---------------------------------------------------
+
+
+\section{Test Cases}
+\label{sec:test-cases-5}
+We used the following code to test the function:
+\begin{lstlisting}[frame=TRBL]
+addPairsGreaterThan 0 [(0,1),(2,0),(2,3),(4,5)];
+\end{lstlisting}
+%% ---------------------------------------------------
+%% execution transcripts
+%% ---------------------------------------------------
+
+\section{Execution Transcripts}
+\label{sec:exec-transcr-2}
+
+
+\setcounter{sessioncount}{0}
+\begin{session}
+  \begin{scriptsize}
+\begin{verbatim}
+ 
+# # # # # # # # val addPairsGreaterThan = fn: int -> (int * int) list -> int list
+> # # # val it = [5, 9]: int list
+> 
+*** Emacs/HOL command completed ***
+\end{verbatim}
+  \end{scriptsize}
+\end{session}
+
+\section{Test Result}
+\label{sec:test-result-3}
+
+By the result, it is proven that our function has passed the test.
+
+\chapter{Appendix A: Exercise 4.6.3 Source Code}
+\label{cha:appendix-a:-exercise}
+The following code is from \emph{ex-4-6-3Tests.sml}
+\lstinputlisting{hw03ML/ex-4-6-3Tests.sml}
+
+\chapter{Appendix B: Exercise 4.6.4 Source Code}
+\label{cha:appendix-b:-exercise}
+The following code is from \emph{ex-4-6-4Tests.sml}
+\lstinputlisting{hw03ML/ex-4-6-4Tests.sml}
+
+\chapter{Appendix C: Exercise 5.3.4 Source Code}
+\label{cha:appendix-c:-exercise}
+The following code is from \emph{ex-5-3-4Tests.sml}
+\lstinputlisting{hw03ML/ex-5-3-4Tests.sml}
+
+\chapter{Appendix D: Exercise 5.3.5 Source Code}
+\label{cha:appendix-d:-exercise}
+The following code is from \emph{ex-5-3-5Tests.sml}
+\lstinputlisting{hw03ML/ex-5-3-5Tests.sml}
+
+
+
+
+\end{document}

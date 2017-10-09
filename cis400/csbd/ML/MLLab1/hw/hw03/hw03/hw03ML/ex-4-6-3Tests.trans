@@ -1,0 +1,48 @@
+
+---------------------------------------------------------------------
+       HOL-4 [Kananaskis 11 (stdknl, built Sat Aug 19 09:30:06 2017)]
+
+       For introductory HOL help, type: help "hol";
+       To exit type <Control>-D
+---------------------------------------------------------------------
+> > > > > > val test463A = fn: ('a -> ''b) -> ('a -> ''b) -> 'a list -> bool
+val f2P = fn: ('a -> 'b -> 'c) -> 'a * 'b -> 'c
+val test463B = fn:
+   ('a -> 'b -> ''c) -> ('a -> 'b -> ''c) -> ('a * 'b) list -> bool
+val funA1 = fn: int * int * int -> int
+val funA2 = fn: int * int * int -> int
+val funB1 = fn: int -> int -> bool
+val outputsA = [6, 120, 504]: int list
+val testListA = [(1, 2, 3), (4, 5, 6), (7, 8, 9)]: (int * int * int) list
+val testResultA = true: bool
+val funB2 = fn: int -> int -> bool
+val funC1 = fn: string -> string -> string
+val outputsB = [false, true, false]: bool list
+val testListB = [(0, 0), (1, 2), (4, 3)]: (int * int) list
+val testResultB = true: bool
+val funC2 = fn: string -> string -> string
+val funD1 = fn: 'a list -> 'a list -> 'a list
+val outputsC = ["Hi there!", "Oh no!", "What the ..."]: string list
+val testListC = [("Hi", " there!"), ("Oh ", "no!"), ("What", " the ...")]:
+   (string * string) list
+val testResultC = true: bool
+val funD2 = fn: 'a list -> 'a list -> 'a list
+val funE1 = fn: int * int -> int
+val outputsD1 = [[0, 1, 2, 3, 4], [0, 1]]: int list list
+val outputsD2 = [[true, true]]: bool list list
+val testListD1 = [([0, 1], [2, 3, 4]), ([], [0, 1])]:
+   (int list * int list) list
+val testListD2 = [([true, true], [])]: (bool list * 'a list) list
+val testResultD1 = true: bool
+val testResultD2 = true: bool
+val funE2 = fn: int * int -> int
+val sampleResultE = [2, 5, 10]: int list
+val testListE = [(2, 1), (5, 5), (5, 10)]: (int * int) list
+val testResultE = true: bool
+val it = (): unit
+> 
+*** Emacs/HOL command completed ***
+
+> val finalResult = [true, true, true, true, true, true]: bool list
+> 
+Process HOL<1> killed

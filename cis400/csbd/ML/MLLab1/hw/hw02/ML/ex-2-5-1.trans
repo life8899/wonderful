@@ -1,0 +1,22 @@
+
+---------------------------------------------------------------------
+       HOL-4 [Kananaskis 11 (stdknl, built Sat Aug 19 09:30:06 2017)]
+
+       For introductory HOL help, type: help "hol";
+       To exit type <Control>-D
+---------------------------------------------------------------------
+> > > > val timesPlus = fn: int -> int -> int * int
+> timesPlus 100 27;
+val it = (2700, 127): int * int
+> timesPlus 10 26;
+val it = (260, 36): int * int
+> timesPlus 1 25;
+val it = (25, 26): int * int
+> timesPlus 2 24;
+val it = (48, 26): int * int
+> timesPlus 30 23;
+val it = (690, 53): int * int
+> timesPlus 50 200;
+val it = (10000, 250): int * int
+> 
+Process HOL finished

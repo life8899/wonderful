@@ -1,0 +1,9 @@
+val Filter = fn: ('a -> bool) -> 'a list -> 'a list
+val testResults = [1, 2, 3, 4]: int list
+val testResults2 = [4]: int list
+val it = (): unit
+> 
+*** Emacs/HOL command completed ***
+
+> 
+Process HOL killed

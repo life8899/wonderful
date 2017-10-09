@@ -1,0 +1,716 @@
+%% ---------------------------------------------------
+%% CIS 400 project 4
+%% this is the work of Xiaozhi Li for class CIS 400 CSBD
+%% this file is writen under the guidence of the course, which is taught
+%% by Professor Shiu-Kai Chin
+
+%% 2017/9/25
+%% ---------------------------------------------------
+\documentclass{report}
+\title{Report for Project4}
+\author{\textbf{Xiaozhi Li}}
+\date{\today}
+
+
+
+%% Formats:
+%% ---------------------------------------------------
+%% 634format specifies the format of our reports
+%% ---------------------------------------------------
+\usepackage{634format}
+
+%% ---------------------------------------------------
+%% enumerate
+%% ---------------------------------------------------
+\usepackage{enumerate}
+
+%% ---------------------------------------------------
+%% listings is used for including our source code in reports
+%% ---------------------------------------------------
+\usepackage{listings}
+\usepackage{textcomp}
+
+%% ---------------------------------------------------
+%% Packages for math environments
+%% ---------------------------------------------------
+\usepackage{amsmath}
+
+%% ---------------------------------------------------
+%% Packages for URLs and hotlinks in the table of contents
+%% and symbolic cross references using \ref
+%% ---------------------------------------------------
+\usepackage{hyperref}
+
+%% ---------------------------------------------------
+%% Packages for using HOL-generated macros and displays
+%% ---------------------------------------------------
+%% end of formats
+
+\usepackage{holtex}
+\usepackage{holtexbasic}
+\input{commands}
+
+\begin{document}
+%% --------------------------------------------------- the listings
+%% parameter "language" is set to "ML"
+%% ---------------------------------------------------
+\lstset{language=ML}
+
+
+\maketitle{}
+
+\begin{abstract}
+  Project 4 using \LaTeX{}. This project demonstrate some equations using ML.
+  \begin{itemize}
+  \item Problem statement
+  \item Relevant code
+  \item Test results
+  \end{itemize}
+
+ For each problem there will be a source code included in the Appendix. They are generated directly using the original source file, hence the changes in the file are represent on the report.
+
+The style files we use:
+  \begin{itemize}
+  \item a style file for the course, \emph{634format.sty},
+  \item the \emph{listings} package for displaying and inputting ML
+    source code, and
+  \item HOL style files and commands to display interactive ML/HOL
+    sessions.
+  \end{itemize}
+
+
+ \end{abstract}
+
+\begin{acknowledgments}
+ This report follows the hand book Certified Security by Design Using Higer Order Logic, and course instructions from CIS400-CSBD.
+\end{acknowledgments}
+
+
+%% ---------------------------------------------------
+%% table of contents
+%% ---------------------------------------------------
+\tableofcontents{}
+
+\chapter{Executive Summary}
+
+
+\textbf{All requirements for this project are satisfied}.
+Specifically,
+\begin{description}
+\item[Report Contents] \ \\
+  Our report has the following content:
+  Our report has the following content:
+  \begin{enumerate}[{}]
+
+%% ---------------------------------------------------
+%% summary
+%% ---------------------------------------------------
+  \item Chapter~: Executive Summary
+   \begin{enumerate}[{}]
+%% ---------------------------------------------------
+%% chapters 6.2.1
+%% ---------------------------------------------------
+  \item Chapter~
+
+
+    \begin{enumerate}[{}]
+
+
+    \item Section~
+      \begin{enumerate}[{}]
+      
+      \item Sub-section~
+      
+      \end{enumerate}
+    
+    \end{enumerate}
+
+%% ---------------------------------------------------
+%% chapters 7.3.1
+%% ---------------------------------------------------
+  \item Chapter~
+
+
+    \begin{enumerate}[{}]
+
+
+    \item Section~
+      \begin{enumerate}[{}]
+      
+      \item Sub-section~
+      
+      \end{enumerate}
+    
+    \end{enumerate}
+%% ---------------------------------------------------
+%% chapters 7.3.2
+%% ---------------------------------------------------
+  \item Chapter~
+
+
+    \begin{enumerate}[{}]
+
+
+    \item Section~
+      \begin{enumerate}[{}]
+      
+      \item Sub-section~
+      
+      \end{enumerate}
+    
+    \end{enumerate}
+
+%% ---------------------------------------------------
+%% chapters 7.3.3
+%% ---------------------------------------------------
+  \item Chapter~
+
+
+    \begin{enumerate}[{}]
+
+
+    \item Section~
+      \begin{enumerate}[{}]
+      
+      \item Sub-section~
+      
+      \end{enumerate}
+    
+    \end{enumerate}
+
+%% ---------------------------------------------------
+%% appendix 6.2.1
+%% ---------------------------------------------------
+ \item Chapter~
+  \end{enumerate}
+\item[Reproducibility in ML and \LaTeX{}] \ \\
+
+
+%% ---------------------------------------------------
+%% appendix 7.3.1
+%% ---------------------------------------------------
+ \item Chapter~
+  
+\item[Reproducibility in ML and \LaTeX{}] \ \\
+
+
+%% ---------------------------------------------------
+%% appendix 7.3.2
+%% ---------------------------------------------------
+ \item Chapter~
+ 
+\item[Reproducibility in ML and \LaTeX{}] \ \\
+
+%% ---------------------------------------------------
+%% appendix 7.3.3
+%% ---------------------------------------------------
+ \item Chapter~
+  \end{enumerate}
+\item[Reproducibility in ML and \LaTeX{}] \ \\
+
+%%----
+%%
+%%      THIS IS IMPORTANT
+%%------
+
+  Our \LaTeX{} source files compiles with no errors.
+During the tests for ML, there is one test from 6.2.1 that could not compile. However this was intended to show how HOL handles type error under constrained type. All other source code compiled with no problem. 
+\end{description}
+
+
+
+%% ---------------------------------------------------
+%% end of table of contents and begin the contents
+%% ---------------------------------------------------
+
+%% for fomating: each section will have:
+%% ---------------------------------------------------
+%% problem statement
+%% ---------------------------------------------------
+%% ---------------------------------------------------
+%% relevent code
+%% ---------------------------------------------------
+%% ---------------------------------------------------
+%% test cases
+%% ---------------------------------------------------
+%% ---------------------------------------------------
+%% execution transcripts
+%% ---------------------------------------------------
+
+
+%% Chapter: 6.2.1
+
+\chapter{Exercise 6.2.1}
+\label{cha:exercise-6.2.1}
+
+
+
+
+%% ---------------------------------------------------
+%% problem statement
+%% ---------------------------------------------------
+
+\section{Problem Statement}
+\label{sec:problem-statement}
+For exercise 6.2.1 we are using HOL to demonstrate following logic
+problems:
+\begin{align*}
+1,2.\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\; P(x)\; &\supset\; Q(x) \\
+3.\;\;\;\;\;\;\;\;\;\;\;\;  \forall x\; y.P(x)\; &\supset\; Q(y)\\
+4.\;\;\;\;\;\;\;\;\;\;\;  \exists (x\;:\;num&).R(x\;:\;\alpha)\\
+5.\;\;  \neg\forall x.P(x) \vee Q(x) &= \exists x.\neg P(x) \wedge \neg 
+Q(x)\\
+\end{align*}
+There are also exercise that uses logic formulas to demonstrate
+English sentence \lstset{frameround=ffff}
+\begin{lstlisting}[frame=trbl]
+  6. All people are mortal, where P(x) represents x is a person and M(x) 
+     represents x is mortal.  
+
+  7. Some people are funny, where Funny(x) denotes x is funny.
+\end{lstlisting}
+
+
+
+%% ---------------------------------------------------
+%% relevent code
+%% ---------------------------------------------------
+
+\section{Relevent Code}
+\label{sec:relevent-code}
+
+
+These are the code for chapter 6.2.1:
+
+ \lstset{frameround=fftt}
+ \begin{lstlisting}[frame=tRBL]
+(**1.**)
+``P x ==> Q y``;
+
+(**2.**)
+``(P:num -> bool) (x:num)  ==> (Q:bool->bool) (y:bool)``;
+
+(**3.**)
+``!x y.(P x) ==> (Q y)``;
+
+(**4.**)
+``?(x :num).(R (x :`a))``;
+
+(**5.**)
+``(~!x.(P x)\/(Q x))=(?x.(~(P x))/\~(Q x))``;
+
+(**6.**)
+``!x.(P x) ==> (M x)``;
+
+(**7.**)
+``?x.(P x) ==> (Funny x)``;
+ \end{lstlisting}
+
+
+%%  Execution Transcripts
+
+\section{Execution Transcripts}
+\label{sec:exec-transcr}
+
+ We sent code 1-7 to HOL, here are the results excluding NO.4:
+
+  \setcounter{sessioncount}{0}
+  \begin{session}
+    \begin{scriptsize}
+  \begin{verbatim}
+
+> # <<HOL message: inventing new type variable names: 'a, 'b>>
+val it =
+   ``(P :'a -> bool) (x :'a) ==> (Q :'b -> bool) (y :'b)``:
+   term
+val it =
+   ``(P :num -> bool) (x :num) ==> (Q :bool -> bool) (y :bool)``:
+   term
+<<HOL message: inventing new type variable names: 'a, 'b>>
+val it =
+   ``!(x :'a) (y :'b). (P :'a -> bool) x ==> (Q :'b -> bool) y``:
+   term
+<<HOL message: inventing new type variable names: 'a>>
+val it =
+   ``~(!(x :'a). (P :'a -> bool) x \/ (Q :'a -> bool) x) <=>
+  ?(x :'a). ~P x /\ ~Q x``:
+   term
+<<HOL message: inventing new type variable names: 'a>>
+val it =
+   ``!(x :'a). (P :'a -> bool) x ==> (M :'a -> bool) x``:
+   term
+<<HOL message: inventing new type variable names: 'a>>
+val it =
+   ``?(x :'a). (P :'a -> bool) x ==> (Funny :'a -> bool) x``:
+   term
+val it = (): unit
+> HOL message: inventing new type variable names: 'a, 'b>>
+val it =
+   “P x ⇒ Q y”:
+   term
+> > # # # # val it =
+   “P x ⇒ Q y”:
+   term
+> > # # # <<HOL message: inventing new type variable names: 'a, 'b>>
+val it =
+   “∀x y. P x ⇒ Q y”:
+   term
+> > # # # <<HOL message: inventing new type variable names: 'a>>
+val it =
+   “¬(∀x. P x ∨ Q x) ⇔ ∃x. ¬P x ∧ ¬Q x”:
+   term
+> > # <<HOL message: inventing new type variable names: 'a>>
+val it =
+   “∀x. P x ⇒ M x”:
+   term
+> # <<HOL message: inventing new type variable names: 'a>>
+val it =
+   “∃x. P x ⇒ Funny x”:
+   term
+> > 
+*** Emacs/HOL command completed ***
+ \end{verbatim}
+   \end{scriptsize}
+ \end{session}
+
+
+%% Explain the Result, should it be nessesary
+
+\subsection{Explain of results}
+\label{sec:explain-results}
+The result from 1 to 3 and 5 to 7 are all expected, which means our
+theory was corrected. However, for problem 4 we got error:
+
+ \setcounter{sessioncount}{0}
+  \begin{session}
+    \begin{scriptsize}
+  \begin{verbatim}
+
+> # <<HOL message: inventing new type variable names: 'a>>
+
+Type inference failure: unable to infer a type for the application of
+
+(x :num)
+
+at line 33, character 16
+
+to
+
+(:` :α)
+
+\end{verbatim}
+   \end{scriptsize}
+ \end{session}
+
+ This is caused by type error, in the equation we already set x as a
+ :num type, and try to ask HOL to give result as `a type, this is seen
+ as impossible by HOL, hence the error message. This error was
+ expected, and all other tests are passed.
+
+%% Chapter: 7.3.1
+
+\chapter{Exercise 7.3.1}
+\label{cha:exercise-7.3.1}
+
+
+%% ---------------------------------------------------
+%% problem statement
+%% ---------------------------------------------------
+
+\section{Problem Statement}
+\label{sec:problem-statement-1}
+For exercise 7.3.1, we are asked to create a function andImp2Imp term, which will opperate to take:
+\begin{align*}
+p\wedge q \subset r
+\end{align*}
+
+and transform it into:
+\begin{align*}
+p \subset q \subset r;
+\end{align*}
+
+
+
+%% ---------------------------------------------------
+%% relevent code
+%% ---------------------------------------------------
+
+\section{Relevent Code}
+\label{sec:relevent-code-1}
+
+
+Here is the code for 7.3.1:
+ \lstset{frameround=fftt}
+\begin{lstlisting}[frame=tRBL]
+(* Exercise 7.3.1*********)
+fun andImp2Imp term=
+let
+ val (conjTerm1,r)= dest_imp term
+ val (p,q )=dest_conj conjTerm1
+ (*val ts= mk_imp (p,q) *)
+in
+``p ==> q ==> r``
+end;
+\end{lstlisting}
+
+
+%% Test Cases
+
+\section{Test Cases}
+\label{sec:test-cases}
+
+
+The following code are for testing our results:
+
+\lstset{frameround=fftt}
+\begin{lstlisting}[frame=tRBL]
+andImp2Imp ``(p/\q) ==> r``;
+ \end{lstlisting}
+
+
+%%  Execution Transcripts
+
+\section{Execution Transcripts}
+\label{sec:exec-transcr-1}
+
+
+We sent the above code to HOL, and here is the output from HOL:
+
+  \setcounter{sessioncount}{0}
+  \begin{session}
+    \begin{scriptsize}
+  \begin{verbatim}
+
+> > > ># # # # # # # val andImp2Imp = fn: term -> term
+> val it =
+   “p ⇒ q ⇒ r”:
+   term
+>
+ \end{verbatim}
+   \end{scriptsize}
+ \end{session}
+It appears that our test passed HOL.
+
+%% Explain the Result, should it be nessesary
+
+
+
+%% Chapter: 7.3.2
+
+\chapter{Exercise 7.3.2}
+\label{cha:exercise-7.3.2}
+
+
+
+
+%% ---------------------------------------------------
+%% problem statement
+%% ---------------------------------------------------
+
+\section{Problem Statement}
+\label{sec:problem-statement-2}
+
+For exercise 7.3.2, we are asked to create a function andImp2Imp term, which will opperate to take:
+\begin{align*}
+p \subset q \subset r;
+\end{align*}
+
+and transform it into:
+\begin{align*}
+p\wedge q \subset r
+\end{align*}
+Notice this is just the reverse of what we were doing in 7.3.1.
+
+
+%% ---------------------------------------------------
+%% relevent code
+%% ---------------------------------------------------
+
+\section{Relevent Code}
+\label{sec:relevent-code-2}
+
+For testing purpose, we included code from 7.3.1 and 7.3.2 into same file.
+
+ \lstset{frameround=fftt}
+ \begin{lstlisting}[frame=tRBL]
+(* Exercise 7.3.2*********)
+fun impImpAnd impTerm= 
+let
+ val (p,qr)= dest_imp impTerm
+ val (q,r )=dest_imp qr
+in
+ mk_imp (mk_conj (p,q), r)
+end;
+
+(* Exercise 7.3.1*********)
+fun andImp2Imp term=
+let
+ val (conjTerm1,r)= dest_imp term
+ val (p,q )=dest_conj conjTerm1
+ (*val ts= mk_imp (p,q) *)
+in
+``p ==> q ==> r``
+end;
+
+(* test case for 7.3.2:  *)
+impImpAnd ``(p ==> q ==> r)``;
+impImpAnd (andImp2Imp `` (p /\ q) ==> r``);
+andImp2Imp (impImpAnd ``p ==>q ==>r``);
+ \end{lstlisting}
+
+
+%%  Execution Transcripts
+
+\section{Execution Transcripts}
+\label{sec:exec-transcr-2}
+
+Here is a transcript of 7.3.2:
+
+  \setcounter{sessioncount}{0}
+ \begin{session}
+   \begin{scriptsize}
+  \begin{verbatim}
+
+> > > > # # # # # # # val andImp2Imp = fn: term -> term
+> > # # # # # # # val impImpAnd = fn: term -> term
+> > # val it =
+   ``(p :bool) /\ (q :bool) ==> (r :bool)``:
+   term
+> val it =
+   ``(p :bool) /\ (q :bool) ==> (r :bool)``:
+   term
+> val it =
+   ``(p :bool) ==> (q :bool) ==> (r :bool)``:
+   term
+> 
+*** Emacs/HOL command completed ***
+
+> 
+Process HOL killed
+ \end{verbatim}
+   \end{scriptsize}
+ \end{session}
+
+It appears that all our tests has passed for 7.3.2.
+
+%% Chapter: 7.3.3
+
+\chapter{Exercise 7.3.3}
+\label{cha:exercise-7.3.3}
+
+
+
+
+%% ---------------------------------------------------
+%% problem statement
+%% ---------------------------------------------------
+
+\section{Problem Statement}
+\label{sec:problem-statement-3}
+
+In 7.3.3, we are asked to create a function \emph{notExists term} ,such
+that this function will oiperate on the form $\neg \exists x.P(x)$ and returns $\forall x.\neg P(x)$.
+
+
+
+%% ---------------------------------------------------
+%% relevent code
+%% ---------------------------------------------------
+
+\section{Relevent Code}
+\label{sec:relevent-code-3}
+
+Here is the code for 7.3.3:
+
+ \lstset{frameround=fftt}
+ \begin{lstlisting}[frame=tRBL]
+(* exercise 7.3.3       *)
+
+fun forallTerm longTerm=
+let
+val (x,P)=dest_exists (dest_neg a)
+in
+``!x.~(P x)``
+end;
+ \end{lstlisting}
+
+
+%% Test Cases
+
+The following code are for testing our results:
+
+\lstset{frameround=fftt}
+\begin{lstlisting}[frame=tRBL]
+forallTerm ``~?x.(P x)``;
+forallTerm ``~?z.Q z``;
+ \end{lstlisting}
+
+
+%%  Execution Transcripts
+
+\section{Execution Transcripts}
+\label{sec:exec-transcr-3}
+
+
+We sent above code to HOL, and here is the output from HOL:
+
+  \setcounter{sessioncount}{0}
+  \begin{session}
+    \begin{scriptsize}
+  \begin{verbatim}
+
+> # # # # # val forallTerm = fn: 'a -> term
+> <<HOL message: inventing new type variable names: 'a>>
+<<HOL message: inventing new type variable names: 'a>>
+val it =
+   ``!(x :'a). ~(P :'a -> bool) x``:
+   term
+> # <<HOL message: inventing new type variable names: 'a>>
+<<HOL message: inventing new type variable names: 'a>>
+val it =
+   ``!(x :'a). ~(P :'a -> bool) x``:
+   term
+> > 
+ \end{verbatim}
+   \end{scriptsize}
+ \end{session}
+
+
+%% Explain the Result, should it be nessesary
+All our tests have been passed.
+
+%%------------------------------
+%% Appendix chapter 6.2.1
+%%------------------------------
+
+\chapter{Appendix A: source code for 6.2.1}
+\label{cha:appendix-a:-source}
+
+
+ The following code is from \emph{ex6-2-1.sml}
+ \lstinputlisting{ML04/ex6-2-1.sml}
+
+\chapter{Appendix B: source code for 7.3.1}
+\label{cha:appendix-b:-source}
+
+
+%%------------------------------
+%% Appendix chapter 7.3.1
+%%------------------------------
+
+
+%%------------------------------
+%% Appendix chapter 7.3.2
+%%------------------------------
+
+%% The following code is from \emph{ex-7-3-2.sml}
+%% \lstinputlisting{ML/ex7-3-2.sml}
+
+%%------------------------------
+%% Appendix chapter 7.3.3
+%%------------------------------
+%% The following code is from \emph{ex-7-3-3.sml}
+ %%\lstinputlisting{ML/ex7-3-3.sml}
+
+
+\end{document}

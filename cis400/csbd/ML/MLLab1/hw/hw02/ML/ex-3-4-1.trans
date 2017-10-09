@@ -1,0 +1,18 @@
+
+---------------------------------------------------------------------
+       HOL-4 [Kananaskis 11 (stdknl, built Sat Aug 19 09:30:06 2017)]
+
+       For introductory HOL help, type: help "hol";
+       To exit type <Control>-D
+---------------------------------------------------------------------
+> > > > val ListA = [(0, "Alice"), (1, "Bob"), (3, "Carol"), (4, "Dan")]:
+   (int * string) list
+> val ListB = [(1, "Bob"), (3, "Carol"), (4, "Dan")]: (int * string) list
+val elB = (0, "Alice"): int * string
+> val elc1 = 0: int
+val elc2 = "Alice": string
+> > val elc3 = (1, "Bob"): int * string
+val elc4 = (3, "Carol"): int * string
+val elc5 = (4, "Dan"): int * string
+> 
+Process HOL finished

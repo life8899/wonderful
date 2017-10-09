@@ -1,0 +1,59 @@
+
+---------------------------------------------------------------------
+       HOL-4 [Kananaskis 11 (stdknl, built Sat Aug 19 09:30:06 2017)]
+
+       For introductory HOL help, type: help "hol";
+       To exit type <Control>-D
+---------------------------------------------------------------------
+> > > > # # # # # # # # # ** types trace now on
+> # # # # # # # # # ** Unicode trace now off
+> <<HOL message: inventing new type variable names: 'a, 'b>>
+val it =
+   ``(P :'a -> bool) (x :'a) ==> (Q :'b -> bool) (y :'b)``:
+   term
+val it =
+   ``(P :num -> bool) (x :num) ==> (Q :bool -> bool) (y :bool)``:
+   term
+<<HOL message: inventing new type variable names: 'a, 'b>>
+val it =
+   ``!(x :'a) (y :'b). (P :'a -> bool) x ==> (Q :'b -> bool) y``:
+   term
+<<HOL message: inventing new type variable names: 'a>>
+val it =
+   ``~(!(x :'a). (P :'a -> bool) x \/ (Q :'a -> bool) x) <=>
+  ?(x :'a). ~P x /\ ~Q x``:
+   term
+<<HOL message: inventing new type variable names: 'a>>
+val it =
+   ``!(x :'a). (P :'a -> bool) x ==> (M :'a -> bool) x``:
+   term
+<<HOL message: inventing new type variable names: 'a>>
+val it =
+   ``?(x :'a). (P :'a -> bool) x ==> (Funny :'a -> bool) x``:
+   term
+val it = (): unit
+> 
+*** Emacs/HOL command completed ***
+
+> # <<HOL message: inventing new type variable names: 'a>>
+
+Type inference failure: unable to infer a type for the application of
+
+(x :num)
+
+at line 33, character 16
+
+to
+
+(:` :'a)
+
+on line 33, characters 18-22
+
+unification failure message: Attempt to unify different type operators: num$num and min$fun
+Exception-
+   HOL_ERR
+     {message =
+      "on line 33, characters 18-22:\n\nType inference failure: unable to infer a type for the application of\n\n(x :num)\n\nat line 33, character 16\n\nto\n\n(:` :'a)\n\non line 33, characters 18-22\n\nunification failure message: Attempt to unify different type operators: num$num and min$fun\n",
+      origin_function = "type-analysis", origin_structure = "Preterm"} raised
+> 
+Process HOL killed

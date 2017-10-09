@@ -1,0 +1,48 @@
+> # <<HOL message: inventing new type variable names: 'a, 'b>>
+val it =
+   “P x ⇒ Q y”:
+   term
+> > # # # # val it =
+   “P x ⇒ Q y”:
+   term
+> > # # # <<HOL message: inventing new type variable names: 'a, 'b>>
+val it =
+   “∀x y. P x ⇒ Q y”:
+   term
+> > # # # <<HOL message: inventing new type variable names: 'a>>
+val it =
+   “¬(∀x. P x ∨ Q x) ⇔ ∃x. ¬P x ∧ ¬Q x”:
+   term
+> > # <<HOL message: inventing new type variable names: 'a>>
+val it =
+   “∀x. P x ⇒ M x”:
+   term
+> # <<HOL message: inventing new type variable names: 'a>>
+val it =
+   “∃x. P x ⇒ Funny x”:
+   term
+> > 
+*** Emacs/HOL command completed ***
+
+> # # <<HOL message: inventing new type variable names: 'a>>
+
+Type inference failure: unable to infer a type for the application of
+
+(x :num)
+
+at line 33, character 16
+
+to
+
+(:` :α)
+
+on line 33, characters 18-22
+
+unification failure message: Attempt to unify different type operators: num$num and min$fun
+Exception-
+   HOL_ERR
+     {message =
+      "on line 33, characters 18-22:\n\nType inference failure: unable to infer a type for the application of\n\n(x :num)\n\nat line 33, character 16\n\nto\n\n(:` :\206\177)\n\non line 33, characters 18-22\n\nunification failure message: Attempt to unify different type operators: num$num and min$fun\n",
+      origin_function = "type-analysis", origin_structure = "Preterm"} raised
+> > 
+Process HOL killed

@@ -1,0 +1,298 @@
+%% ---------------------------------------------------
+%% CIS 400 project 5
+%% this is the work of Xiaozhi Li for class CIS 400 CSBD
+%% this file is writen under the guidence of the course, which is taught
+%% by Professor Shiu-Kai Chin
+
+%% 2017/10/04
+%% ---------------------------------------------------
+\documentclass{report}
+\title{Report for Project5}
+\author{\textbf{Xiaozhi Li}}
+\date{\today}
+
+
+
+%% Formats:
+%% ---------------------------------------------------
+%% 634format specifies the format of our reports
+%% ---------------------------------------------------
+\usepackage{634format}
+
+%% ---------------------------------------------------
+%% enumerate
+%% ---------------------------------------------------
+\usepackage{enumerate}
+
+%% ---------------------------------------------------
+%% listings is used for including our source code in reports
+%% ---------------------------------------------------
+\usepackage{listings}
+\usepackage{textcomp}
+
+%% ---------------------------------------------------
+%% Packages for math environments
+%% ---------------------------------------------------
+\usepackage{amsmath}
+
+%% ---------------------------------------------------
+%% Packages for URLs and hotlinks in the table of contents
+%% and symbolic cross references using \ref
+%% ---------------------------------------------------
+\usepackage{hyperref}
+
+%% ---------------------------------------------------
+%% Packages for using HOL-generated macros and displays
+%% ---------------------------------------------------
+%% end of formats
+
+\usepackage{holtex}
+\usepackage{holtexbasic}
+\input{commands}
+\input{../HOL/HOLReports/HOLprojFive}
+
+\begin{document}
+%% --------------------------------------------------- the listings
+%% parameter "language" is set to "ML"
+%% ---------------------------------------------------
+\lstset{language=ML}
+
+
+\maketitle{}
+
+\begin{abstract}
+  Project 5 using \LaTeX{}. In this project we will use EmitTeX to generate the HOL reports. All HOL source files are included in the HOL folder.
+ \end{abstract}
+
+\begin{acknowledgments}
+ This report follows the hand book Certified Security by Design Using Higer Order Logic, and course instructions from CIS400-CSBD.
+\end{acknowledgments}
+
+
+%% ---------------------------------------------------
+%% table of contents
+%% ---------------------------------------------------
+\tableofcontents{}
+
+\chapter{Executive Summary}
+
+
+\textbf{All requirements for this project are satisfied}.
+Specifically, we utilized HOL to prove the following theorems:
+\begin{quote}
+\HOLprojFiveTheorems
+\end{quote}
+
+%%----
+%%
+%%      THIS IS IMPORTANT
+%%------
+All requirments of the project have been met, all theories and code compiled and ran within HOL and Latex.
+
+%% Chapter: 8.4.1
+
+\chapter{Exercise 8.4.1}
+\label{cha:exercise-8.4.1}
+%% ---------------------------------------------------
+%% problem statement
+%% ---------------------------------------------------
+
+\section{Problem Statement}
+\label{sec:problem-statement}
+Our task is to prove the theorem
+\HOLTokenTurnstile{} \HOLFreeVar{p} \HOLSymConst{\HOLTokenImp{}} (\HOLFreeVar{p} \HOLSymConst{\HOLTokenImp{}} \HOLFreeVar{q}) \HOLSymConst{\HOLTokenImp{}} (\HOLFreeVar{q} \HOLSymConst{\HOLTokenImp{}} \HOLFreeVar{r}) \HOLSymConst{\HOLTokenImp{}} \HOLFreeVar{r}
+
+\section{HOL Code}
+\label{HOl Code 841}
+
+\begin{lstlisting}[frame=trBL]
+(* 8-4-1  *)
+val problem1Thm =
+let
+val th1 =ASSUME ``p:bool``
+val th2 =ASSUME ``p ==> q``
+val th3 =ASSUME ``q ==> r``
+val th4 =MP th2 th1
+val th5 =MP th3 th4
+val th6 = DISCH (hd(hyp th3)) th5
+val th7 = DISCH (hd(hyp th2)) th6
+
+in
+DISCH (hd(hyp th1)) th7
+end
+\end{lstlisting}
+
+\section{Session Transcript}
+\label{Session Trans1}
+
+\setcounter{sessioncount}{0}
+\begin{session}
+  \begin{scriptsize}
+\begin{verbatim}
+
+> > > > # # # # # # # # # # # # val problem1Thm =
+   |- p ⇒ (p ⇒ q) ⇒ (q ⇒ r) ⇒ r:
+   thm
+>
+Process HOL killed
+\end{verbatim}
+  \end{scriptsize}
+\end{session}
+
+%% Explain the Result, should it be nessesary
+\section{Explain Result}
+\label{eplain re 841}
+Hol is showing our theorem with no type errors, this means our tests have passed.
+
+%-----------------------
+% 8 4 2
+
+\chapter{Exercise 8.4.2}
+\label{ex 842}
+
+\section{Problem Statement}
+\label{problem state 842}
+For 8.4.2 we need to prove the therom:
+\HOLprojFiveTheoremsconjSymThm
+
+\section{HOL Code}
+\label{HOl Code 842}
+
+\begin{lstlisting}[frame=trBL]
+val conj1Thm =
+let
+val th2 =ASSUME ``p/\q``
+val th3 =CONJUNCT1 th2
+val th4 =CONJUNCT2 th2
+val th5 =CONJ th4 th3
+in
+DISCH (hd(hyp th2)) th5
+end;
+
+val conj2Thm =
+let
+val th1 =ASSUME ``q/\p``
+val th2 =CONJUNCT1 th1
+val th3 =CONJUNCT2 th1
+
+val th4 =CONJ th3 th2
+in
+DISCH (hd(hyp th1)) th4
+end;
+
+
+val conjSymThm =
+IMP_ANTISYM_RULE conj1Thm conj2Thm;
+\end{lstlisting}
+
+\section{Session Transcript}
+\label{Session Trans 842}
+\setcounter{sessioncount}{0}
+\begin{session}
+  \begin{scriptsize}
+\begin{verbatim}
+
+> > > > # # # # # # # # # # val conj1Thm =
+   |- p ∧ q ⇒ q ∧ p:
+   thm
+> > # # # # # # # # # val conj2Thm =
+   |- q ∧ p ⇒ p ∧ q:
+   thm
+> > > # val conjSymThm =
+   |- p ∧ q ⇔ q ∧ p:
+   thm
+>
+*** Emacs/HOL command completed ***
+
+>
+Process HOL killed
+\end{verbatim}
+  \end{scriptsize}
+\end{session}
+\section{Explain Result}
+\label{explain result 842}
+In 8.4.2, all of our theorem and theory have passed by HOL.
+
+
+% 8 4 3
+\chapter{Excersice 8.4.3}
+\label{Ex 843}
+\section{Problem Statement}
+\label{Problem State 843}
+For 8.4.3 we need to prove the therom:
+\HOLprojFiveTheoremsconjSymAll
+
+\section{HOL Code}
+\label{HOl Code 843}
+Notice in 8.4.3 we are extending the code from 8.4.2:
+\begin{lstlisting}[frame=trBL]
+val conj1Thm =
+let
+val th2 =ASSUME ``p/\q``
+val th3 =CONJUNCT1 th2
+val th4 =CONJUNCT2 th2
+val th5 =CONJ th4 th3
+in
+DISCH (hd(hyp th2)) th5
+end;
+
+val conj2Thm =
+let
+val th1 =ASSUME ``q/\p``
+val th2 =CONJUNCT1 th1
+val th3 =CONJUNCT2 th1
+
+val th4 =CONJ th3 th2
+in
+DISCH (hd(hyp th1)) th4
+end;
+
+
+val conjSymThm =
+IMP_ANTISYM_RULE conj1Thm conj2Thm;
+val conjSymAll=GENL [``p:bool``, ``q:bool``] conjSymThm;
+\end{lstlisting}
+
+\section{Session Transcript}
+\label{Session Trans 843}
+\setcounter{sessioncount}{0}
+\begin{session}
+  \begin{scriptsize}
+\begin{verbatim}
+
+> # # # # # # # # val conj1Thm =
+   |- p ∧ q ⇒ q ∧ p:
+   thm
+> > # # # # # # # # # val conj2Thm =
+   |- q ∧ p ⇒ p ∧ q:
+   thm
+> > > # val conjSymThm =
+   |- p ∧ q ⇔ q ∧ p:
+   thm
+>
+*** Emacs/HOL command completed ***
+
+> val conjSymAll =
+   |- ∀p q. p ∧ q ⇔ q ∧ p:
+   thm
+\end{verbatim}
+  \end{scriptsize}
+\end{session}
+\section{Explain Result}
+\label{explain result 843}
+All tests from 8.4.3 have been passed in HOL.
+
+
+
+% Appendix:
+
+\chapter{Appendix A: source code for 8.4.1, 8.4.2, and 8.4.3}
+\label{cha:appendix-a:-source}
+
+
+The following code is from \emph{proj5Script.sml}
+\lstinputlisting{../HOL/proj5Script.sml}
+
+
+
+\end{document}

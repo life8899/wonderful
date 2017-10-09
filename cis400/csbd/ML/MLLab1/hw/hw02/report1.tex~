@@ -1,0 +1,217 @@
+%% ---------------------------------------------------
+%% this is a report using latex and ML
+%% this is the work of Xiaozhi Li for class CIS 400 CSBD
+%% this file is writen under the guidence of the course, which is taught
+%% by Professor Shiu-Kai Chin
+
+%% 2017/9/13
+%% ---------------------------------------------------
+\documentclass{report}
+\title{Report for Simple ML Example}
+\author{\textbf{Xiaozhi Li}}
+\date{\textbf{13 September 2017}}
+
+
+
+%% Formats:
+%% ---------------------------------------------------
+%% 634format specifies the format of our reports
+%% ---------------------------------------------------
+\usepackage{634format}
+
+%% ---------------------------------------------------
+%% enumerate 
+%% ---------------------------------------------------
+\usepackage{enumerate}
+
+%% ---------------------------------------------------
+%% listings is used for including our source code in reports
+%% ---------------------------------------------------
+\usepackage{listings}
+\usepackage{textcomp}
+
+%% ---------------------------------------------------
+%% Packages for math environments
+%% ---------------------------------------------------
+\usepackage{amsmath}
+
+%% ---------------------------------------------------
+%% Packages for URLs and hotlinks in the table of contents
+%% and symbolic cross references using \ref
+%% ---------------------------------------------------
+\usepackage{hyperref}
+
+%% ---------------------------------------------------
+%% Packages for using HOL-generated macros and displays
+%% ---------------------------------------------------
+%% end of formats
+
+\usepackage{holtex}
+\usepackage{holtexbasic}
+\input{commands}
+
+\begin{document}
+%% --------------------------------------------------- the listings
+%% parameter "language" is set to "ML"
+%% ---------------------------------------------------
+\lstset{language=ML}
+
+
+\maketitle{}
+\begin{abstract}
+  The project brings together elements of functional programming in ML
+  and documentation ins \LaTeX{}.  The purpose of this project is to
+  lay the groundwork for credibility: results that are thoroughly
+  documented and easily reproducible by independent third parties. We
+  establish the documentation and programming infrastructure where
+  each chapter documents a problem or exercise.  Within each chapter
+  are sections stating or showing:
+  \begin{itemize}
+  \item Problem statement
+  \item Relevant code
+  \item Test results
+  \end{itemize}
+
+  For each problem or exercise-oriented chapter in the main body of
+  the report is a corresponding chapter in the Appendix containing the
+  source code in ML.  This source code is not pasted into the
+  Appendix.  Rather, it is input directly from the source code file
+  itself. This means changes in source code are easily captured in the
+  report by recompiling the report in \LaTeX{}.
+
+We introduce the use of style files and packages. Specifically, we use:
+  \begin{itemize}
+  \item a style file for the course, \emph{634format.sty}, 
+  \item the \emph{listings} package for displaying and inputting ML
+    source code, and
+  \item HOL style files and commands to display interactive ML/HOL
+    sessions.
+  \end{itemize}
+
+  Finally, we show how to:
+  \begin{itemize}
+  \item easily generate a table of contents for the report, and
+  \item refer to chapter and section labels in our report.
+  \end{itemize}
+
+  There are numerous \LaTeX{} tutorials on the web, for example,
+  \url{https://www.latex-tutorial.com}, is very accessible for
+  beginners.
+
+ \end{abstract}
+
+\begin{acknowledgments}
+  We gratefully acknowledge the hard work, trust, and dedication of
+  our past students in the Syracuse University Cyber Engineering
+  Semester and the Air Force Research Laboratory's Advanced Course
+  (ACE) in Engineering Cybersecurity Boot Camp.  They bridged dreams
+  and reality.
+  In addition, this report is generated following the guidence of the course CIS 400-CSBD taught by Professor Shiu-kai Chin.
+\end{acknowledgments}
+
+\tableofcontents{}
+
+\chapter{Executive Summary}
+\label{cha:executive-summary-1}
+
+\textbf{All requirements for this project are satisfied}.
+Specifically,
+\begin{description}
+\item[Report Contents] \ \\
+  Our report has the following content:
+  \begin{enumerate}[{}]
+  \item Chapter~\ref{cha:executive-summary-1}: Executive Summary
+  \item Chapter~\ref{cha:exercise-2.5.1}: Exercise 2.5.1
+    \begin{enumerate}[{}]
+    \item Section~\ref{sec:problem-statement-5}: Problem Statement
+    \item Section~\ref{sec:relevant-code}: Relevant code
+    \item Section~\ref{sec:test-cases}: Test results
+    \end{enumerate}
+
+  \item Chapter~\ref{cha:exercise-3.4.1}
+    \begin{enumerate}[{}]
+    \item Section~\ref{sec:problem-statement-6}: Problem Statement
+    \item Section~\ref{sec:relevant-code-3}: Relevant code
+    \item Section~\ref{sec:test-cases-2}: Test results
+    \end{enumerate}
+
+  \item Chapter~\ref{cha:exercise-3.4.2}
+    \begin{enumerate}[{}]
+    \item Section~\ref{sec:problem-statement-6}: Problem Statement
+    \item Section~\ref{sec:relevant-code-2}: Relevant code
+    \item Section~\ref{sec:test-cases-1}: Test results
+    \end{enumerate}
+  \item Chapter~\ref{cha:append-a:ex-2.4.1} : Source Code is input to the report using \lstinputlisting.
+  \item Chapter~\ref{cha:appendix-b:-exercise} : Source Code is input to the report using \lstinputlisting.
+  \item Chapter~\ref{cha:appendix-c:-exercise} : Source Code is input to the report using \lstinputlisting.
+
+  \end{enumerate}
+
+\item[Reproducibility in ML and \LaTeX{}] \ \\
+  Our ML and \LaTeX{} source files compile with no errors.
+\end{description}
+
+
+\chapter{Exercise 2.5.1}
+\label{cha:exercise-2.5.1}
+
+\section{Problem Statement}
+\label{sec:problem-statement-5}
+
+\section{Relevant Code}
+\label{sec:relevant-code}
+
+\section{Test Cases}
+\label{sec:test-cases}
+
+In this exercise we are to define in ML the following functions:
+\begin{align}
+  plus x y &= x + y\\
+  times \;x\;y &= x \times y\\
+  plus \;x\;y &= x + y\\
+  times \;x\;y &= x \times y
+\end{align}
+
+\chapter{Exercise 3.4.1}
+\label{cha:exercise-3.4.1}
+
+\section{Problem Statement}
+\label{sec:problem-statement-6}
+
+
+\section{Relevant Code}
+\label{sec:relevant-code-2}
+
+\section{Test Cases}
+\label{sec:test-cases-2}
+
+
+
+\chapter{Exercise 3.4.2}
+\label{cha:exercise-3.4.2}
+
+
+\section{Problem Statement}
+\label{sec:problem-statement-7}
+
+\section{Relevant Code}
+\label{sec:relevant-code-3}
+
+\section{Test Cases}
+\label{sec:test-cases-1}
+
+
+
+\chapter{Appendix A: Exercise 2.4.1 Source Code}
+\label{cha:append-a:ex-2.4.1}
+
+\chapter{Appendix B: Exercise 3.4.1 Source Code}
+\label{cha:appendix-b:-exercise}
+
+\chapter{Appendix C: Exercise 3.4.2 Source Code}
+\label{cha:appendix-c:-exercise}
+
+
+
+
+\end{document}

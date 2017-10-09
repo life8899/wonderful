@@ -1,0 +1,38 @@
+> > # # # # # # # # # val test463A = fn: ('a -> ''b) -> ('a -> ''b) -> 'a list -> bool
+> > # # # # # # # # # # # val f2P = fn: ('a -> 'b -> 'c) -> 'a * 'b -> 'c
+val test463B = fn:
+   ('a -> 'b -> ''c) -> ('a -> 'b -> ''c) -> ('a * 'b) list -> bool
+> 
+*** Emacs/HOL command completed ***
+
+> val funA1 = fn: int * int * int -> int
+> val funA2 = fn: int * int * int -> int
+> > # # # # # val outputsA = [6, 120, 504]: int list
+val testListA = [(1, 2, 3), (4, 5, 6), (7, 8, 9)]: (int * int * int) list
+val testResultA = true: bool
+> val funB1 = fn: int -> int -> bool
+> val funB2 = fn: int -> int -> bool
+> > # # # # # val outputsB = [false, true, false]: bool list
+val testListB = [(0, 0), (1, 2), (4, 3)]: (int * int) list
+val testResultB = true: bool
+> val funC1 = fn: string -> string -> string
+> val funC2 = fn: string -> string -> string
+> > # # # # # val outputsC = ["Hi there!", "Oh no!", "What the ..."]: string list
+val testListC = [("Hi", " there!"), ("Oh ", "no!"), ("What", " the ...")]:
+   (string * string) list
+val testResultC = true: bool
+> val funD1 = fn: 'a list -> 'a list -> 'a list
+> val funD2 = fn: 'a list -> 'a list -> 'a list
+> > # # # # # # # # val outputsD1 = [[0, 1, 2, 3, 4], [0, 1]]: int list list
+val outputsD2 = [[true, true]]: bool list list
+val testListD1 = [([0, 1], [2, 3, 4]), ([], [0, 1])]:
+   (int list * int list) list
+val testListD2 = [([true, true], [])]: (bool list * 'a list) list
+val testResultD1 = true: bool
+val testResultD2 = true: bool
+> val funE1 = fn: int * int -> int
+> val funE2 = fn: int * int -> int
+> > # # # # val sampleResultE = [2, 5, 10]: int list
+val testListE = [(2, 1), (5, 5), (5, 10)]: (int * int) list
+val testResultE = true: bool
+> 

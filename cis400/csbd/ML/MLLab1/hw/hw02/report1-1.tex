@@ -1,0 +1,372 @@
+%% ---------------------------------------------------
+%% this is a report using latex and ML
+%% this is the work of Xiaozhi Li for class CIS 400 CSBD
+%% this file is writen under the guidence of the course, which is taught
+%% by Professor Shiu-Kai Chin
+
+%% 2017/9/13
+%% ---------------------------------------------------
+\documentclass{report}
+\title{Report for Simple ML Example}
+\author{\textbf{Xiaozhi Li}}
+\date{\textbf{13 September 2017}}
+
+
+
+%% Formats:
+%% ---------------------------------------------------
+%% 634format specifies the format of our reports
+%% ---------------------------------------------------
+\usepackage{634format}
+
+%% ---------------------------------------------------
+%% enumerate 
+%% ---------------------------------------------------
+\usepackage{enumerate}
+
+%% ---------------------------------------------------
+%% listings is used for including our source code in reports
+%% ---------------------------------------------------
+\usepackage{listings}
+\usepackage{textcomp}
+
+%% ---------------------------------------------------
+%% Packages for math environments
+%% ---------------------------------------------------
+\usepackage{amsmath}
+
+%% ---------------------------------------------------
+%% Packages for URLs and hotlinks in the table of contents
+%% and symbolic cross references using \ref
+%% ---------------------------------------------------
+\usepackage{hyperref}
+
+%% ---------------------------------------------------
+%% Packages for using HOL-generated macros and displays
+%% ---------------------------------------------------
+%% end of formats
+
+\usepackage{holtex}
+\usepackage{holtexbasic}
+\input{commands}
+
+\begin{document}
+%% --------------------------------------------------- the listings
+%% parameter "language" is set to "ML"
+%% ---------------------------------------------------
+\lstset{language=ML}
+
+
+\maketitle{}
+
+\begin{abstract}
+  The project brings together elements of functional programming in ML
+  and documentation ins \LaTeX{}.  The purpose of this project is to
+  lay the groundwork for credibility: results that are thoroughly
+  documented and easily reproducible by independent third parties. We
+  establish the documentation and programming infrastructure where
+  each chapter documents a problem or exercise.  Within each chapter
+  are sections stating or showing:
+  \begin{itemize}
+  \item Problem statement
+  \item Relevant code
+  \item Test results
+  \end{itemize}
+
+  For each problem or exercise-oriented chapter in the main body of
+  the report is a corresponding chapter in the Appendix containing the
+  source code in ML.  This source code is not pasted into the
+  Appendix.  Rather, it is input directly from the source code file
+  itself. This means changes in source code are easily captured in the
+  report by recompiling the report in \LaTeX{}.
+
+We introduce the use of style files and packages. Specifically, we use:
+  \begin{itemize}
+  \item a style file for the course, \emph{634format.sty}, 
+  \item the \emph{listings} package for displaying and inputting ML
+    source code, and
+  \item HOL style files and commands to display interactive ML/HOL
+    sessions.
+  \end{itemize}
+
+  Finally, we show how to:
+  \begin{itemize}
+  \item easily generate a table of contents for the report, and
+  \item refer to chapter and section labels in our report.
+  \end{itemize}
+
+  There are numerous \LaTeX{} tutorials on the web, for example,
+  \url{https://www.latex-tutorial.com}, is very accessible for
+  beginners.
+
+ \end{abstract}
+\begin{acknowledgments}
+  We gratefully acknowledge the hard work, trust, and dedication of
+  our past students in the Syracuse University Cyber Engineering
+  Semester and the Air Force Research Laboratory's Advanced Course
+  (ACE) in Engineering Cybersecurity Boot Camp.  They bridged dreams
+  and reality.  In addition, this report is generated following the
+  guidence of the course CIS 400-CSBD taught by Professor Shiu-kai
+  Chin.
+\end{acknowledgments}
+
+\tableofcontents{}
+
+\chapter{Executive Summary}
+\label{cha:executive-summary-1}
+
+\textbf{All requirements for this project are satisfied}.
+Specifically,
+\begin{description}
+\item[Report Contents] \ \\
+  Our report has the following content:
+  Our report has the following content:
+  \begin{enumerate}[{}]
+  \item Chapter~\ref{cha:executive-summary-1}: Executive Summary
+  \item Chapter~\ref{cha:exercise-2.5.1}: Exercise 2.5.1
+    \begin{enumerate}[{}]
+    \item Section~\ref{sec:problem-statement-5}: Problem Statement
+    \item Section~\ref{sec:relevant-code}: Relevant code
+    \item Section~\ref{sec:test-cases}: Test results
+    \end{enumerate}
+
+    \item Chapter~\ref{cha:exercise-3.4.1}
+    \begin{enumerate}[{}]
+    \item Section~\ref{sec:problem-statement-6}: Problem Statement
+    \item Section~\ref{sec:relevant-code-3}: Relevant code
+    \item Section~\ref{sec:test-result}: Test results
+    \end{enumerate}
+
+
+  \item Chapter~\ref{cha:exercise-3.4.2}
+   \begin{enumerate}[{}]
+   \item Section~\ref{sec:problem-statement-7}
+   \item Section~\ref{sec:relevant-code-3}
+   \item Section~\ref{sec:test-cases-1}
+     \item Section~\ref{sec:explain-error}
+   \end{enumerate}
+ \item Chapter~\ref{cha:appendix-a:-exercise}:Appendix A: Exercise
+   2.5.1 Source Cod
+  \item Chapter~\ref{cha:appendix-b:-exercise}:Appendix B: Exercise 3.4.1 Source Cod
+  \item Chapter~\ref{cha:appendix-c:-exercise}:Appendix C: Exercise 3.4.2 Source Cod
+
+  \end{enumerate}
+\item[Reproducibility in ML and \LaTeX{}] \ \\
+  Our ML and \LaTeX{} source files compile with no errors.
+\end{description}
+
+\chapter{Exercise 2.5.1}
+\label{cha:exercise-2.5.1}
+
+\section{Problem Statement}
+\label{sec:problem-statement-5}
+
+In this exercise we are to define in ML the following functions:
+\begin{align*}
+  timesPlus\; x\; y &= (x*y,\; x+y)\\
+\end{align*}
+
+\section{Relevant Code}
+\label{sec:relevant-code}
+
+The following code takes advantage of function definition using
+\emph{fun} in ML, and \emph{currying}, i.e., defining functions with multiple arguments as a sequence of functions. This supports partial evaluation.
+
+\lstset{frameround=fftt}
+\begin{lstlisting}[frame=tRBL]
+  fun timesPlus x y= (x*y, x+y);
+\end{lstlisting}
+
+\section{Test Cases}
+\label{sec:test-cases}
+The required test cases for \emph{timesPlus} are as follows.
+\begin{lstlisting}[frame = TB]
+(****************************************************************)
+(* Test Cases Specified in the requirements                     *)
+(****************************************************************)
+timesPlus 100 27;
+timesPlus 10 26;
+timesPlus 1 25;
+timesPlus 2 24;
+timesPlus 30 23;
+timesPlus 50 200;
+
+\end{lstlisting}
+
+\section{Test Results}
+\label{sec:test-results}
+
+\setcounter{sessioncount}{0}
+\begin{session}
+  \begin{scriptsize}
+\begin{verbatim}
+
+> > > > val ListA = [(0, "Alice"), (1, "Bob"), (3, "Carol"), (4, "Dan")]:
+   (int * string) list
+> val ListB = [(1, "Bob"), (3, "Carol"), (4, "Dan")]: (int * string) list
+val elB = (0, "Alice"): int * string
+> val elc1 = 0: int
+val elc2 = "Alice": string
+> > val elc3 = (1, "Bob"): int * string
+val elc4 = (3, "Carol"): int * string
+val elc5 = (4, "Dan"): int * string
+> 
+\end{verbatim}
+  \end{scriptsize}
+\end{session}
+
+\chapter{Exercise 3.4.1}
+\label{cha:exercise-3.4.1}
+
+\section{Problem Statement}
+\label{sec:problem-statement-6}
+In this exercise we are to define in ML the following functions:
+\begin{align*}
+  &val\; ListA\; =\; [(0,\; "Alice"),\; (1,\;"Bob"),\; (3,\; "Carol"),\;(4,\;"Dan")];\\
+                      &val\; elB:: ListB\;= \;ListA;\\
+                      &val\; (elc1,elc2)\;=\;elB;\\
+                      &val\; [elc3,elc4,elc5]\;=\;ListB;\\
+\end{align*}
+
+\section{Relevant Code}
+\label{sec:relevant-code-2}
+
+
+The following code takes advantage of function definition using
+\emph{fun} in ML, and \emph{currying}, i.e., defining functions with multiple arguments as a sequence of functions. This supports partial evaluation.
+
+\lstset{frameround=fftt}
+\begin{lstlisting}[frame=tRBL]
+
+ val ListA = [(0, "Alice"), (1,"Bob"), (3, "Carol"),(4,"Dan")];
+ val elB:: ListB= ListA;
+ val (elc1,elc2)=elB;
+ val [elc3,elc4,elc5]=ListB;
+\end{lstlisting}
+
+
+\section{Test Result}
+\label{sec:test-result}
+\setcounter{sessioncount}{0}
+\begin{session}
+  \begin{scriptsize}
+\begin{verbatim}
+
+> > > > val ListA = [(0, "Alice"), (1, "Bob"), (3, "Carol"), (4, "Dan")]:
+   (int * string) list
+> val ListB = [(1, "Bob"), (3, "Carol"), (4, "Dan")]: (int * string) list
+val elB = (0, "Alice"): int * string
+> val elc1 = 0: int
+val elc2 = "Alice": string
+> > val elc3 = (1, "Bob"): int * string
+val elc4 = (3, "Carol"): int * string
+val elc5 = (4, "Dan"): int * string
+> 
+\end{verbatim}
+  \end{scriptsize}
+\end{session}
+
+
+
+\chapter{Exercise 3.4.2}
+\label{cha:exercise-3.4.2}
+
+
+\section{Problem Statement}
+\label{sec:problem-statement-7}
+In this exercise we are to define in ML the following functions:
+\begin{align*}
+&val\; (x1,x2,x3)\; = \;(1,\;true,\;"Alice");\\
+&val\; pair1\; =\; (x1,\;x3);\\
+&val\; list1\; =\; [0,\;x1,\;2];\\
+&val\; list2\; =\; [x2,\;x1];\\
+&val\; list3\; =\; (1\; ::\; [x3]);\\
+\end{align*}
+
+
+\section{Relevant Code}
+\label{sec:relevant-code-3}
+The following code takes advantage of function definition using
+\emph{fun} in ML.
+
+\lstset{frameround=fftt}
+\begin{lstlisting}[frame=tRBL]
+
+val (x1,x2,x3) = (1,true,"Alice");
+val pair1 = (x1,x3);
+val list1 = [0,x1,2];
+val list2 = [x2,x1];
+val list3 = (1 :: [x3]);
+val ListA = [(0, "Alice"), (1,"Bob"), (3, "Carol"),(4,"Dan")];
+val elB:: ListB= ListA;
+val (elc1,elc2)=elB;
+val [elc3,elc4,elc5]=ListB;
+
+\end{lstlisting}
+\section{Test Cases}
+\label{sec:test-cases-1}
+
+The following are the test results
+\setcounter{sessioncount}{0}
+\begin{session}
+  \begin{scriptsize}
+\begin{verbatim}
+
+> > > >val x1 = 1: int
+val x2 = true: bool
+val x3 = "Alice": string
+> val pair1 = (1, "Alice"): int * string
+> val list1 = [0, 1, 2]: int list
+> poly: : error: Elements in a list have different types.
+   Item 1: x2 : bool
+   Item 2: x1 : int
+   Reason:
+      Can't unify bool (*In Basis*) with int (*In Basis*)
+         (Different type constructors)
+Found near [x2, x1]
+Static Errors
+> poly: : error: Type error in function application.
+   Function: :: : int * int list -> int list
+   Argument: (1, [x3]) : int * string list   Reason:
+      Can't unify int (*In Basis*) with string (*In Basis*)
+         (Different type constructors)
+Found near (1 :: [x3])
+Static Errors
+> > > > val ListA = [(0, "Alice"), (1, "Bob"), (3, "Carol"), (4, "Dan")]:
+   (int * string) list
+> val ListB = [(1, "Bob"), (3, "Carol"), (4, "Dan")]: (int * string) list
+val elB = (0, "Alice"): int * string
+> val elc1 = 0: int
+val elc2 = "Alice": string
+> > val elc3 = (1, "Bob"): int * string
+val elc4 = (3, "Carol"): int * string
+val elc5 = (4, "Dan"): int * string
+> 
+\end{verbatim}
+  \end{scriptsize}
+\end{session}
+
+\subsection{Explain of error}
+\label{sec:explain-error}
+The errors occured in 3.4.2 are because of type matching. Errors in val list2 and val lsit3, is that list2 referenced x2 from (x1,x2,x3) = (1,true,"Alice"). Where x2 is the type bool, and HOL can't put bool and numbers in one list. List3 contains x3 which is a string type and Hol will not put string type and int in one list; therefore we got typeerrors.
+
+\chapter{Appendix A: Exercise 2.5.1 Source Code}
+\label{cha:appendix-a:-exercise}
+The following code is from \emph{ex-2-5-1.sml}
+\lstinputlisting{ML/ex-2-5-1.sml}
+
+\chapter{Appendix B: Exercise 3.4.1 Source Code}
+\label{cha:appendix-b:-exercise}
+The following code is from \emph{ex-3-4-1.sml}
+\lstinputlisting{ML/ex-3-4-1.sml}
+
+\chapter{Appendix C: Exercise 3.4.2 Source Code}
+\label{cha:appendix-c:-exercise}
+The following code is from \emph{ex-3-4-2.sml}
+\lstinputlisting{ML/ex-3-4-2.sml}
+
+
+
+
+
+\end{document}

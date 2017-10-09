@@ -1,0 +1,19 @@
+\newcommand{\HOLprojFiveDate}{06 October 2017}
+\newcommand{\HOLprojFiveTime}{22:01}
+\begin{SaveVerbatim}{HOLprojFiveTheoremsconjSymAll}
+\HOLTokenTurnstile{} \HOLSymConst{\HOLTokenForall{}}\HOLBoundVar{p} \HOLBoundVar{q}. \HOLBoundVar{p} \HOLSymConst{\HOLTokenConj{}} \HOLBoundVar{q} \HOLSymConst{\HOLTokenEquiv{}} \HOLBoundVar{q} \HOLSymConst{\HOLTokenConj{}} \HOLBoundVar{p}
+\end{SaveVerbatim}
+\newcommand{\HOLprojFiveTheoremsconjSymAll}{\UseVerbatim{HOLprojFiveTheoremsconjSymAll}}
+\begin{SaveVerbatim}{HOLprojFiveTheoremsconjSymThm}
+\HOLTokenTurnstile{} \HOLFreeVar{p} \HOLSymConst{\HOLTokenConj{}} \HOLFreeVar{q} \HOLSymConst{\HOLTokenEquiv{}} \HOLFreeVar{q} \HOLSymConst{\HOLTokenConj{}} \HOLFreeVar{p}
+\end{SaveVerbatim}
+\newcommand{\HOLprojFiveTheoremsconjSymThm}{\UseVerbatim{HOLprojFiveTheoremsconjSymThm}}
+\begin{SaveVerbatim}{HOLprojFiveTheoremsproblemOneThm}
+\HOLTokenTurnstile{} \HOLFreeVar{p} \HOLSymConst{\HOLTokenImp{}} (\HOLFreeVar{p} \HOLSymConst{\HOLTokenImp{}} \HOLFreeVar{q}) \HOLSymConst{\HOLTokenImp{}} (\HOLFreeVar{q} \HOLSymConst{\HOLTokenImp{}} \HOLFreeVar{r}) \HOLSymConst{\HOLTokenImp{}} \HOLFreeVar{r}
+\end{SaveVerbatim}
+\newcommand{\HOLprojFiveTheoremsproblemOneThm}{\UseVerbatim{HOLprojFiveTheoremsproblemOneThm}}
+\newcommand{\HOLprojFiveTheorems}{
+\HOLThmTag{proj5}{conjSymAll}\HOLprojFiveTheoremsconjSymAll
+\HOLThmTag{proj5}{conjSymThm}\HOLprojFiveTheoremsconjSymThm
+\HOLThmTag{proj5}{problem1Thm}\HOLprojFiveTheoremsproblemOneThm
+}

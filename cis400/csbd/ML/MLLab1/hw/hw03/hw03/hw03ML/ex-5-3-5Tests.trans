@@ -1,0 +1,6 @@
+# # # # # # # # val addPairsGreaterThan = fn: int -> (int * int) list -> int list
+> # # # val it = [5, 9]: int list
+> 
+*** Emacs/HOL command completed ***
+
+> 

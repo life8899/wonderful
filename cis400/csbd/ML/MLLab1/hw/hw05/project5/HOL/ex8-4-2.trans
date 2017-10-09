@@ -1,0 +1,24 @@
+
+---------------------------------------------------------------------
+       HOL-4 [Kananaskis 11 (stdknl, built Sat Aug 19 09:30:06 2017)]
+
+       For introductory HOL help, type: help "hol";
+       To exit type <Control>-D
+---------------------------------------------------------------------
+> > > > # # # # # # # # # ** types trace now on
+> *** Globals.show_assums now true ***
+> # # # # # # # # # ** Unicode trace now off
+> # # # # # # # # val conj1Thm =
+    [] |- (p :bool) /\ (q :bool) ==> q /\ p:
+   thm
+> > # # # # # # # # # val conj2Thm =
+    [] |- (q :bool) /\ (p :bool) ==> p /\ q:
+   thm
+> > > # val conjSymThm =
+    [] |- (p :bool) /\ (q :bool) <=> q /\ p:
+   thm
+> 
+*** Emacs/HOL command completed ***
+
+> 
+Process HOL killed

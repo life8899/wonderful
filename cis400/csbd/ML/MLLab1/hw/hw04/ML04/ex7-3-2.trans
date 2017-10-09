@@ -1,0 +1,23 @@
+
+---------------------------------------------------------------------
+       HOL-4 [Kananaskis 11 (stdknl, built Sat Aug 19 09:30:06 2017)]
+
+       For introductory HOL help, type: help "hol";
+       To exit type <Control>-D
+---------------------------------------------------------------------
+> > > > # # # # # # # val andImp2Imp = fn: term -> term
+> > # # # # # # # val impImpAnd = fn: term -> term
+> > # val it =
+   ``(p :bool) /\ (q :bool) ==> (r :bool)``:
+   term
+> val it =
+   ``(p :bool) /\ (q :bool) ==> (r :bool)``:
+   term
+> val it =
+   ``(p :bool) ==> (q :bool) ==> (r :bool)``:
+   term
+> 
+*** Emacs/HOL command completed ***
+
+> 
+Process HOL killed

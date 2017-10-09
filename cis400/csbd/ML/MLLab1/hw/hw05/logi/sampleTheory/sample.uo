@@ -1,0 +1,7 @@
+$(HOLDIR)/sigobj/HolKernel
+$(HOLDIR)/sigobj/Overlay
+$(HOLDIR)/sigobj/Parse
+$(HOLDIR)/sigobj/boolLib
+$(HOLDIR)/sigobj/bossLib
+/home/csbd/Documents/COURSES/csbd/ML/MLLab1/hw/hw05/logi/sampleTheory/sample
+/home/csbd/Documents/COURSES/csbd/ML/MLLab1/hw/hw05/logi/sampleTheory/sample.sml

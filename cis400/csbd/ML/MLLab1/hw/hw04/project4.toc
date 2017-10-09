@@ -1,0 +1,23 @@
+\contentsline {chapter}{\numberline {1}Executive Summary}{3}{chapter.1}
+\contentsline {chapter}{\numberline {2}Exercise 6.2.1}{4}{chapter.2}
+\contentsline {section}{\numberline {2.1}Problem Statement}{4}{section.2.1}
+\contentsline {section}{\numberline {2.2}Relevent Code}{4}{section.2.2}
+\contentsline {section}{\numberline {2.3}Execution Transcripts}{5}{section.2.3}
+\contentsline {subsection}{\numberline {2.3.1}Explain of results}{5}{subsection.2.3.1}
+\contentsline {chapter}{\numberline {3}Exercise 7.3.1}{7}{chapter.3}
+\contentsline {section}{\numberline {3.1}Problem Statement}{7}{section.3.1}
+\contentsline {section}{\numberline {3.2}Relevent Code}{7}{section.3.2}
+\contentsline {section}{\numberline {3.3}Test Cases}{7}{section.3.3}
+\contentsline {section}{\numberline {3.4}Execution Transcripts}{7}{section.3.4}
+\contentsline {chapter}{\numberline {4}Exercise 7.3.2}{8}{chapter.4}
+\contentsline {section}{\numberline {4.1}Problem Statement}{8}{section.4.1}
+\contentsline {section}{\numberline {4.2}Relevent Code}{8}{section.4.2}
+\contentsline {section}{\numberline {4.3}Execution Transcripts}{8}{section.4.3}
+\contentsline {chapter}{\numberline {5}Exercise 7.3.3}{10}{chapter.5}
+\contentsline {section}{\numberline {5.1}Problem Statement}{10}{section.5.1}
+\contentsline {section}{\numberline {5.2}Relevent Code}{10}{section.5.2}
+\contentsline {section}{\numberline {5.3}Execution Transcripts}{10}{section.5.3}
+\contentsline {chapter}{\numberline {6}Appendix A: source code for 6.2.1}{11}{chapter.6}
+\contentsline {chapter}{\numberline {7}Appendix B: source code for 7.3.1}{12}{chapter.7}
+\contentsline {chapter}{\numberline {8}Appendix C: source code for 7.3.2}{13}{chapter.8}
+\contentsline {chapter}{\numberline {9}Appendix D: source code for 7.3.3}{14}{chapter.9}
