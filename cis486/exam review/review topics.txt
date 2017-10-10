@@ -1,0 +1,25 @@
+1. interrupt handling:
+ 1. hardware stacks program counter,etc
+ 2. hardware loads new program counter from interrupt vector.
+ 3. assembly language procedure saves registers
+ 4. assembly language procedure sets up new stack
+ 5. C interrupt serviceruns (typically reads and buffers input).
+ 6. Scheduler decide swhich process is to run next
+ 7. C procedure returns to the assembly code
+ 8. Assembly language procedure starts up new current process.
+
+2. look at hw1, lab1-3
+
+3. fork implementation
+
+4. address space, 4 elements of an address space
+
+5. process life cycle: process state diagram
+
+6. the thread model chart
+
+7. the user level thread is in app.
+   the kernel level thread is in kernel.
+   
+   
+
