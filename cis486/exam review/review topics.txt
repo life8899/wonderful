@@ -20,6 +20,31 @@
 
 7. the user level thread is in app.
    the kernel level thread is in kernel.
-   
-   
+
+8.  3 benefits of user level thread:
+user has more control over schedule
+
+
+downside: blcoking system call
+
+hybrid thread
+
+9 schedule algorithms
+
+10 multi level feedback queue
+
+hw2
+1.
+state hungery means you want to take forks.
+the test function checks
+after take forks we check I is really hungery
+
+2. starvation
+
+3. readers writers problem (wikipedia)
+
+4. he will post the slides to the solution
+
+
+
 
