@@ -1,0 +1,37 @@
+
+---------------------------------------------------------------------
+       HOL-4 [Kananaskis 11 (stdknl, built Sat Aug 19 09:30:06 2017)]
+
+       For introductory HOL help, type: help "hol";
+       To exit type <Control>-D
+---------------------------------------------------------------------
+> > > > *** Globals.show_types_verbosely now true ***
+> *** Globals.show_types_verbosely now false ***
+> # # # # # # # # # ** types trace now on
+> # # # # # # # # # ** Unicode trace now off
+> *** Globals.show_assums now true ***
+> # # # # # # val absorptionRule =
+    [] |- !(p :bool) (q :bool). (p ==> q) ==> p ==> p /\ q:
+   thm
+> # # # # # # # # # # val constructiveDilemmaRule =
+    []
+|- !(p :bool) (q :bool) (r :bool) (s :bool).
+     (p ==> q) /\ (r ==> s) ==> p \/ r ==> q \/ s:
+   thm
+> # # # # Meson search level: ................
+val absorptionRule2 =
+    []
+|- !(p :bool) (q :bool) (r :bool) (s :bool).
+     (p ==> q) /\ (r ==> s) ==> p \/ r ==> q \/ s:
+   thm
+> > > > > # # # # Meson search level: ................
+val constructiveDilemmaRule2 =
+    []
+|- !(p :bool) (q :bool) (r :bool) (s :bool).
+     (p ==> q) /\ (r ==> s) ==> p \/ r ==> q \/ s:
+   thm
+> 
+*** Emacs/HOL command completed ***
+
+> 
+Process HOL killed

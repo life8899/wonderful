@@ -1,4 +1,0 @@
-(* Xiaozhi Li *)
-(* exercise 9.5.1 *)
-
-(* !p q. (p => q) => p => p/\q  *)
