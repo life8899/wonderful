@@ -1,0 +1,30 @@
+
+this is a instruction file on how I am gona study for 486.
+
+operating system is a very important  category in computer science, under standing it is crucial for "system-oriented thinking" or "computational thinking".
+
+486 is difficult because there are many concepts going on and I have very little time for it.
+
+
+the way I want it to be studied:
+
+there is a operating system course on udacity, watch that.
+
+Jae-oh wrote a very good book (aka the text book), read that.
+
+there are 486 labs, I generally found them very difficult to follow, but with some amount of help it can be managed to finish.
+
+problems:
+I do not have enough time to do everything, mainly because cis 400 requires a lot of time, and 477 and 486 both need some seriousness.
+
+453 is not that important ( product management and system spec is very close to common sense in cs) but there seem to be a lot of ambiguousness in it.
+
+I want to do side projects and play video games and do physical exercise, human limitation of time.
+
+solution:
+I should fetch the most knowledge in shortest time.
+The best way to do this, due my experience, is to read the problems, study with questions in mind.
+or do a project, a project gives a 360 degree understanding of a certain topic, but it can consume more time if I get stuck in the middle. (if I work with others it will shorten the time of stucking).
+
+Conclusion: get the fuck on udacity and read some books, while search OS problems and study with those problems in mind.
+Try a little project thing with friends, and pivot the fuck out if it doesn;t work
