@@ -1,0 +1,63 @@
+Xiaozhi Li
+lab 04
+cis 486
+
+(1)  What address space segments are loaded from the ex-
+ecutable JNachos?  Take a look at the AddrSpace con-
+structor.
+The code and data segments.
+
+(2)  What segments contribute to the overall size of an ad-
+dress space?
+int size = noffH.code.size + noffH.initData.size + noffH.uninitData.size + UserStackSize;
+code size, initialized ata size, uninitData size, and userstack size.
+
+3)  Which segments are created in AddrSpace constructor
+but are not loaded from the file?  Hypothesize as to why
+this is.
+line 47:
+uninitData segment
+these are created dynamically
+
+(4)  What does the class NoffHeader tell us about the exe-
+cutable?
+noff is a header for the Executable files, tells what the file structure look like:
+NoffHeader tell us about 3 segments:code initData uninitData
+
+(5)  Read  the  TranslationEntry  class.   Based  on  the  Ad-
+drSpace  constructor  code  what  can  we  say  about  the
+relationship between the virtual address in JNachos and
+the physical page in JNachos in our current version?
+The virtual address is translated identically to physical address.
+(0 to 0, 1 to 1, etc)
+
+(6)  What  does  this  relationship  suggest  about  the  total
+number of processes that can be concurrently run within
+JNachos?
+This means that we can only run one process at a time. In case we want to run a second program
+ because starting from physical adress 0 there exists another process, we have to save that process before we
+ run the second one.
+
+(7)  Run the new JNachos download with the following run
+configuration:
+-x test/matmult
+Record what you see as the output for x
+7220
+“Current Process test/matmult exiting with code
+7220
+”
+
+8)  Now change the runtime configuration to:
+-x test/matmult,test/sort
+and re-run (it takes a minute or two to complete). Record
+what you see for X and Y below:
+“Current Process test/matmult exiting with code
+1022
+”
+
+“Current Process test/sort exiting with code
+1022
+”
+Can you explain what the output changed for matmult?
+
+changed from 7220 to 1022
