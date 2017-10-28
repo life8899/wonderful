@@ -1,0 +1,31 @@
+\newcommand{\HOLexTypeDate}{26 October 2017}
+\newcommand{\HOLexTypeTime}{16:40}
+\begin{SaveVerbatim}{HOLexTypeDefinitionsAPPXXdef}
+\HOLTokenTurnstile{} (\HOLSymConst{\HOLTokenForall{}}\HOLBoundVar{l}. \HOLConst{APP} [] \HOLBoundVar{l} \HOLSymConst{=} \HOLBoundVar{l}) \HOLSymConst{\HOLTokenConj{}} \HOLSymConst{\HOLTokenForall{}}\HOLBoundVar{h} \HOLBoundVar{l\sb{\mathrm{1}}} \HOLBoundVar{l\sb{\mathrm{2}}}. \HOLConst{APP} (\HOLBoundVar{h}\HOLSymConst{::}\HOLBoundVar{l\sb{\mathrm{1}}}) \HOLBoundVar{l\sb{\mathrm{2}}} \HOLSymConst{=} \HOLBoundVar{h}\HOLSymConst{::}\HOLConst{APP} \HOLBoundVar{l\sb{\mathrm{1}}} \HOLBoundVar{l\sb{\mathrm{2}}}
+\end{SaveVerbatim}
+\newcommand{\HOLexTypeDefinitionsAPPXXdef}{\UseVerbatim{HOLexTypeDefinitionsAPPXXdef}}
+\newcommand{\HOLexTypeDefinitions}{
+\HOLDfnTag{exType}{APP_def}\HOLexTypeDefinitionsAPPXXdef
+}
+\begin{SaveVerbatim}{HOLexTypeTheoremsAPPXXASSOC}
+\HOLTokenTurnstile{} \HOLSymConst{\HOLTokenForall{}}\HOLBoundVar{l\sb{\mathrm{1}}} \HOLBoundVar{l\sb{\mathrm{2}}} \HOLBoundVar{l\sb{\mathrm{3}}}. \HOLConst{APP} (\HOLConst{APP} \HOLBoundVar{l\sb{\mathrm{1}}} \HOLBoundVar{l\sb{\mathrm{2}}}) \HOLBoundVar{l\sb{\mathrm{3}}} \HOLSymConst{=} \HOLConst{APP} \HOLBoundVar{l\sb{\mathrm{1}}} (\HOLConst{APP} \HOLBoundVar{l\sb{\mathrm{2}}} \HOLBoundVar{l\sb{\mathrm{3}}})
+\end{SaveVerbatim}
+\newcommand{\HOLexTypeTheoremsAPPXXASSOC}{\UseVerbatim{HOLexTypeTheoremsAPPXXASSOC}}
+\begin{SaveVerbatim}{HOLexTypeTheoremsLENGTHXXAPPXXdef}
+\HOLTokenTurnstile{} (\HOLConst{LENGTH_APP} [] [] \HOLSymConst{=} \HOLNumLit{0}) \HOLSymConst{\HOLTokenConj{}}
+   (\HOLConst{LENGTH_APP} [] (\HOLFreeVar{v\sb{\mathrm{6}}}\HOLSymConst{::}\HOLFreeVar{v\sb{\mathrm{7}}}) \HOLSymConst{=} \HOLConst{LENGTH} (\HOLConst{APP} [] (\HOLFreeVar{v\sb{\mathrm{6}}}\HOLSymConst{::}\HOLFreeVar{v\sb{\mathrm{7}}}))) \HOLSymConst{\HOLTokenConj{}}
+   (\HOLConst{LENGTH_APP} (\HOLFreeVar{v\sb{\mathrm{2}}}\HOLSymConst{::}\HOLFreeVar{v\sb{\mathrm{3}}}) \HOLFreeVar{l\sb{\mathrm{2}}} \HOLSymConst{=} \HOLConst{LENGTH} (\HOLConst{APP} (\HOLFreeVar{v\sb{\mathrm{2}}}\HOLSymConst{::}\HOLFreeVar{v\sb{\mathrm{3}}}) \HOLFreeVar{l\sb{\mathrm{2}}}))
+\end{SaveVerbatim}
+\newcommand{\HOLexTypeTheoremsLENGTHXXAPPXXdef}{\UseVerbatim{HOLexTypeTheoremsLENGTHXXAPPXXdef}}
+\begin{SaveVerbatim}{HOLexTypeTheoremsLENGTHXXAPPXXind}
+\HOLTokenTurnstile{} \HOLSymConst{\HOLTokenForall{}}\HOLBoundVar{P}.
+     \HOLBoundVar{P} [] [] \HOLSymConst{\HOLTokenConj{}} (\HOLSymConst{\HOLTokenForall{}}\HOLBoundVar{v\sb{\mathrm{6}}} \HOLBoundVar{v\sb{\mathrm{7}}}. \HOLBoundVar{P} [] (\HOLBoundVar{v\sb{\mathrm{6}}}\HOLSymConst{::}\HOLBoundVar{v\sb{\mathrm{7}}})) \HOLSymConst{\HOLTokenConj{}}
+     (\HOLSymConst{\HOLTokenForall{}}\HOLBoundVar{v\sb{\mathrm{2}}} \HOLBoundVar{v\sb{\mathrm{3}}} \HOLBoundVar{l\sb{\mathrm{2}}}. \HOLBoundVar{P} (\HOLBoundVar{v\sb{\mathrm{2}}}\HOLSymConst{::}\HOLBoundVar{v\sb{\mathrm{3}}}) \HOLBoundVar{l\sb{\mathrm{2}}}) \HOLSymConst{\HOLTokenImp{}}
+     \HOLSymConst{\HOLTokenForall{}}\HOLBoundVar{v} \HOLBoundVar{v\sb{\mathrm{1}}}. \HOLBoundVar{P} \HOLBoundVar{v} \HOLBoundVar{v\sb{\mathrm{1}}}
+\end{SaveVerbatim}
+\newcommand{\HOLexTypeTheoremsLENGTHXXAPPXXind}{\UseVerbatim{HOLexTypeTheoremsLENGTHXXAPPXXind}}
+\newcommand{\HOLexTypeTheorems}{
+\HOLThmTag{exType}{APP_ASSOC}\HOLexTypeTheoremsAPPXXASSOC
+\HOLThmTag{exType}{LENGTH_APP_def}\HOLexTypeTheoremsLENGTHXXAPPXXdef
+\HOLThmTag{exType}{LENGTH_APP_ind}\HOLexTypeTheoremsLENGTHXXAPPXXind
+}

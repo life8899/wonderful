@@ -1,0 +1,6 @@
+$(HOLDIR)/sigobj/Overlay
+$(HOLDIR)/sigobj/Thm
+$(HOLDIR)/sigobj/term_grammar
+$(HOLDIR)/sigobj/type_grammar
+/home/csbd/Documents/COURSES/github/wonderful/cis400/csbd/ML/MLLab1/hw/hw06/project06/HOL/exercise9Theory
+/home/csbd/Documents/COURSES/github/wonderful/cis400/csbd/ML/MLLab1/hw/hw06/project06/HOL/exercise9Theory.sig

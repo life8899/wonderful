@@ -1,0 +1,374 @@
+%% ---------------------------------------------------
+%% CIS 400 project 6
+%% this is the work of Xiaozhi Li for class CIS 400 CSBD
+%% this file is writen under the guidence of the course, which is taught
+%% by Professor Shiu-Kai Chin
+
+%% 2017/10/12
+%% ---------------------------------------------------
+\documentclass{report}
+\title{Report for Project5}
+\author{\textbf{Xiaozhi Li}}
+\date{\today}
+
+
+
+%% Formats:
+%% ---------------------------------------------------
+%% 634format specifies the format of our reports
+%% ---------------------------------------------------
+\usepackage{634format}
+
+%% ---------------------------------------------------
+%% enumerate
+%% ---------------------------------------------------
+\usepackage{enumerate}
+
+%% ---------------------------------------------------
+%% listings is used for including our source code in reports
+%% ---------------------------------------------------
+\usepackage{listings}
+\usepackage{textcomp}
+
+%% ---------------------------------------------------
+%% Packages for math environments
+%% ---------------------------------------------------
+\usepackage{amsmath}
+
+%% ---------------------------------------------------
+%% Packages for URLs and hotlinks in the table of contents
+%% and symbolic cross references using \ref
+%% ---------------------------------------------------
+\usepackage{hyperref}
+
+%% ---------------------------------------------------
+%% Packages for using HOL-generated macros and displays
+%% ---------------------------------------------------
+%% end of formats
+
+\usepackage{holtex}
+\usepackage{holtexbasic}
+\input{commands}
+\input{../HOL/HOLReports/HOLexerciseNine}
+\input{../HOL/HOLReports/HOLexerciseOneZero}
+
+
+\begin{document}
+%% --------------------------------------------------- the listings
+%% parameter "language" is set to "ML"
+%% ---------------------------------------------------
+\lstset{language=ML}
+
+
+\maketitle{}
+
+\begin{abstract}
+  Project 6 using \LaTeX{}. In this project we will use EmitTeX to generate the HOL reports. All HOL source files are included in the HOL folder.
+ \end{abstract}
+
+\begin{acknowledgments}
+ This report follows the hand book Certified Security by Design Using Higer Order Logic, and course instructions from CIS400-CSBD.
+\end{acknowledgments}
+
+
+%% ---------------------------------------------------
+%% table of contents
+%% ---------------------------------------------------
+\tableofcontents{}
+
+\chapter{Executive Summary}
+
+
+\textbf{Not all requirements for this project are satisfied}.
+Specifically, we utilized HOL to prove the following theorems:
+\begin{quote}
+\HOLexerciseNineTheorems
+\HOLexerciseOneZeroTheorems
+\end{quote}
+
+%%----
+%%
+%%      THIS IS IMPORTANT
+%%------
+Exercise 10.4.3 was not included in this project.
+
+
+
+\chapter{Exercise 9.5.1}
+\label{ex 951}
+%% ---------------------------------------------------
+%% problem statement
+%% ---------------------------------------------------
+
+\section{Problem Statement}
+
+Our task is to prove the theorem
+\HOLexerciseNineTheoremsabsorptionRule
+
+\section{HOL Code}
+\label{HOl Code 841}
+
+\begin{lstlisting}[frame=trBL]
+(* 9-5-1 *)
+val absorptionRule=
+
+TAC_PROOF (
+([],``!p q. (p ==> q) ==> p ==> p/\q``),
+(REPEAT STRIP_TAC THEN
+ASM_REWRITE_TAC [] THEN
+RES_TAC) );
+
+val _=save_thm("absorptionRule",absorptionRule);
+val _=export_theory();
+\end{lstlisting}
+
+\section{Session Transcript}
+\label{Session Trans1}
+
+\setcounter{sessioncount}{0}
+\begin{session}
+  \begin{scriptsize}
+\begin{verbatim}
+
+> # # # # # # val absorptionRule =
+    [] |- !(p :bool) (q :bool). (p ==> q) ==> p ==> p /\ q:
+   thm
+\end{verbatim}
+  \end{scriptsize}
+\end{session}
+
+%% Explain the Result, should it be nessesary
+\section{Explain Result}
+\label{eplain re 951}
+Hol is showing our theorem with no type errors, this means our tests have passed.
+
+%-----------------------
+% 8 4 2
+
+\chapter{Exercise 9.5.2}
+\label{ex 952}
+
+\section{Problem Statement}
+\label{problem state 952}
+For 9.5.2 we need to prove the therom:
+\HOLexerciseNineTheoremsconstructiveDilemmaRule
+
+\section{HOL Code}
+\label{HOl Code 952}
+
+\begin{lstlisting}[frame=trBL]
+val constructiveDilemmaRule=
+
+ TAC_PROOF (
+([], ``!p q r s.(p ==> q) /\ (r ==> s) ==> (p\/r) ==> (q\/s)``),
+REPEAT STRIP_TAC THEN
+ASM_REWRITE_TAC [] THEN
+RES_TAC THEN
+ASM_REWRITE_TAC [] THEN
+RES_TAC THEN
+ASM_REWRITE_TAC []
+);
+
+\end{lstlisting}
+
+\section{Session Transcript}
+\label{Session Trans 952}
+\setcounter{sessioncount}{0}
+\begin{session}
+  \begin{scriptsize}
+\begin{verbatim}
+
+> # # # # # # # # # # val constructiveDilemmaRule =
+    []
+|- !(p :bool) (q :bool) (r :bool) (s :bool).
+     (p ==> q) /\ (r ==> s) ==> p \/ r ==> q \/ s:
+   thm
+
+\end{verbatim}
+  \end{scriptsize}
+\end{session}
+\section{Explain Result}
+\label{explain result 952}
+In 9.5.2, all of our theorem and theory have passed by HOL.
+
+
+% 8 4 3
+\chapter{Excersice 9.5.3}
+\label{Ex 953}
+\section{Problem Statement}
+\label{Problem State 953}
+For 9.5.3 we need to prove the therom:
+\HOLexerciseNineTheoremsabsorptionRule
+\HOLexerciseNineTheoremsconstructiveDilemmaRule
+
+using PROVE_TAC .
+
+\section{HOL Code}
+\label{HOl Code 953}
+In 9.5.3, our relative HOL code is:
+\begin{lstlisting}[frame=trBL]
+(* 9-5-3 *)
+
+val absorptionRule2=
+ TAC_PROOF (
+([], ``!p q r s.(p ==> q) /\ (r ==> s) ==> (p\/r) ==> (q\/s)``),
+PROVE_TAC []
+);
+
+val _=save_thm("absorptionRule2",absorptionRule2);
+
+
+val constructiveDilemmaRule2=
+ TAC_PROOF (
+([],``!p q r s.(p ==> q) /\ (r ==> s) ==> (p\/r) ==> (q\/s)``),
+PROVE_TAC []
+);
+\end{lstlisting}
+
+\section{Session Transcript}
+\label{Session Trans 953}
+\setcounter{sessioncount}{0}
+\begin{session}
+  \begin{scriptsize}
+\begin{verbatim}
+
+> # # # # Meson search level: ................
+val absorptionRule2 =
+    []
+|- !(p :bool) (q :bool) (r :bool) (s :bool).
+     (p ==> q) /\ (r ==> s) ==> p \/ r ==> q \/ s:
+   thm
+> > > > > # # # # Meson search level: ................
+val constructiveDilemmaRule2 =
+    []
+|- !(p :bool) (q :bool) (r :bool) (s :bool).
+     (p ==> q) /\ (r ==> s) ==> p \/ r ==> q \/ s:
+   thm
+>
+\end{verbatim}
+  \end{scriptsize}
+\end{session}
+\section{Explain Result}
+\label{explain result 953}
+All tests from 9.5.3 have been passed in HOL.
+
+\chapter{Exercise 9.5.2}
+\label{ex 952}
+
+\section{Problem Statement}
+\label{problem state 952}
+For 9.5.2 we need to prove the therom:
+\HOLexerciseNineTheoremsconstructiveDilemmaRule
+
+\section{HOL Code}
+\label{HOl Code 952}
+
+\begin{lstlisting}[frame=trBL]
+val constructiveDilemmaRule=
+
+ TAC_PROOF (
+([], ``!p q r s.(p ==> q) /\ (r ==> s) ==> (p\/r) ==> (q\/s)``),
+REPEAT STRIP_TAC THEN
+ASM_REWRITE_TAC [] THEN
+RES_TAC THEN
+ASM_REWRITE_TAC [] THEN
+RES_TAC THEN
+ASM_REWRITE_TAC []
+);
+
+\end{lstlisting}
+
+\section{Session Transcript}
+\label{Session Trans 952}
+\setcounter{sessioncount}{0}
+\begin{session}
+  \begin{scriptsize}
+\begin{verbatim}
+
+> # # # # # # # # # # val constructiveDilemmaRule =
+    []
+|- !(p :bool) (q :bool) (r :bool) (s :bool).
+     (p ==> q) /\ (r ==> s) ==> p \/ r ==> q \/ s:
+   thm
+
+\end{verbatim}
+  \end{scriptsize}
+\end{session}
+\section{Explain Result}
+\label{explain result 952}
+In 9.5.2, all of our theorem and theory have passed by HOL.
+
+
+% 8 4 3
+\chapter{Excersice 10.4.1}
+\label{Ex 1041}
+\section{Problem Statement}
+\label{Problem State 1041}
+For 10.4.1 we need to prove the therom:
+\HOLexerciseOneZeroTheoremsproblem1thm
+\HOLexerciseOneZeroTheoremsproblem2thm
+
+using PROVE_TAC .
+
+\section{HOL Code}
+\label{HOl Code 953}
+In 9.5.3, our relative HOL code is:
+\begin{lstlisting}[frame=trBL]
+(* 9-5-3 *)
+
+val absorptionRule2=
+ TAC_PROOF (
+([], ``!p q r s.(p ==> q) /\ (r ==> s) ==> (p\/r) ==> (q\/s)``),
+PROVE_TAC []
+);
+
+val _=save_thm("absorptionRule2",absorptionRule2);
+
+
+val constructiveDilemmaRule2=
+ TAC_PROOF (
+([],``!p q r s.(p ==> q) /\ (r ==> s) ==> (p\/r) ==> (q\/s)``),
+PROVE_TAC []
+);
+\end{lstlisting}
+
+\section{Session Transcript}
+\label{Session Trans 953}
+\setcounter{sessioncount}{0}
+\begin{session}
+  \begin{scriptsize}
+\begin{verbatim}
+
+> # # # # Meson search level: ................
+val absorptionRule2 =
+    []
+|- !(p :bool) (q :bool) (r :bool) (s :bool).
+     (p ==> q) /\ (r ==> s) ==> p \/ r ==> q \/ s:
+   thm
+> > > > > # # # # Meson search level: ................
+val constructiveDilemmaRule2 =
+    []
+|- !(p :bool) (q :bool) (r :bool) (s :bool).
+     (p ==> q) /\ (r ==> s) ==> p \/ r ==> q \/ s:
+   thm
+>
+\end{verbatim}
+  \end{scriptsize}
+\end{session}
+\section{Explain Result}
+\label{explain result 953}
+All tests from 9.5.3 have been passed in HOL
+
+
+% Appendix:
+
+\chapter{Appendix A: source code for 8.4.1, 8.4.2, and 8.4.3}
+\label{cha:appendix-a:-source}
+
+
+The following code is from \emph{proj5Script.sml}
+%\lstinputlisting{../HOL/proj5Script.sml}
+
+
+
+\end{document}

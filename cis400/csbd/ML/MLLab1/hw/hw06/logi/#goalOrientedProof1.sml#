@@ -14,6 +14,7 @@ val th1 = ASSUME``A:bool``
 val th2 = ASSUME``B:bool``
 CONJ th1 th2;
 
+
 (* -------------------------------------------------------------------------- *)
 (* Recall that the CONJ inference rule, which is given in the HOL documenation*)
 (* is      A1 |- t1         A2 |- t2                                          *)

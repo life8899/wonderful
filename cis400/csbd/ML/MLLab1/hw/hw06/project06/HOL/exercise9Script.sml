@@ -1,6 +1,5 @@
-(******************************************************************************)
-(* Author: Xiaozhi Li                                                      *)
-(*Proj 6                 **)
+(* Author: Xiaozhi Li *)
+(*Project 6**)
 
 structure exercise9Script =struct
 
@@ -8,13 +7,9 @@ open HolKernel Parse boolLib bossLib;
 
 val _=new_theory "exercise9";
 
-
 (* 9-5-1 *)
 
-
-
 val absorptionRule=
-
 TAC_PROOF (
 ([],``!p q. (p ==> q) ==> p ==> p/\q``),
 (REPEAT STRIP_TAC THEN
@@ -24,11 +19,8 @@ RES_TAC) );
 val _=save_thm("absorptionRule",absorptionRule);
 val _=export_theory();
 
-
 (* 9-5-2 *)
-
-val constructiveDilemmaRule=
-
+val constructiveDilemmaRule =
  TAC_PROOF (
 ([], ``!p q r s.(p ==> q) /\ (r ==> s) ==> (p\/r) ==> (q\/s)``),
 REPEAT STRIP_TAC THEN
@@ -51,8 +43,6 @@ PROVE_TAC []
 );
 
 val _=save_thm("absorptionRule2",absorptionRule2);
-
-
 val constructiveDilemmaRule2=
  TAC_PROOF (
 ([],``!p q r s.(p ==> q) /\ (r ==> s) ==> (p\/r) ==> (q\/s)``),
