@@ -81,7 +81,7 @@ in
  DISCH(hd(hyp th1)) th5
 end;
 
-val _=save_thm("aclExerciseOne",aclExercise1)
+val _=save_thm("aclExercise1",aclExercise1)
 
 
 
@@ -100,7 +100,7 @@ val aclExercise1A= TAC_PROOF(([],
 PROVE_TAC[Conjunction,And_Says_Eq])
 
 
-val _ = save_thm("aclExerciseOneA",aclExercise1A)
+val _ = save_thm("aclExercise1A",aclExercise1A)
 
 (* part C *)
 val aclExercise2B=
@@ -116,7 +116,7 @@ TAC_PROOF(([],
 PROVE_TAC[] THEN
 PROVE_TAC[])
 
-val _ = save_thm("aclExerciseTwoB", aclExercise2B)
+val _ = save_thm("aclExercise2B", aclExercise2B)
 (*Holmake has no problem*)
 
 
@@ -159,13 +159,13 @@ Name Alice says (prop go) ==>
 ,
 PROVE_TAC[Controls, Modus_Ponens,Says])
 
-val _= save_thm("aclExerciseTwoA",aclExercise2A)
+val _= save_thm("aclExercise2A",aclExercise2A)
 
 (* Holmake succeed *)
 
 (* Part C *)
 
-(* start===========================
+(* These are unfinished work==========
 val term1=``((Name Alice) says (prop go)):(commands,staff,'d,'e)Form``;
 val term2=``((Name Alice) controls (prop go)):(commands,staff,'d,'e)Form``;
 val term3=``((prop go) impf (prop launch)):(commands,staff,'d,'e)Form``;
@@ -174,27 +174,58 @@ val thm1 = ACL_ASSUM term1
 val thm2 = ACL_ASSUM term2
 val thm3 = ACL_ASSUM term3
 
-
-val aclExercise2C=
+val aclExercise2B=
 TAC_PROOF(([],
 ``((M :(commands, 'b, staff, 'd, 'e) Kripke),(Oi :'d po),(Os :'e po)) sat
 Name Alice says (prop go) ==>
 (M,Oi,Os) sat Name Alice controls (prop go) ==>
 (M,Oi,Os) sat (prop go) impf (prop launch) ==>
-(M,Oi,Os) sat Name Bob says (prop launch)``)
+(M,Oi,Os) sat Name Bob says (prop launch)``))
 ,
-REPEAT STRIP_TAC
-ACL_SAYS_TAC
+REPEAT STRIP_TAC  THEN
+ACL_SAYS_TAC 
+
+try it :
+
+val bob1=``((Name Bob) says (prop launch)):(commands,staff,'d,'e)Form``;
+val bob2=``((Name Bob) controls (prop launch)):(commands,staff,'d,'e)Form``;
+val launch=``((prop launch)):(commands,staff,'d,'e)Form``;
+
+TAC_PROOF(([],
+``((M :(commands, 'b, staff, 'd, 'e) Kripke),(Oi :'d po),(Os :'e po)) sat
+(Name Bob) says (prop launch) ==>
+(M,Oi,Os) sat(Name Bob) controls (prop launch) ==>
+(M,Oi,Os) sat(prop launch)``
+REPEAT STRIP_TAC  THEN
+
+ACL_CONTROLS_TAC
+PAT_ASSUM
+``(M,Oi,Os) sat Name Bob says prop launch``
+(fn th1 =>??
 
 
+PAT_ASSUM
+``(M,Oi,Os) sat (prop go) impf (prop launch)``
+(fn th1 =>
+ (PAT_ASSUM
+  ``(M,Oi,Os) sat ((prop go))``
+  (fn th2 => ASSUME_TAC(Modus_Ponens th1))))
+
+PAT_ASSUM
+``(M,Oi,Os) sat (Name Alice speaks_for Name Bob)``
+(fn th1 =>
+ (PAT_ASSUM
+  ``(M,Oi,Os) sat (Name Alice says (prop go))``
+  (fn th2 => ASSUME_TAC(SPEAKS_FOR th1 th2)))) THEN
+ASM_REWRITE_TAC[])
+
+
+ACL_ASSUM_TAC
+REWRITE_RULE[](Controls_Eq,term2)
+ACL_MP_TAC (Modus_Ponens,term3)
 
 ============================end*)
 
-(*
-
-ASSUME_TAC  (REWRITE_RULE [] (CONTROLS thm2 thm1) )
-
-*)
 
 
 (*******************************)

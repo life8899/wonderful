@@ -1,0 +1,27 @@
+(***************************************************)
+(* CIS 400:CSBD : solutions2Script.sml *)
+(* Xiaozhi Li                              *)
+(* Date: 29 October 2017                           *)
+(* Acknowledgement: solutions were given on conops0SolutionsScript.sml, which was created by
+ Prof. Shiu-Kai Chin *)
+(***************************************************)
+
+(* Interactive mode: these are theories that are in the ACL  *)
+(* subdirectory pointed to in the Holmakefile file. The file *)
+(* acl_infRules contains the ML functions that are the       *)
+(* inference rules in the access control logic.              *)
+
+(* only necessary when working interactively
+app load ["acl_infRules","aclrulesTheory","aclDrulesTheory","conops0SolutionTheory"];
+open acl_infRules aclrulesTheory aclDrulesTheory conops0SolutionTheory
+*)
+
+(* The following structure is similar to the module command in Haskell *)
+structure conops0SolutionScript = struct
+
+open HolKernel boolLib Parse bossLib (* used by Holmake, not in interactive  *)
+open acl_infRules aclrulesTheory aclDrulesTheory (* used by Holmake and interactive mode *)
+
+(***********
+* create a new theory
+***********)

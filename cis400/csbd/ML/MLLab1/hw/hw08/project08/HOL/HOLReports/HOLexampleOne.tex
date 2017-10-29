@@ -1,0 +1,48 @@
+\newcommand{\HOLexampleOneDate}{29 October 2017}
+\newcommand{\HOLexampleOneTime}{19:07}
+\begin{SaveVerbatim}{HOLexampleOneDatatypescommands}
+\HOLFreeVar{commands} = \HOLConst{go} \HOLTokenBar{} \HOLConst{nogo} \HOLTokenBar{} \HOLConst{launch} \HOLTokenBar{} \HOLConst{abort}
+\end{SaveVerbatim}
+\newcommand{\HOLexampleOneDatatypescommands}{\UseVerbatim{HOLexampleOneDatatypescommands}}
+\begin{SaveVerbatim}{HOLexampleOneDatatypesstaff}
+\HOLFreeVar{staff} = \HOLConst{Alice} \HOLTokenBar{} \HOLConst{Bob} \HOLTokenBar{} \HOLConst{Carol} \HOLTokenBar{} \HOLConst{Dan}
+\end{SaveVerbatim}
+\newcommand{\HOLexampleOneDatatypesstaff}{\UseVerbatim{HOLexampleOneDatatypesstaff}}
+\newcommand{\HOLexampleOneDatatypes}{
+\HOLexampleOneDatatypescommands\HOLexampleOneDatatypesstaff}
+\begin{SaveVerbatim}{HOLexampleOneTheoremsaclExerciseOne}
+\HOLTokenTurnstile{} (\HOLFreeVar{M}\HOLSymConst{,}\HOLFreeVar{Oi}\HOLSymConst{,}\HOLFreeVar{Os}) \HOLConst{sat} \HOLConst{Name} \HOLConst{Alice} \HOLConst{says} \HOLConst{prop} \HOLConst{go} \HOLSymConst{\HOLTokenImp{}}
+   (\HOLFreeVar{M}\HOLSymConst{,}\HOLFreeVar{Oi}\HOLSymConst{,}\HOLFreeVar{Os}) \HOLConst{sat} \HOLConst{Name} \HOLConst{Bob} \HOLConst{says} \HOLConst{prop} \HOLConst{go} \HOLSymConst{\HOLTokenImp{}}
+   (\HOLFreeVar{M}\HOLSymConst{,}\HOLFreeVar{Oi}\HOLSymConst{,}\HOLFreeVar{Os}) \HOLConst{sat} \HOLConst{Name} \HOLConst{Alice} \HOLConst{meet} \HOLConst{Name} \HOLConst{Bob} \HOLConst{says} \HOLConst{prop} \HOLConst{go}
+\end{SaveVerbatim}
+\newcommand{\HOLexampleOneTheoremsaclExerciseOne}{\UseVerbatim{HOLexampleOneTheoremsaclExerciseOne}}
+\begin{SaveVerbatim}{HOLexampleOneTheoremsaclExerciseOneA}
+\HOLTokenTurnstile{} (\HOLFreeVar{M}\HOLSymConst{,}\HOLFreeVar{Oi}\HOLSymConst{,}\HOLFreeVar{Os}) \HOLConst{sat} \HOLConst{Name} \HOLConst{Alice} \HOLConst{says} \HOLConst{prop} \HOLConst{go} \HOLSymConst{\HOLTokenImp{}}
+   (\HOLFreeVar{M}\HOLSymConst{,}\HOLFreeVar{Oi}\HOLSymConst{,}\HOLFreeVar{Os}) \HOLConst{sat} \HOLConst{Name} \HOLConst{Bob} \HOLConst{says} \HOLConst{prop} \HOLConst{go} \HOLSymConst{\HOLTokenImp{}}
+   (\HOLFreeVar{M}\HOLSymConst{,}\HOLFreeVar{Oi}\HOLSymConst{,}\HOLFreeVar{Os}) \HOLConst{sat} \HOLConst{Name} \HOLConst{Alice} \HOLConst{meet} \HOLConst{Name} \HOLConst{Bob} \HOLConst{says} \HOLConst{prop} \HOLConst{go}
+\end{SaveVerbatim}
+\newcommand{\HOLexampleOneTheoremsaclExerciseOneA}{\UseVerbatim{HOLexampleOneTheoremsaclExerciseOneA}}
+\begin{SaveVerbatim}{HOLexampleOneTheoremsaclExerciseTwoA}
+\HOLTokenTurnstile{} (\HOLFreeVar{M}\HOLSymConst{,}\HOLFreeVar{Oi}\HOLSymConst{,}\HOLFreeVar{Os}) \HOLConst{sat} \HOLConst{Name} \HOLConst{Alice} \HOLConst{says} \HOLConst{prop} \HOLConst{go} \HOLSymConst{\HOLTokenImp{}}
+   (\HOLFreeVar{M}\HOLSymConst{,}\HOLFreeVar{Oi}\HOLSymConst{,}\HOLFreeVar{Os}) \HOLConst{sat} \HOLConst{Name} \HOLConst{Alice} \HOLConst{controls} \HOLConst{prop} \HOLConst{go} \HOLSymConst{\HOLTokenImp{}}
+   (\HOLFreeVar{M}\HOLSymConst{,}\HOLFreeVar{Oi}\HOLSymConst{,}\HOLFreeVar{Os}) \HOLConst{sat} \HOLConst{prop} \HOLConst{go} \HOLConst{impf} \HOLConst{prop} \HOLConst{launch} \HOLSymConst{\HOLTokenImp{}}
+   (\HOLFreeVar{M}\HOLSymConst{,}\HOLFreeVar{Oi}\HOLSymConst{,}\HOLFreeVar{Os}) \HOLConst{sat} \HOLConst{Name} \HOLConst{Bob} \HOLConst{says} \HOLConst{prop} \HOLConst{launch}
+\end{SaveVerbatim}
+\newcommand{\HOLexampleOneTheoremsaclExerciseTwoA}{\UseVerbatim{HOLexampleOneTheoremsaclExerciseTwoA}}
+\begin{SaveVerbatim}{HOLexampleOneTheoremsaclExerciseTwoB}
+\HOLTokenTurnstile{} (\HOLFreeVar{M}\HOLSymConst{,}\HOLFreeVar{Oi}\HOLSymConst{,}\HOLFreeVar{Os}) \HOLConst{sat} \HOLConst{Name} \HOLConst{Alice} \HOLConst{says} \HOLConst{prop} \HOLConst{go} \HOLSymConst{\HOLTokenImp{}}
+   (\HOLFreeVar{M}\HOLSymConst{,}\HOLFreeVar{Oi}\HOLSymConst{,}\HOLFreeVar{Os}) \HOLConst{sat} \HOLConst{Name} \HOLConst{Bob} \HOLConst{says} \HOLConst{prop} \HOLConst{go} \HOLSymConst{\HOLTokenImp{}}
+   (\HOLFreeVar{M}\HOLSymConst{,}\HOLFreeVar{Oi}\HOLSymConst{,}\HOLFreeVar{Os}) \HOLConst{sat} \HOLConst{Name} \HOLConst{Alice} \HOLConst{meet} \HOLConst{Name} \HOLConst{Bob} \HOLConst{says} \HOLConst{prop} \HOLConst{go}
+\end{SaveVerbatim}
+\newcommand{\HOLexampleOneTheoremsaclExerciseTwoB}{\UseVerbatim{HOLexampleOneTheoremsaclExerciseTwoB}}
+\begin{SaveVerbatim}{HOLexampleOneTheoremsaclExerciseTwo}
+\HOLTokenTurnstile{} (\HOLFreeVar{M}\HOLSymConst{,}\HOLFreeVar{Oi}\HOLSymConst{,}\HOLFreeVar{Os}) \HOLConst{sat} \HOLConst{Name} \HOLConst{Bob} \HOLConst{says} \HOLConst{prop} \HOLConst{launch}
+\end{SaveVerbatim}
+\newcommand{\HOLexampleOneTheoremsaclExerciseTwo}{\UseVerbatim{HOLexampleOneTheoremsaclExerciseTwo}}
+\newcommand{\HOLexampleOneTheorems}{
+\HOLThmTag{example1}{aclExercise1}\HOLexampleOneTheoremsaclExerciseOne
+\HOLThmTag{example1}{aclExercise1A}\HOLexampleOneTheoremsaclExerciseOneA
+\HOLThmTag{example1}{aclExercise2A}\HOLexampleOneTheoremsaclExerciseTwoA
+\HOLThmTag{example1}{aclExercise2B}\HOLexampleOneTheoremsaclExerciseTwoB
+\HOLThmTag{example1}{aclExerciseTwo}\HOLexampleOneTheoremsaclExerciseTwo
+}
