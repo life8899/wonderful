@@ -10,10 +10,10 @@
 
 app 
  load 
- ["conops0SolutionTheory","example1Theory","EmitTeX"];
+ ["solutions1Theory","conops0SolutionTheory","example1Theory","EmitTeX"];
 
 open EmitTeX;
 
 
 print_theories_as_tex_doc
-["conops0Solution","example1"] "proj08Report";
+["example1","solutions1","conops0Solution"] "proj08Report";
