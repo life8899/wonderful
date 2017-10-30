@@ -86,6 +86,7 @@
 Specifically, we utilized HOL to prove the following theorems:
 \begin{quote}
 \HOLexampleOneTheorems
+\HOLsolutionsOneTheorems
 \HOLconopsZeroSolutionTheorems
 \end{quote}
 
@@ -104,24 +105,11 @@ Exercise 10.4.3 was not included in this project.
 %% ---------------------------------------------------
 
 \section{Problem Statement}
-\HOLexampleOneTheoremsaclExerciseOne
+
 
 \section{HOL Code}
 \label{HOl Code 841}
 
-\begin{lstlisting}[frame=trBL]
-(* 9-5-1 *)
-val absorptionRule=
-
-TAC_PROOF (
-([],``!p q. (p ==> q) ==> p ==> p/\q``),
-(REPEAT STRIP_TAC THEN
-ASM_REWRITE_TAC [] THEN
-RES_TAC) );
-
-val _=save_thm("absorptionRule",absorptionRule);
-val _=export_theory();
-\end{lstlisting}
 
 \section{Session Transcript}
 \label{Session Trans1}
