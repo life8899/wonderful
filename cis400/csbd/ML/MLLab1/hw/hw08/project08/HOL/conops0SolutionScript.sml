@@ -98,7 +98,7 @@ in
  DISCH(hd(hyp th1)) th22
 end;
 
-val _ = save_thm("OpRuleLaunch_thm",OpRuleLaunch_thm)
+val _ = save_thm("OpRuleLaunchXXthm",OpRuleLaunch_thm)
 
 
 (******************************************************************************)
@@ -157,7 +157,7 @@ in
  DISCH(hd(hyp th1)) th21
 end;
 
-val _ = save_thm("OpRuleAbort_thm",OpRuleAbort_thm)
+val _ = save_thm("OpRuleAbortXXthm",OpRuleAbort_thm)
 
 (******************************************************************************)
 (* Proof of ApRuleActivate_thm                                                *)
@@ -189,7 +189,7 @@ in
  DISCH(hd(hyp th1)) th21
 end;
 
-val _ = save_thm("ApRuleActivate_thm",ApRuleActivate_thm)
+val _ = save_thm("ApRuleActivateXXthm",ApRuleActivate_thm)
 
 
 
@@ -223,7 +223,7 @@ in
  DISCH(hd(hyp th1)) th21
 end;
 
-val _ = save_thm("ApRuleStandDown_thm",ApRuleStandDown_thm)
+val _ = save_thm("ApRuleStandDownXXthm",ApRuleStandDown_thm)
 
 (*******************************)
 (* Print and export the theory *)

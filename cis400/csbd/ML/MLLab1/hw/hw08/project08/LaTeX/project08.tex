@@ -50,6 +50,7 @@
 \usepackage{holtexbasic}
 \input{commands}
 \input{../HOL/HOLReports/HOLexampleOne}
+\input{../HOL/HOLReports/HOLsolutionsOne}
 \input{../HOL/HOLReports/HOLconopsZeroSolution}
 
 
@@ -85,9 +86,9 @@
 \textbf{Not all requirements for this project are satisfied}.
 Specifically, we utilized HOL to prove the following theorems:
 \begin{quote}
-\HOLexampleOneTheorems
-\HOLsolutionsOneTheorems
-\HOLconopsZeroSolutionTheorems
+  \HOLexampleOneTheorems
+  \HOLsolutionsOneTheorems
+  \HOLconopsZeroSolutionTheorems
 \end{quote}
 
 %%----
@@ -194,22 +195,6 @@ using PROVE_TAC .
 \label{HOl Code 953}
 In 9.5.3, our relative HOL code is:
 \begin{lstlisting}[frame=trBL]
-(* 9-5-3 *)
-
-val absorptionRule2=
- TAC_PROOF (
-([], ``!p q r s.(p ==> q) /\ (r ==> s) ==> (p\/r) ==> (q\/s)``),
-PROVE_TAC []
-);
-
-val _=save_thm("absorptionRule2",absorptionRule2);
-
-
-val constructiveDilemmaRule2=
- TAC_PROOF (
-([],``!p q r s.(p ==> q) /\ (r ==> s) ==> (p\/r) ==> (q\/s)``),
-PROVE_TAC []
-);
 \end{lstlisting}
 
 \section{Session Transcript}

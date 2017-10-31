@@ -47,7 +47,7 @@ Found near fn [th1, th2] => TRANS_SPEAKS_FOR th1 th2
 Saved theorem _____ "aclExercise1"
 Saved theorem _____ "aclExercise1A"
 Saved theorem _____ "aclExercise2B"
-Saved theorem _____ "aclExerciseTwo"
+Saved theorem _____ "aclExercise2"
 Saved theorem _____ "aclExercise2A"
 Theory: solutions1
 
@@ -64,6 +64,8 @@ Theorems:
       |- (M,Oi,Os) sat Name Alice says prop go ⇒
          (M,Oi,Os) sat Name Bob says prop go ⇒
          (M,Oi,Os) sat Name Alice meet Name Bob says prop go
+    aclExercise2
+       [...] |- (M,Oi,Os) sat Name Bob says prop launch
     aclExercise2A
       |- (M,Oi,Os) sat Name Alice says prop go ⇒
          (M,Oi,Os) sat Name Alice controls prop go ⇒
@@ -73,7 +75,5 @@ Theorems:
       |- (M,Oi,Os) sat Name Alice says prop go ⇒
          (M,Oi,Os) sat Name Bob says prop go ⇒
          (M,Oi,Os) sat Name Alice meet Name Bob says prop go
-    aclExerciseTwo
-       [...] |- (M,Oi,Os) sat Name Bob says prop launch
 Exporting theory "solutions1" ... done.
-Theory "solutions1" took 0.02400s to build
+Theory "solutions1" took 0.02800s to build

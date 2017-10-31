@@ -86,7 +86,7 @@ Saved theorem _____ "example2TheoremA"
 Saved theorem _____ "example2TheoremB"
 Saved theorem _____ "example3Theorem"
 Saved theorem _____ "example3TheoremA"
-Saved theorem _____ "Mono_Reps_Theorem"
+Saved theorem _____ "MonoXXRepsXXTheorem"
 Theory: example1
 
 Parents:
@@ -171,7 +171,7 @@ Definitions:
       |- ∀x. staff_size x = 0
 
 Theorems:
-    Mono_Reps_Theorem
+    MonoXXRepsXXTheorem
       |- (M,Oi,Os) sat Q controls f ⇒
          (M,Oi,Os) sat reps P Q f ⇒
          (M,Oi,Os) sat P' quoting Q' says f ⇒
@@ -374,4 +374,4 @@ Theorems:
     staff_nchotomy
       |- ∀a. (a = Alice) ∨ (a = Bob) ∨ (a = Carol) ∨ (a = Dan)
 Exporting theory "example1" ... done.
-Theory "example1" took 0.19600s to build
+Theory "example1" took 0.22800s to build

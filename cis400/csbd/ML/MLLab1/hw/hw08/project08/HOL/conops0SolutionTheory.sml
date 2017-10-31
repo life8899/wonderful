@@ -175,14 +175,14 @@ struct
   val op principals_Axiom = TDB.find "principals_Axiom"
   fun op principals_induction _ = ()
   val op principals_induction = TDB.find "principals_induction"
-  fun op OpRuleLaunch_thm _ = ()
-  val op OpRuleLaunch_thm = TDB.find "OpRuleLaunch_thm"
-  fun op OpRuleAbort_thm _ = ()
-  val op OpRuleAbort_thm = TDB.find "OpRuleAbort_thm"
-  fun op ApRuleActivate_thm _ = ()
-  val op ApRuleActivate_thm = TDB.find "ApRuleActivate_thm"
-  fun op ApRuleStandDown_thm _ = ()
-  val op ApRuleStandDown_thm = TDB.find "ApRuleStandDown_thm"
+  fun op OpRuleLaunchXXthm _ = ()
+  val op OpRuleLaunchXXthm = TDB.find "OpRuleLaunchXXthm"
+  fun op OpRuleAbortXXthm _ = ()
+  val op OpRuleAbortXXthm = TDB.find "OpRuleAbortXXthm"
+  fun op ApRuleActivateXXthm _ = ()
+  val op ApRuleActivateXXthm = TDB.find "ApRuleActivateXXthm"
+  fun op ApRuleStandDownXXthm _ = ()
+  val op ApRuleStandDownXXthm = TDB.find "ApRuleStandDownXXthm"
 
   local open GrammarSpecials Parse
     fun UTOFF f = Feedback.trace("Parse.unicode_trace_off_complaints",0)f

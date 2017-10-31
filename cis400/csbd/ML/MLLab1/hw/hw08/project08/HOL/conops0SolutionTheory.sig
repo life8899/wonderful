@@ -23,10 +23,10 @@ sig
     val roles_size_def : thm
 
   (*  Theorems  *)
-    val ApRuleActivate_thm : thm
-    val ApRuleStandDown_thm : thm
-    val OpRuleAbort_thm : thm
-    val OpRuleLaunch_thm : thm
+    val ApRuleActivateXXthm : thm
+    val ApRuleStandDownXXthm : thm
+    val OpRuleAbortXXthm : thm
+    val OpRuleLaunchXXthm : thm
     val commands2num_11 : thm
     val commands2num_ONTO : thm
     val commands2num_num2commands : thm
@@ -229,7 +229,7 @@ sig
 
       |- ∀x. roles_size x = 0
 
-   [ApRuleActivate_thm]  Theorem
+   [ApRuleActivateXXthm]  Theorem
 
       |- (M,Oi,Os) sat Name (PR (Role Operator)) controls prop launch ⇒
          (M,Oi,Os) sat
@@ -249,7 +249,7 @@ sig
          Name (Key (Staff Bob)) speaks_for Name (PR (Staff Bob)) ⇒
          (M,Oi,Os) sat prop activate
 
-   [ApRuleStandDown_thm]  Theorem
+   [ApRuleStandDownXXthm]  Theorem
 
       |- (M,Oi,Os) sat Name (PR (Role Operator)) controls prop abort ⇒
          (M,Oi,Os) sat
@@ -269,7 +269,7 @@ sig
          Name (Key (Staff Bob)) speaks_for Name (PR (Staff Bob)) ⇒
          (M,Oi,Os) sat prop stand_down
 
-   [OpRuleAbort_thm]  Theorem
+   [OpRuleAbortXXthm]  Theorem
 
       [oracles: DISK_THM] [axioms: ]
       [(M,Oi,Os) sat
@@ -292,7 +292,7 @@ sig
          Name (Key (Staff Bob)) quoting Name (PR (Role Operator)) says
          prop abort
 
-   [OpRuleLaunch_thm]  Theorem
+   [OpRuleLaunchXXthm]  Theorem
 
       |- (M,Oi,Os) sat Name (PR (Role Commander)) controls prop go ⇒
          (M,Oi,Os) sat

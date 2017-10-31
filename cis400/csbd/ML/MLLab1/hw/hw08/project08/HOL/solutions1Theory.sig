@@ -5,9 +5,9 @@ sig
   (*  Theorems  *)
     val aclExercise1 : thm
     val aclExercise1A : thm
+    val aclExercise2 : thm
     val aclExercise2A : thm
     val aclExercise2B : thm
-    val aclExerciseTwo : thm
 
   val solutions1_grammars : type_grammar.grammar * term_grammar.grammar
 (*
@@ -26,6 +26,14 @@ sig
          (M,Oi,Os) sat Name Bob says prop go ⇒
          (M,Oi,Os) sat Name Alice meet Name Bob says prop go
 
+   [aclExercise2]  Theorem
+
+      [oracles: DISK_THM] [axioms: ]
+      [(M,Oi,Os) sat Name Alice controls prop go,
+       (M,Oi,Os) sat prop go impf prop launch,
+       (M,Oi,Os) sat Name Alice says prop go]
+      |- (M,Oi,Os) sat Name Bob says prop launch
+
    [aclExercise2A]  Theorem
 
       |- (M,Oi,Os) sat Name Alice says prop go ⇒
@@ -38,14 +46,6 @@ sig
       |- (M,Oi,Os) sat Name Alice says prop go ⇒
          (M,Oi,Os) sat Name Bob says prop go ⇒
          (M,Oi,Os) sat Name Alice meet Name Bob says prop go
-
-   [aclExerciseTwo]  Theorem
-
-      [oracles: DISK_THM] [axioms: ]
-      [(M,Oi,Os) sat Name Alice controls prop go,
-       (M,Oi,Os) sat prop go impf prop launch,
-       (M,Oi,Os) sat Name Alice says prop go]
-      |- (M,Oi,Os) sat Name Bob says prop launch
 
 
 *)

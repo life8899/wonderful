@@ -13,7 +13,7 @@ sig
     val staff_size_def : thm
 
   (*  Theorems  *)
-    val Mono_Reps_Theorem : thm
+    val MonoXXRepsXXTheorem : thm
     val commands2num_11 : thm
     val commands2num_ONTO : thm
     val commands2num_num2commands : thm
@@ -105,7 +105,7 @@ sig
 
       |- ∀x. staff_size x = 0
 
-   [Mono_Reps_Theorem]  Theorem
+   [MonoXXRepsXXTheorem]  Theorem
 
       |- (M,Oi,Os) sat Q controls f ⇒
          (M,Oi,Os) sat reps P Q f ⇒

@@ -243,7 +243,7 @@ TAC_PROOF(([],
   (M,Oi,Os) sat (f:('a,'c,'d,'e)Form)``),
 PROVE_TAC[Controls,Reps,Mono_speaks_for,Derived_Speaks_For])
 
-val _ = save_thm("Mono_Reps_Theorem",Mono_Reps_Theorem)
+val _ = save_thm("MonoXXRepsXXTheorem",Mono_Reps_Theorem)
 
 (* ==== start here ====
 

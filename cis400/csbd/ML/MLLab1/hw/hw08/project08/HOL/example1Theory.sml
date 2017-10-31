@@ -112,8 +112,8 @@ struct
   val op example3Theorem = TDB.find "example3Theorem"
   fun op example3TheoremA _ = ()
   val op example3TheoremA = TDB.find "example3TheoremA"
-  fun op Mono_Reps_Theorem _ = ()
-  val op Mono_Reps_Theorem = TDB.find "Mono_Reps_Theorem"
+  fun op MonoXXRepsXXTheorem _ = ()
+  val op MonoXXRepsXXTheorem = TDB.find "MonoXXRepsXXTheorem"
 
   local open GrammarSpecials Parse
     fun UTOFF f = Feedback.trace("Parse.unicode_trace_off_complaints",0)f

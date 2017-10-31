@@ -111,10 +111,10 @@ Saved theorem _____ "principals_nchotomy"
 Saved theorem _____ "principals_Axiom"
 Saved theorem _____ "principals_induction"
 <<HOL message: Defined type: "principals">>
-Saved theorem _____ "OpRuleLaunch_thm"
-Saved theorem _____ "OpRuleAbort_thm"
-Saved theorem _____ "ApRuleActivate_thm"
-Saved theorem _____ "ApRuleStandDown_thm"
+Saved theorem _____ "OpRuleLaunchXXthm"
+Saved theorem _____ "OpRuleAbortXXthm"
+Saved theorem _____ "ApRuleActivateXXthm"
+Saved theorem _____ "ApRuleStandDownXXthm"
 Theory: conops0Solution
 
 Parents:
@@ -287,7 +287,7 @@ Definitions:
       |- ∀x. roles_size x = 0
 
 Theorems:
-    ApRuleActivate_thm
+    ApRuleActivateXXthm
       |- (M,Oi,Os) sat Name (PR (Role Operator)) controls prop launch ⇒
          (M,Oi,Os) sat
          reps (Name (PR (Staff Bob))) (Name (PR (Role Operator)))
@@ -305,7 +305,7 @@ Theorems:
          Name (PR (Role CA)) controls
          Name (Key (Staff Bob)) speaks_for Name (PR (Staff Bob)) ⇒
          (M,Oi,Os) sat prop activate
-    ApRuleStandDown_thm
+    ApRuleStandDownXXthm
       |- (M,Oi,Os) sat Name (PR (Role Operator)) controls prop abort ⇒
          (M,Oi,Os) sat
          reps (Name (PR (Staff Bob))) (Name (PR (Role Operator)))
@@ -323,7 +323,7 @@ Theorems:
          Name (PR (Role CA)) controls
          Name (Key (Staff Bob)) speaks_for Name (PR (Staff Bob)) ⇒
          (M,Oi,Os) sat prop stand_down
-    OpRuleAbort_thm
+    OpRuleAbortXXthm
        [.]
       |- (M,Oi,Os) sat Name (PR (Role Commander)) controls prop nogo ⇒
          (M,Oi,Os) sat
@@ -341,7 +341,7 @@ Theorems:
          (M,Oi,Os) sat
          Name (Key (Staff Bob)) quoting Name (PR (Role Operator)) says
          prop abort
-    OpRuleLaunch_thm
+    OpRuleLaunchXXthm
       |- (M,Oi,Os) sat Name (PR (Role Commander)) controls prop go ⇒
          (M,Oi,Os) sat
          reps (Name (PR (Staff Alice))) (Name (PR (Role Commander)))
@@ -620,4 +620,4 @@ Theorems:
     roles_nchotomy
       |- ∀a. (a = Commander) ∨ (a = Operator) ∨ (a = CA)
 Exporting theory "conops0Solution" ... done.
-Theory "conops0Solution" took 0.28000s to build
+Theory "conops0Solution" took 0.34400s to build

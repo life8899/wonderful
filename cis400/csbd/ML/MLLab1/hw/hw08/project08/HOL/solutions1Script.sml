@@ -26,7 +26,6 @@ val _ = new_theory "solutions1";
 
 
 
-
 val princTerm = ``Name Alice``;
 (* Principals make statements *)
 val term1 = ``((Name Alice) says (prop go)):(commands,staff,'d,'e)Form``;
@@ -113,7 +112,7 @@ in
 SAYS ``Name Bob`` thm6
 end;
 
-val _ = save_thm("aclExerciseTwo",aclExercise2)
+val _ = save_thm("aclExercise2",aclExercise2)
 
 (*part B  goal oriented proof *)
 

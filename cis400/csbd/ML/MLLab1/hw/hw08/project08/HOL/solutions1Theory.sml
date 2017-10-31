@@ -20,8 +20,7 @@ struct
   val op aclExercise1A = TDB.find "aclExercise1A"
   fun op aclExercise2B _ = ()
   val op aclExercise2B = TDB.find "aclExercise2B"
-  fun op aclExerciseTwo _ = ()
-  val op aclExerciseTwo = TDB.find "aclExerciseTwo"
+  fun op aclExercise2 _ = () val op aclExercise2 = TDB.find "aclExercise2"
   fun op aclExercise2A _ = ()
   val op aclExercise2A = TDB.find "aclExercise2A"
 

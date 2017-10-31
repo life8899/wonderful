@@ -1,6 +1,6 @@
 THEORY_AND_PARENTS
-"solutions1" 1509322322 338245
-["example1" 1509322321 351591]
+"solutions1" 1509325054 449436
+["example1" 1509325053 445081]
 
 INCORPORATE_TYPES
 []
@@ -50,7 +50,7 @@ THEOREMS
 [
 "%5%16%3%0@%4%1@%2@3%17%8%6@2%15%11@4%5%16%3%0@%4%1@%2@3%17%8%7@2%15%11@4%16%3%0@%4%1@%2@3%17%14%8%6@2%8%7@3%15%11@5"
 ]
-"aclExerciseTwo"
+"aclExercise2"
 ["solutions1", 3, "aclDrules", 3, "aclrules", 23, 24]
 ["DISK_THM"]
 ["%16%3%0@%4%1@%2@3%17%8%7@2%15%13@3",
@@ -67,7 +67,7 @@ THEOREMS
 
 CLASSES
 ["aclExercise1" Thm, "aclExercise1A" Thm, "aclExercise2B" Thm,
-"aclExerciseTwo" Thm, "aclExercise2A" Thm]
+"aclExercise2" Thm, "aclExercise2A" Thm]
 
 LOADABLE_THYDATA
 []

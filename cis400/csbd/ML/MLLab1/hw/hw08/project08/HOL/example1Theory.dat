@@ -1,5 +1,5 @@
 THEORY_AND_PARENTS
-"example1" 1509322321 351591
+"example1" 1509325053 445081
 ["aclDrules" 1509255078 818724]
 
 INCORPORATE_TYPES
@@ -348,7 +348,7 @@ THEOREMS
 [
 "%60%98%50%1@%51%6@%7@3%89%94%88@2%94%90@4%60%98%50%1@%51%6@%7@3%94%88@3%98%50%1@%51%6@%7@3%100%77%73@2%94%90@5"
 ]
-"Mono_Reps_Theorem"
+"MonoXXRepsXXTheorem"
 ["example1", 56, "aclDrules", 3, 4, 16, "aclrules", 33, "bool", 25, 26, 46,
 47, 52, 53, 62, 92, 93, 95, "sat", 1, 3, 5, 6, 7, 11, 12, 13, 14, 15]
 ["DISK_THM"]
@@ -373,7 +373,7 @@ CLASSES
 "staff_nchotomy" Thm, "staff_Axiom" Thm, "staff_induction" Thm,
 "example1Theorem" Thm, "example1TheoremA" Thm, "example1TheoremB" Thm,
 "example2Theorem" Thm, "example2TheoremA" Thm, "example2TheoremB" Thm,
-"example3Theorem" Thm, "example3TheoremA" Thm, "Mono_Reps_Theorem" Thm]
+"example3Theorem" Thm, "example3TheoremA" Thm, "MonoXXRepsXXTheorem" Thm]
 
 LOADABLE_THYDATA
 ["TypeGrammarDeltas" "NTY8.example1,8.commandsNTY8.example1,5.staff",

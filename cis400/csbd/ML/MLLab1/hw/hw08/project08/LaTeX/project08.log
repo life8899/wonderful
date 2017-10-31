@@ -1,13 +1,10 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Debian) (preloaded format=pdflatex 2017.10.26)  29 OCT 2017 20:18
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Debian) (preloaded format=pdflatex 2017.10.26)  29 OCT 2017 20:59
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
  %&-line parsing enabled.
-**project08
-(./project08.tex
-LaTeX2e <2016/02/01>
-Babel <3.9q> and hyphenation patterns for 3 language(s) loaded.
-(/usr/share/texlive/texmf-dist/tex/latex/base/report.cls
+**\input project08.tex
+(./project08.tex (/usr/share/texlive/texmf-dist/tex/latex/base/report.cls
 Document Class: report 2014/09/29 v1.4h Standard LaTeX document class
 (/usr/share/texlive/texmf-dist/tex/latex/base/size10.clo
 File: size10.clo 2014/09/29 v1.4h Standard LaTeX file (size option)
@@ -396,6 +393,7 @@ Style option: `fancyvrb' v2.7a, with DG/SPQR fixes, and firstline=lastline fix
 \hsbw=\skip57
 \c@sessioncount=\count125
 ) (../HOL/HOLReports/HOLexampleOne.tex)
+(../HOL/HOLReports/HOLsolutionsOne.tex)
 (../HOL/HOLReports/HOLconopsZeroSolution.tex) (./project08.aux
 
 LaTeX Warning: Label `ex 952' multiply defined.
@@ -418,26 +416,26 @@ LaTeX Warning: Label `Session Trans 1041' multiply defined.
 )
 \openout1 = `project08.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 56.
-LaTeX Font Info:    ... okay on input line 56.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 56.
-LaTeX Font Info:    ... okay on input line 56.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 56.
-LaTeX Font Info:    ... okay on input line 56.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 56.
-LaTeX Font Info:    ... okay on input line 56.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 56.
-LaTeX Font Info:    ... okay on input line 56.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 56.
-LaTeX Font Info:    ... okay on input line 56.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 56.
-LaTeX Font Info:    Try loading font information for TS1+cmr on input line 56.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 57.
+LaTeX Font Info:    ... okay on input line 57.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 57.
+LaTeX Font Info:    ... okay on input line 57.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 57.
+LaTeX Font Info:    ... okay on input line 57.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 57.
+LaTeX Font Info:    ... okay on input line 57.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 57.
+LaTeX Font Info:    ... okay on input line 57.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 57.
+LaTeX Font Info:    ... okay on input line 57.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 57.
+LaTeX Font Info:    Try loading font information for TS1+cmr on input line 57.
  (/usr/share/texlive/texmf-dist/tex/latex/base/ts1cmr.fd
 File: ts1cmr.fd 2014/09/29 v2.5h Standard LaTeX font definitions
 )
-LaTeX Font Info:    ... okay on input line 56.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 56.
-LaTeX Font Info:    ... okay on input line 56.
+LaTeX Font Info:    ... okay on input line 57.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 57.
+LaTeX Font Info:    ... okay on input line 57.
 
 *geometry* driver: auto-detecting
 *geometry* detected driver: pdftex
@@ -475,7 +473,7 @@ LaTeX Font Info:    ... okay on input line 56.
 
 \c@lstlisting=\count126
 \AtBeginShipoutBox=\box31
-Package hyperref Info: Link coloring OFF on input line 56.
+Package hyperref Info: Link coloring OFF on input line 57.
 (/usr/share/texlive/texmf-dist/tex/latex/hyperref/nameref.sty
 Package: nameref 2012/10/27 v2.43 Cross-referencing by name of section
 
@@ -484,9 +482,9 @@ Package: gettitlestring 2010/12/03 v1.4 Cleanup title references (HO)
 )
 \c@section@level=\count127
 )
-LaTeX Info: Redefining \ref on input line 56.
-LaTeX Info: Redefining \pageref on input line 56.
-LaTeX Info: Redefining \nameref on input line 56.
+LaTeX Info: Redefining \ref on input line 57.
+LaTeX Info: Redefining \pageref on input line 57.
+LaTeX Info: Redefining \nameref on input line 57.
 
 (./project08.out) (./project08.out)
 \@outlinefile=\write4
@@ -512,12 +510,12 @@ File: lstlang1.sty 2015/06/04 1.6 listings language file
 (/usr/share/texlive/texmf-dist/tex/latex/listings/lstlang2.sty
 File: lstlang2.sty 2015/06/04 1.6 listings language file
 )
-LaTeX Font Info:    Try loading font information for U+msa on input line 63.
+LaTeX Font Info:    Try loading font information for U+msa on input line 64.
 
 (/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Try loading font information for U+msb on input line 63.
+LaTeX Font Info:    Try loading font information for U+msb on input line 64.
 
 (/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
@@ -528,12 +526,12 @@ ination with the same identifier (name{page.1}) has been already used, duplicat
 e ignored
 <to be read again> 
                    \relax 
-l.69  \end{abstract}
+l.70  \end{abstract}
                      [1]pdfTeX warning (ext4): destination with the same identi
 fier (name{page.1}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.80 \tableofcontents
+l.81 \tableofcontents
                      {} [1] (./project08.toc)
 \tf@toc=\write5
 \openout5 = `project08.toc'.
@@ -542,472 +540,44 @@ l.80 \tableofcontents
 
 ]
 Chapter 1.
-./project08.tex:88: Missing $ inserted.
-<inserted text> 
-                $
-l.88 \HOLexampleOneTheorems
-                           
-I've inserted a begin-math/end-math symbol since I think
-you left one out. Proceed, with fingers crossed.
-
-./project08.tex:88: Extra }, or forgotten $.
-<recently read> \egroup 
-                        
-l.88 \HOLexampleOneTheorems
-                           
-I've deleted a group-closing symbol because it seems to be
-spurious, as in `$x}$'. But perhaps the } is legitimate and
-you forgot something else, as in `\hbox{$x}'. In such cases
-the way to recover is to insert both the forgotten and the
-deleted material, e.g., by typing `I$}'.
-
-./project08.tex:88: Extra }, or forgotten $.
-\@textcolor ...otect \leavevmode {\color #1{#2}#3}
-                                                  
-l.88 \HOLexampleOneTheorems
-                           
-I've deleted a group-closing symbol because it seems to be
-spurious, as in `$x}$'. But perhaps the } is legitimate and
-you forgot something else, as in `\hbox{$x}'. In such cases
-the way to recover is to insert both the forgotten and the
-deleted material, e.g., by typing `I$}'.
-
-./project08.tex:88: Missing $ inserted.
-<inserted text> 
-                $
-l.88 \HOLexampleOneTheorems
-                           
-I've inserted a begin-math/end-math symbol since I think
-you left one out. Proceed, with fingers crossed.
-
-./project08.tex:88: Missing } inserted.
-<inserted text> 
-                }
-l.88 \HOLexampleOneTheorems
-                           
-I've inserted something that you may have forgotten.
-(See the <inserted text> above.)
-With luck, this will get me unwedged. But if you
-really didn't forget anything, try typing `2' now; then
-my insertion and my current dilemma will both disappear.
-
-./project08.tex:88: Missing \endgroup inserted.
-<inserted text> 
-                \endgroup 
-l.88 \HOLexampleOneTheorems
-                           
-I've inserted something that you may have forgotten.
-(See the <inserted text> above.)
-With luck, this will get me unwedged. But if you
-really didn't forget anything, try typing `2' now; then
-my insertion and my current dilemma will both disappear.
-
 [3
 
-]
-./project08.tex:88: Missing } inserted.
-<inserted text> 
-                }
-l.88 \HOLexampleOneTheorems
-                           
-I've inserted something that you may have forgotten.
-(See the <inserted text> above.)
-With luck, this will get me unwedged. But if you
-really didn't forget anything, try typing `2' now; then
-my insertion and my current dilemma will both disappear.
-
-./project08.tex:89: Undefined control sequence.
-l.89 \HOLsolutionsOneTheorems
-                             
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-./project08.tex:90: Missing $ inserted.
-<inserted text> 
-                $
-l.90 \HOLconopsZeroSolutionTheorems
-                                   
-I've inserted a begin-math/end-math symbol since I think
-you left one out. Proceed, with fingers crossed.
-
-./project08.tex:90: Extra }, or forgotten $.
-<recently read> \egroup 
-                        
-l.90 \HOLconopsZeroSolutionTheorems
-                                   
-I've deleted a group-closing symbol because it seems to be
-spurious, as in `$x}$'. But perhaps the } is legitimate and
-you forgot something else, as in `\hbox{$x}'. In such cases
-the way to recover is to insert both the forgotten and the
-deleted material, e.g., by typing `I$}'.
-
-./project08.tex:90: Extra }, or forgotten $.
-\@textcolor ...otect \leavevmode {\color #1{#2}#3}
-                                                  
-l.90 \HOLconopsZeroSolutionTheorems
-                                   
-I've deleted a group-closing symbol because it seems to be
-spurious, as in `$x}$'. But perhaps the } is legitimate and
-you forgot something else, as in `\hbox{$x}'. In such cases
-the way to recover is to insert both the forgotten and the
-deleted material, e.g., by typing `I$}'.
-
-./project08.tex:90: Missing $ inserted.
-<inserted text> 
-                $
-l.90 \HOLconopsZeroSolutionTheorems
-                                   
-I've inserted a begin-math/end-math symbol since I think
-you left one out. Proceed, with fingers crossed.
-
-./project08.tex:90: Missing \endgroup inserted.
-<inserted text> 
-                \endgroup 
-l.90 \HOLconopsZeroSolutionTheorems
-                                   
-I've inserted something that you may have forgotten.
-(See the <inserted text> above.)
-With luck, this will get me unwedged. But if you
-really didn't forget anything, try typing `2' now; then
-my insertion and my current dilemma will both disappear.
-
-./project08.tex:90: Missing } inserted.
-<inserted text> 
-                }
-l.90 \HOLconopsZeroSolutionTheorems
-                                   
-I've inserted something that you may have forgotten.
-(See the <inserted text> above.)
-With luck, this will get me unwedged. But if you
-really didn't forget anything, try typing `2' now; then
-my insertion and my current dilemma will both disappear.
-
-./project08.tex:90: Missing } inserted.
-<inserted text> 
-                }
-l.90 \HOLconopsZeroSolutionTheorems
-                                   
-I've inserted something that you may have forgotten.
-(See the <inserted text> above.)
-With luck, this will get me unwedged. But if you
-really didn't forget anything, try typing `2' now; then
-my insertion and my current dilemma will both disappear.
-
-./project08.tex:90: Extra \endgroup.
-<recently read> \endgroup 
-                          
-l.90 \HOLconopsZeroSolutionTheorems
-                                   
-Things are pretty mixed up, but I think the worst is over.
-
-./project08.tex:90: Missing $ inserted.
-<inserted text> 
-                $
-l.90 \HOLconopsZeroSolutionTheorems
-                                   
-I've inserted a begin-math/end-math symbol since I think
-you left one out. Proceed, with fingers crossed.
-
-./project08.tex:90: Extra }, or forgotten $.
-<recently read> \egroup 
-                        
-l.90 \HOLconopsZeroSolutionTheorems
-                                   
-I've deleted a group-closing symbol because it seems to be
-spurious, as in `$x}$'. But perhaps the } is legitimate and
-you forgot something else, as in `\hbox{$x}'. In such cases
-the way to recover is to insert both the forgotten and the
-deleted material, e.g., by typing `I$}'.
-
-./project08.tex:90: Extra }, or forgotten $.
-\@textcolor ...otect \leavevmode {\color #1{#2}#3}
-                                                  
-l.90 \HOLconopsZeroSolutionTheorems
-                                   
-I've deleted a group-closing symbol because it seems to be
-spurious, as in `$x}$'. But perhaps the } is legitimate and
-you forgot something else, as in `\hbox{$x}'. In such cases
-the way to recover is to insert both the forgotten and the
-deleted material, e.g., by typing `I$}'.
-
-./project08.tex:90: Missing $ inserted.
-<inserted text> 
-                $
-l.90 \HOLconopsZeroSolutionTheorems
-                                   
-I've inserted a begin-math/end-math symbol since I think
-you left one out. Proceed, with fingers crossed.
-
-./project08.tex:90: Missing \endgroup inserted.
-<inserted text> 
-                \endgroup 
-l.90 \HOLconopsZeroSolutionTheorems
-                                   
-I've inserted something that you may have forgotten.
-(See the <inserted text> above.)
-With luck, this will get me unwedged. But if you
-really didn't forget anything, try typing `2' now; then
-my insertion and my current dilemma will both disappear.
-
-./project08.tex:90: Missing } inserted.
-<inserted text> 
-                }
-l.90 \HOLconopsZeroSolutionTheorems
-                                   
-I've inserted something that you may have forgotten.
-(See the <inserted text> above.)
-With luck, this will get me unwedged. But if you
-really didn't forget anything, try typing `2' now; then
-my insertion and my current dilemma will both disappear.
-
-./project08.tex:90: Missing } inserted.
-<inserted text> 
-                }
-l.90 \HOLconopsZeroSolutionTheorems
-                                   
-I've inserted something that you may have forgotten.
-(See the <inserted text> above.)
-With luck, this will get me unwedged. But if you
-really didn't forget anything, try typing `2' now; then
-my insertion and my current dilemma will both disappear.
-
-./project08.tex:90: Extra \endgroup.
-<recently read> \endgroup 
-                          
-l.90 \HOLconopsZeroSolutionTheorems
-                                   
-Things are pretty mixed up, but I think the worst is over.
-
-./project08.tex:90: Missing $ inserted.
-<inserted text> 
-                $
-l.90 \HOLconopsZeroSolutionTheorems
-                                   
-I've inserted a begin-math/end-math symbol since I think
-you left one out. Proceed, with fingers crossed.
-
-./project08.tex:90: Extra }, or forgotten $.
-<recently read> \egroup 
-                        
-l.90 \HOLconopsZeroSolutionTheorems
-                                   
-I've deleted a group-closing symbol because it seems to be
-spurious, as in `$x}$'. But perhaps the } is legitimate and
-you forgot something else, as in `\hbox{$x}'. In such cases
-the way to recover is to insert both the forgotten and the
-deleted material, e.g., by typing `I$}'.
-
-./project08.tex:90: Extra }, or forgotten $.
-\@textcolor ...otect \leavevmode {\color #1{#2}#3}
-                                                  
-l.90 \HOLconopsZeroSolutionTheorems
-                                   
-I've deleted a group-closing symbol because it seems to be
-spurious, as in `$x}$'. But perhaps the } is legitimate and
-you forgot something else, as in `\hbox{$x}'. In such cases
-the way to recover is to insert both the forgotten and the
-deleted material, e.g., by typing `I$}'.
-
-./project08.tex:90: Missing $ inserted.
-<inserted text> 
-                $
-l.90 \HOLconopsZeroSolutionTheorems
-                                   
-I've inserted a begin-math/end-math symbol since I think
-you left one out. Proceed, with fingers crossed.
-
-./project08.tex:90: Missing \endgroup inserted.
-<inserted text> 
-                \endgroup 
-l.90 \HOLconopsZeroSolutionTheorems
-                                   
-I've inserted something that you may have forgotten.
-(See the <inserted text> above.)
-With luck, this will get me unwedged. But if you
-really didn't forget anything, try typing `2' now; then
-my insertion and my current dilemma will both disappear.
-
-[4]
-./project08.tex:90: Missing } inserted.
-<inserted text> 
-                }
-l.90 \HOLconopsZeroSolutionTheorems
-                                   
-I've inserted something that you may have forgotten.
-(See the <inserted text> above.)
-With luck, this will get me unwedged. But if you
-really didn't forget anything, try typing `2' now; then
-my insertion and my current dilemma will both disappear.
-
-./project08.tex:90: Missing } inserted.
-<inserted text> 
-                }
-l.90 \HOLconopsZeroSolutionTheorems
-                                   
-I've inserted something that you may have forgotten.
-(See the <inserted text> above.)
-With luck, this will get me unwedged. But if you
-really didn't forget anything, try typing `2' now; then
-my insertion and my current dilemma will both disappear.
-
-./project08.tex:90: Extra \endgroup.
-<recently read> \endgroup 
-                          
-l.90 \HOLconopsZeroSolutionTheorems
-                                   
-Things are pretty mixed up, but I think the worst is over.
-
-./project08.tex:90: Missing $ inserted.
-<inserted text> 
-                $
-l.90 \HOLconopsZeroSolutionTheorems
-                                   
-I've inserted a begin-math/end-math symbol since I think
-you left one out. Proceed, with fingers crossed.
-
-./project08.tex:90: Extra }, or forgotten $.
-<recently read> \egroup 
-                        
-l.90 \HOLconopsZeroSolutionTheorems
-                                   
-I've deleted a group-closing symbol because it seems to be
-spurious, as in `$x}$'. But perhaps the } is legitimate and
-you forgot something else, as in `\hbox{$x}'. In such cases
-the way to recover is to insert both the forgotten and the
-deleted material, e.g., by typing `I$}'.
-
-./project08.tex:90: Extra }, or forgotten $.
-\@textcolor ...otect \leavevmode {\color #1{#2}#3}
-                                                  
-l.90 \HOLconopsZeroSolutionTheorems
-                                   
-I've deleted a group-closing symbol because it seems to be
-spurious, as in `$x}$'. But perhaps the } is legitimate and
-you forgot something else, as in `\hbox{$x}'. In such cases
-the way to recover is to insert both the forgotten and the
-deleted material, e.g., by typing `I$}'.
-
-./project08.tex:90: Missing $ inserted.
-<inserted text> 
-                $
-l.90 \HOLconopsZeroSolutionTheorems
-                                   
-I've inserted a begin-math/end-math symbol since I think
-you left one out. Proceed, with fingers crossed.
-
-./project08.tex:90: Missing \endgroup inserted.
-<inserted text> 
-                \endgroup 
-l.90 \HOLconopsZeroSolutionTheorems
-                                   
-I've inserted something that you may have forgotten.
-(See the <inserted text> above.)
-With luck, this will get me unwedged. But if you
-really didn't forget anything, try typing `2' now; then
-my insertion and my current dilemma will both disappear.
-
-./project08.tex:90: Missing } inserted.
-<inserted text> 
-                }
-l.90 \HOLconopsZeroSolutionTheorems
-                                   
-I've inserted something that you may have forgotten.
-(See the <inserted text> above.)
-With luck, this will get me unwedged. But if you
-really didn't forget anything, try typing `2' now; then
-my insertion and my current dilemma will both disappear.
-
-./project08.tex:90: Missing } inserted.
-<inserted text> 
-                }
-l.90 \HOLconopsZeroSolutionTheorems
-                                   
-I've inserted something that you may have forgotten.
-(See the <inserted text> above.)
-With luck, this will get me unwedged. But if you
-really didn't forget anything, try typing `2' now; then
-my insertion and my current dilemma will both disappear.
-
-./project08.tex:90: Extra \endgroup.
-<recently read> \endgroup 
-                          
-l.90 \HOLconopsZeroSolutionTheorems
-                                   
-Things are pretty mixed up, but I think the worst is over.
-
-
-./project08.tex:91: LaTeX Error: \begin{document} ended by \end{quote}.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.91 \end{quote}
-                
-Your command was ignored.
-Type  I <command> <return>  to replace it with another command,
-or  <return>  to continue without it.
-
-./project08.tex:91: Extra \endgroup.
-<recently read> \endgroup 
-                          
-l.91 \end{quote}
-                
-Things are pretty mixed up, but I think the worst is over.
-
-[5]
+] [4] [5] [6]
 Chapter 2.
-[6
+[7
 
 ]
 Chapter 3.
-LaTeX Font Info:    Try loading font information for OML+cmr on input line 152.
+LaTeX Font Info:    Try loading font information for OML+cmr on input line 153.
 
 (/usr/share/texlive/texmf-dist/tex/latex/base/omlcmr.fd
 File: omlcmr.fd 2014/09/29 v2.5h Standard LaTeX font definitions
 )
 LaTeX Font Info:    Font shape `OML/cmr/m/n' in size <10> not available
-(Font)              Font shape `OML/cmm/m/it' tried instead on input line 152.
-LaTeX Font Info:    Try loading font information for OMS+cmr on input line 152.
+(Font)              Font shape `OML/cmm/m/it' tried instead on input line 153.
+LaTeX Font Info:    Try loading font information for OMS+cmr on input line 153.
 
 
 (/usr/share/texlive/texmf-dist/tex/latex/base/omscmr.fd
 File: omscmr.fd 2014/09/29 v2.5h Standard LaTeX font definitions
 )
 LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <10> not available
-(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 152.
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 153.
 pdfTeX warning (ext4): destination with the same identifier (name{sessioncount.
 1}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.166 \begin{session}
-                      [7
+l.167 \begin{session}
+                      [8
 
 ]
 Chapter 4.
-./project08.tex:197: Font TS1/cmr/m/it/10=tcti1000 at 10.0pt not loadable: Metr
-ic (TFM) file not found.
-<to be read again> 
-                   relax 
-l.197 (*
-         9-5-3 *)
-I wasn't able to read the size data for this font,
-so I will ignore the font specification.
-[Wizards can fix TFM files using TFtoPL/PLtoTF.]
-You might try inserting a different font spec;
-e.g., type `I\font<same font id>=<substitute font name>'.
-
-Missing character: There is no * in font nullfont!
-Missing character: There is no * in font nullfont!
 pdfTeX warning (ext4): destination with the same identifier (name{sessioncount.
 1}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.218 \begin{session}
-                      [8
+l.203 \begin{session}
+                      [9
 
 ]
 Chapter 5.
@@ -1015,8 +585,8 @@ pdfTeX warning (ext4): destination with the same identifier (name{sessioncount.
 1}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.271 \begin{session}
-                      [9
+l.256 \begin{session}
+                      [10
 
 ]
 Chapter 6.
@@ -1024,8 +594,8 @@ pdfTeX warning (ext4): destination with the same identifier (name{sessioncount.
 1}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.312 \begin{session}
-                      [10
+l.297 \begin{session}
+                      [11
 
 ]
 Chapter 7.
@@ -1033,62 +603,60 @@ pdfTeX warning (ext4): destination with the same identifier (name{sessioncount.
 1}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.363 \begin{session}
+l.348 \begin{session}
                      
 Missing character: There is no â in font cmtt8!
 Missing character: There is no ‡ in font cmtt8!
 Missing character: There is no ’ in font cmtt8!
 Missing character: There is no Â in font cmtt8!
 Missing character: There is no ¬ in font cmtt8!
- [11
+ [12
 
 ]
 Chapter 8.
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 391.
-[12
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 376.
+[13
 
 ]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 391.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 376.
  (./project08.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 391.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 391.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 376.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 376.
 Package rerunfilecheck Info: File `project08.out' has not changed.
 (rerunfilecheck)             Checksum: 3EB7DF3B78CC8B00D413B519EDDDCA76;1906.
 
 
 LaTeX Warning: There were multiply-defined labels.
 
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 391.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 376.
  ) 
 Here is how much of TeX's memory you used:
- 8971 strings out of 494953
- 129350 string characters out of 6180976
- 251069 words of memory out of 5000000
- 12018 multiletter control sequences out of 15000+600000
+ 8964 strings out of 494953
+ 129553 string characters out of 6180976
+ 252716 words of memory out of 5000000
+ 12024 multiletter control sequences out of 15000+600000
  16548 words of font info for 63 fonts, out of 8000000 for 9000
  14 hyphenation exceptions out of 8191
- 39i,11n,45p,341b,1196s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 39i,11n,45p,352b,1196s stack positions out of 5000i,500n,10000p,200000b,80000s
 </usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb></us
 r/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/shar
 e/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmcsc10.pfb></usr/share/tex
 live/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/share/texlive/t
-exmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb></usr/share/texlive/texmf-di
-st/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/share/texlive/texmf-dist/font
-s/type1/public/amsfonts/cm/cmr12.pfb></usr/share/texlive/texmf-dist/fonts/type1
-/public/amsfonts/cm/cmr17.pfb></usr/share/texlive/texmf-dist/fonts/type1/public
-/amsfonts/cm/cmr7.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfont
-s/cm/cmsl8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cm
-sy10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy6.pf
-b></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy9.pfb></usr
-/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb></usr/share
-/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmti9.pfb></usr/share/texliv
-e/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt10.pfb></usr/share/texlive/texm
-f-dist/fonts/type1/public/amsfonts/cm/cmtt8.pfb></usr/share/texlive/texmf-dist/
-fonts/type1/public/amsfonts/cm/cmtt9.pfb>
-Output written on project08.pdf (14 pages, 211704 bytes).
+exmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/share/texlive/texmf-di
+st/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/share/texlive/texmf-dist/font
+s/type1/public/amsfonts/cm/cmr17.pfb></usr/share/texlive/texmf-dist/fonts/type1
+/public/amsfonts/cm/cmr7.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/
+amsfonts/cm/cmsl8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfont
+s/cm/cmsy10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/c
+msy6.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy9.pf
+b></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmti9.pfb></usr
+/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt10.pfb></usr/share
+/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt8.pfb></usr/share/texliv
+e/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt9.pfb>
+Output written on project08.pdf (15 pages, 193888 bytes).
 PDF statistics:
- 394 PDF objects out of 1000 (max. 8388607)
- 356 compressed objects within 4 object streams
- 114 named destinations out of 1000 (max. 500000)
+ 371 PDF objects out of 1000 (max. 8388607)
+ 334 compressed objects within 4 object streams
+ 99 named destinations out of 1000 (max. 500000)
  257 words of extra memory for PDF output out of 10000 (max. 10000000)
 
