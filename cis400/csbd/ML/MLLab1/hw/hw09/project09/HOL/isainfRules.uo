@@ -1,0 +1,10 @@
+$(HOLDIR)/sigobj/HolKernel
+$(HOLDIR)/sigobj/Overlay
+$(HOLDIR)/sigobj/Parse
+$(HOLDIR)/sigobj/TypeBase
+$(HOLDIR)/sigobj/boolLib
+$(HOLDIR)/sigobj/bossLib
+$(HOLDIR)/sigobj/reduceLib
+/home/caesar/Documents/development/github/wonderful/cis400/csbd/ML/MLLab1/hw/hw09/project09/HOL/isainfRules
+/home/caesar/Documents/development/github/wonderful/cis400/csbd/ML/MLLab1/hw/hw09/project09/HOL/isainfRules
+/home/caesar/Documents/development/github/wonderful/cis400/csbd/ML/MLLab1/hw/hw09/project09/HOL/isainfRules.sml

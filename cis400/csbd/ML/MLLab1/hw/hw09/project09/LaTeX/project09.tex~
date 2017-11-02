@@ -1,13 +1,13 @@
 %% ---------------------------------------------------
-%% CIS 400 project 7
+%% CIS 400 project 9
 %% this is the work of Xiaozhi Li for class CIS 400 CSBD
 %% this file is writen under the guidence of the course, which is taught
 %% by Professor Shiu-Kai Chin
 
-%% 2017/10/16
+%% 2017/11/1
 %% ---------------------------------------------------
 \documentclass{report}
-\title{Report for Project07}
+\title{Report for Project09}
 \author{\textbf{Xiaozhi Li}}
 \date{\today}
 
@@ -49,8 +49,9 @@
 \usepackage{holtex}
 \usepackage{holtexbasic}
 \input{commands}
-\input{../HOL/HOLReports/HOLexerciseNine}
-\input{../HOL/HOLReports/HOLexerciseOneZero}
+\input{../HOL/HOLReports/HOLcryptoExercises}
+\input{../HOL/HOLReports/HOLcipher}
+
 
 
 \begin{document}
@@ -63,12 +64,13 @@
 \maketitle{}
 
 \begin{abstract}
-  Project  using \LaTeX{}. In this project we will use EmitTeX to generate the HOL reports. All HOL source files are included in the HOL folder.
+  Project 09 using \LaTeX{}. In this project we use HOL to practice cryptographic operations.
+  In this project the theorems are coded in HOL and generated using EmitTeX. All HOL source files are included in the HOL folder.
  \end{abstract}
 
 \begin{acknowledgments}
  This report follows the hand book Certified Security by Design Using Higer Order Logic, and course instructions from CIS400-CSBD.
-\end{acknowledgments}
+ \end{acknowledgments}
 
 
 %% ---------------------------------------------------
@@ -79,59 +81,95 @@
 \chapter{Executive Summary}
 
 
-\textbf{Not all requirements for this project are satisfied}.
+\textbf{All requirements for this project are satisfied}.
 Specifically, we utilized HOL to prove the following theorems:
 \begin{quote}
-\HOLexerciseNineTheorems
-\HOLexerciseOneZeroTheorems
-\end{quote}
-
-%%----
-%%
-%%      THIS IS IMPORTANT
-%%------
-Exercise 10.4.3 was not included in this project.
+  \emph{exercise15_6_1a_thm}\HOLcryptoExercisesTheoremsexerciseOneFiveXXSixXXOneaXXthm
+  \emph{exercise15_6_1b_thm}\HOLcryptoExercisesTheoremsexerciseOneFiveXXSixXXOnebXXthm
+  \emph{exercise15_6_2a_thm}\HOLcryptoExercisesTheoremsexerciseOneFiveXXSixXXTwoaXXthm
+  \emph{exercise15_6_2b_thm}\HOLcryptoExercisesTheoremsexerciseOneFiveXXSixXXTwobXXthm
+  \emph{exercise15_6_3_thm}\HOLcryptoExercisesTheoremsexerciseOneFiveXXSixXXThreeXXthm
+  \end{quote}
 
 
 
-\chapter{Exercise 9.5.1}
-\label{ex 951}
+\chapter{Exercise 15.6.1}
+\label{1561a}
 %% ---------------------------------------------------
 %% problem statement
 %% ---------------------------------------------------
 
 \section{Problem Statement}
-
-Our task is to prove the theorem
-\HOLexerciseNineTheoremsabsorptionRule
+We used properties of symmetric key encryption and decryption in cipherTheory to prove the following theorems
+\emph{exercise15_6_1a_thm}\HOLcryptoExercisesTheoremsexerciseOneFiveXXSixXXOneaXXthm
+\emph{exercise15_6_1b_thm}\HOLcryptoExercisesTheoremsexerciseOneFiveXXSixXXOnebXXthm
 
 \section{HOL Code}
-\label{HOl Code 841}
+\label{HOl Code 1561}
+Here is the relevant code for 15.6.1:
+\begin {lstlisting}[frame=trBL]
+  (*15.6.1 A*)
 
-\begin{lstlisting}[frame=trBL]
-(* 9-5-1 *)
-val absorptionRule=
+  val exercise15_6_1a_thm =
+  TAC_PROOF(
+  ([],
+  ``! key enMsg message. (deciphS key enMsg = SOME message) <=> (enMsg = Es key (SOME message))``),
+  ASM_REWRITE_TAC [deciphS_one_one]);
 
-TAC_PROOF (
-([],``!p q. (p ==> q) ==> p ==> p/\q``),
-(REPEAT STRIP_TAC THEN
-ASM_REWRITE_TAC [] THEN
-RES_TAC) );
+  val _ = save_thm("exercise15_6_1a_thm",exercise15_6_1a_thm)
 
-val _=save_thm("absorptionRule",absorptionRule);
-val _=export_theory();
+  (*15.6.1 B*)
+  val exercise15_6_1b_thm =
+  TAC_PROOF(
+  ([],
+  ``! keyAlice k text.
+  (deciphS keyAlice (Es k (SOME text)) =
+  SOME "This is from Alice") <=>
+  (k = keyAlice) /\ (text = "This is from Alice")``),
+  ASM_REWRITE_TAC [deciphS_one_one] THEN
+  PROVE_TAC[]
+  );
 \end{lstlisting}
 
 \section{Session Transcript}
-\label{Session Trans1}
+\label{Session Trans1561}
 
 \setcounter{sessioncount}{0}
 \begin{session}
   \begin{scriptsize}
 \begin{verbatim}
 
-> # # # # # # val absorptionRule =
-    [] |- !(p :bool) (q :bool). (p ==> q) ==> p ==> p /\ q:
+> # # # # # # val exercise15_6_1a_thm =
+TAC_PROOF(
+([],
+``! key enMsg message. (deciphS key enMsg = SOME message) <=> (enMsg = Es key (SOME message))``),
+ASM_REWRITE_TAC [deciphS_one_one]);
+
+val _ = save_thm("exercise15_6_1a_thm",exercise15_6_1a_thm);
+# # # # <<HOL message: inventing new type variable names: 'a>>
+val exercise15_6_1a_thm =
+    []
+|- !(key :symKey) (enMsg :'a symMsg) (message :'a).
+     (deciphS key enMsg = SOME message) <=>
+     (enMsg = Es key (SOME message)):
+   thm
+> > > val exercise15_6_1b_thm =
+TAC_PROOF(
+([],
+``! keyAlice k text.
+(deciphS keyAlice (Es k (SOME text)) =
+SOME "This is from Alice") <=>
+(k = keyAlice) /\ (text = "This is from Alice")``),
+ASM_REWRITE_TAC [deciphS_one_one] THEN
+PROVE_TAC[]
+);
+# # # # # # # # # Meson search level: ........................
+val exercise15_6_1b_thm =
+    []
+|- !(keyAlice :symKey) (k :symKey) (text :string).
+     (deciphS keyAlice (Es k (SOME text)) =
+      SOME "This is from Alice") <=>
+     (k = keyAlice) /\ (text = "This is from Alice"):
    thm
 \end{verbatim}
   \end{scriptsize}
@@ -139,37 +177,26 @@ val _=export_theory();
 
 %% Explain the Result, should it be nessesary
 \section{Explain Result}
-\label{eplain re 951}
+\label{eplain re 1561}
 Hol is showing our theorem with no type errors, this means our tests have passed.
 
 %-----------------------
 % 8 4 2
 
-\chapter{Exercise 9.5.2}
+\chapter{Exercise 15.6.2}
 \label{ex 952}
-
+We used properties of asymmetric key encryption and decryption to prove the following theorems:
+\emph{exercise15_6_2a_thm}\HOLcryptoExercisesTheoremsexerciseOneFiveXXSixXXTwoaXXthm
+\emph{exercise15_6_2b_thm}\HOLcryptoExercisesTheoremsexerciseOneFiveXXSixXXTwobXXthm
 \section{Problem Statement}
 \label{problem state 952}
 For 9.5.2 we need to prove the therom:
-\HOLexerciseNineTheoremsconstructiveDilemmaRule
+
 
 \section{HOL Code}
 \label{HOl Code 952}
 
-\begin{lstlisting}[frame=trBL]
-val constructiveDilemmaRule=
 
- TAC_PROOF (
-([], ``!p q r s.(p ==> q) /\ (r ==> s) ==> (p\/r) ==> (q\/s)``),
-REPEAT STRIP_TAC THEN
-ASM_REWRITE_TAC [] THEN
-RES_TAC THEN
-ASM_REWRITE_TAC [] THEN
-RES_TAC THEN
-ASM_REWRITE_TAC []
-);
-
-\end{lstlisting}
 
 \section{Session Transcript}
 \label{Session Trans 952}
@@ -197,8 +224,7 @@ In 9.5.2, all of our theorem and theory have passed by HOL.
 \section{Problem Statement}
 \label{Problem State 953}
 For 9.5.3 we need to prove the therom:
-\HOLexerciseNineTheoremsabsorptionRule
-\HOLexerciseNineTheoremsconstructiveDilemmaRule
+
 
 using PROVE_TAC .
 
@@ -206,22 +232,6 @@ using PROVE_TAC .
 \label{HOl Code 953}
 In 9.5.3, our relative HOL code is:
 \begin{lstlisting}[frame=trBL]
-(* 9-5-3 *)
-
-val absorptionRule2=
- TAC_PROOF (
-([], ``!p q r s.(p ==> q) /\ (r ==> s) ==> (p\/r) ==> (q\/s)``),
-PROVE_TAC []
-);
-
-val _=save_thm("absorptionRule2",absorptionRule2);
-
-
-val constructiveDilemmaRule2=
- TAC_PROOF (
-([],``!p q r s.(p ==> q) /\ (r ==> s) ==> (p\/r) ==> (q\/s)``),
-PROVE_TAC []
-);
 \end{lstlisting}
 
 \section{Session Transcript}
@@ -257,7 +267,7 @@ All tests from 9.5.3 have been passed in HOL.
 \section{Problem Statement}
 \label{problem state 952}
 For 9.5.2 we need to prove the therom:
-\HOLexerciseNineTheoremsconstructiveDilemmaRule
+
 
 \section{HOL Code}
 \label{HOl Code 952}
@@ -303,19 +313,14 @@ In 9.5.2, all of our theorem and theory have passed by HOL.
 \section{Problem Statement}
 \label{Problem State 1041}
 For 10.4.1 we need to prove the therom:
-\HOLexerciseOneZeroTheoremsproblemOnethm
+
 
 
 \section{HOL Code}
 \label{HOl Code 1041}
 In 10.4.1, our relative HOL code is:
-\begin{lstlisting}[frame=trBL]
-val problemOnethm=
-TAC_PROOF(
-([ `` !x: 'a.P(x) ==> M(x) ``, ``(P: 'a->bool) (s: 'a)``],
-``(M:'a->bool) (s: 'a)``),
-RES_TAC
-);
+\begin {lstlisting}[frame=trBL]
+
 \end{lstlisting}
 
 \section{Session Transcript}
@@ -342,7 +347,7 @@ All tests from 10.4.1 have been passed in HOL
 \label{Problem State 1042}
 For 10.4.2 we need to prove the therom:
 
-\HOLexerciseOneZeroTheoremsproblemTwothm
+
 
 
 \section{HOL Code}
@@ -392,15 +397,11 @@ All tests from 10.4.2 have been passed in HOL
 %\label{cha:appendix-a:-source}
 
 
-The following code is from \emph{exercise9Script}
-\lstinputlisting{../HOL/exercise9Script.sml}
-
-\chapter{Appendix B: source code for 10.4.1, 10.4.2}
-\label{cha:appendix-b:-source}
+%The following code is from \emph{exercise9Script}
+%\lstinputlisting{../HOL/exercise9Script.sml}
 
 
-The following code is from \emph{exercise10Script}
-\lstinputlisting{../HOL/exercise10Script.sml}
+
 
 
 

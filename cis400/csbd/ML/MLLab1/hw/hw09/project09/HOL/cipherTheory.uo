@@ -11,10 +11,13 @@ $(HOLDIR)/sigobj/Theory
 $(HOLDIR)/sigobj/TheoryReader
 $(HOLDIR)/sigobj/Thm
 $(HOLDIR)/sigobj/Type
+$(HOLDIR)/sigobj/TypeBase
+$(HOLDIR)/sigobj/TypeBasePure
+$(HOLDIR)/sigobj/computeLib
 $(HOLDIR)/sigobj/indexedListsTheory
 $(HOLDIR)/sigobj/patternMatchesTheory
 $(HOLDIR)/sigobj/term_grammar
 $(HOLDIR)/sigobj/type_grammar
-/home/caesar/Documents/development/github/wonderful/cis400/csbd/ML/MLLab1/hw/hw07/Project07/HOL/exTypeTheory
-/home/caesar/Documents/development/github/wonderful/cis400/csbd/ML/MLLab1/hw/hw07/Project07/HOL/exTypeTheory
-/home/caesar/Documents/development/github/wonderful/cis400/csbd/ML/MLLab1/hw/hw07/Project07/HOL/exTypeTheory.sml
+/home/caesar/Documents/development/github/wonderful/cis400/csbd/ML/MLLab1/hw/hw09/project09/HOL/cipherTheory
+/home/caesar/Documents/development/github/wonderful/cis400/csbd/ML/MLLab1/hw/hw09/project09/HOL/cipherTheory
+/home/caesar/Documents/development/github/wonderful/cis400/csbd/ML/MLLab1/hw/hw09/project09/HOL/cipherTheory.sml

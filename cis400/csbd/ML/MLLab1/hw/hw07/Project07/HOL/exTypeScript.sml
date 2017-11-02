@@ -25,52 +25,17 @@ ASM_REWRITE_TAC[APP_def])
 val _ = save_thm("APP_ASSOC", APP_ASSOC)
 
 
-(*
-val LENGTH_def=
-Define
-`(LENGTH [] =0) /\
- (LENGTH (w:: (l: 'a list))= 1 +(LENGTH l))`
-
-not needed
-*)
-
-
-
-
-val LENGTH_APP_def=
-Define
-`(LENGTH_APP [] [] = 0)/\
-(LENGTH_APP (l1: 'a list) (l2: 'a list) = LENGTH (APP l1 l2)) `
-
-(* ===start =======
-set_goal([],
-``!(l1: 'a list)(l2 :'a list)(l3 :'a list).
-    (APP(APP l1 l2) l3) = (APP l1 (APP l2 l3))``);
-
-
-set_goal ([],
+val LENGTH_APP=
+TAC_PROOF(
+([],
 ``!(l1: 'a list)(l2: 'a list).
-   (LENGTH (APP l1 l2)) =(LENGTH l1 + LENGTH l2)``);
+   (LENGTH (APP l1 l2)) =(LENGTH l1 + LENGTH l2)``),
+Induct_on `l1` THEN
+Induct_on `l2` THEN
+ASM_REWRITE_TAC[ADD_CLAUSES,APP_def,LENGTH])
 
-Induct_on `l1`
-Induct_on `l2`
-ASM_REWRITE_TAC [LENGTH_APP_def]
+val _ = save_thm("LENGTH_APP", LENGTH_APP)
 
-
-
-REWRITE_TAC[ADD_CLAUSES,APP_def,LENGTH]
-
-RES_TAC[ADD_CLAUSES]
-PROVE_TAC[ADD_CLAUSES]
-
-set_goal([],`` !a b. a+b=b+a``)
-REPEAT STRIP_TAC
-REWRITE_TAC [ADD_COMM]
-RES_TAC
-ADD_COMM
-
-PAT_ASSUM
-===end======= *)
 
 val _= export_theory ();
 val _= print_theory "-";

@@ -1,0 +1,49 @@
+
+
+(******************************************************************************)
+(* Cipher Operations                                                          *)
+(* Xiaozhi Li                                                            *)
+(* Nov.1 2017: cryptoExercises.sml                                       *)
+(******************************************************************************)
+(* Interactive mode
+app load ["isainfRules","TypeBase","optionTheory"]
+
+(* Disable Pretty-Printing *)
+set_trace "Unicode" 0;
+*)
+
+structure cryptoExercisesScript = struct
+
+open HolKernel boolLib Parse bossLib
+open TypeBase isainfRules optionTheory cipherTheory stringTheory
+
+val _ = new_theory "cryptoExercises";
+
+(*15.6.1 A*)
+
+val exercise15_6_1a_thm =
+TAC_PROOF(
+([],
+``! key enMsg message. (deciphS key enMsg = SOME message) <=> (enMsg = Es key (SOME message))``),
+ASM_REWRITE_TAC [deciphS_one_one]);
+
+
+(*15.6.1 B*)
+val exercise15_6_1b_thm =
+
+``! keyAlice k text.
+(deciphS keyAlice (Es k (SOME text)) =
+SOME "This is from Alice") <=>
+(k = keyAlice) /\ (text = "This is from Alice")``
+ASM_REWRITE_TAC [deciphS_one_one]
+
+
+(* *)
+
+
+
+(* *)
+
+val _ = print_theory "-";
+val _ = export_theory();
+end (* struct*)

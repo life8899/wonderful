@@ -1,0 +1,7 @@
+$(HOLDIR)/sigobj/Abbrev
+$(HOLDIR)/sigobj/Overlay
+$(HOLDIR)/sigobj/Term
+$(HOLDIR)/sigobj/Thm
+$(HOLDIR)/sigobj/Type
+/home/caesar/Documents/development/github/wonderful/cis400/csbd/ML/MLLab1/hw/hw09/project09/HOL/isainfRules
+/home/caesar/Documents/development/github/wonderful/cis400/csbd/ML/MLLab1/hw/hw09/project09/HOL/isainfRules.sig

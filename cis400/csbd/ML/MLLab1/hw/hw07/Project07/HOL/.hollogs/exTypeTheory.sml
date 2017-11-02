@@ -10,7 +10,7 @@ Saved theorem _____ "APP_ASSOC"
 Saved definition __ "LENGTH_APP_def"
 Saved induction ___ "LENGTH_APP_ind"
 Exporting theory "exType" ... done.
-Theory "exType" took 0.43600s to build
+Theory "exType" took 0.09600s to build
 Theory: exType
 
 Parents:
@@ -37,4 +37,3 @@ Theorems:
            P [] [] ∧ (∀v6 v7. P [] (v6::v7)) ∧
            (∀v2 v3 l2. P (v2::v3) l2) ⇒
            ∀v v1. P v v1
-Completed load of exTypeScript

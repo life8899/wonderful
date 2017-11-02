@@ -1,0 +1,84 @@
+val exercise15_6_1a_thm =
+TAC_PROOF(
+([],
+``! key enMsg message. (deciphS key enMsg = SOME message) <=> (enMsg = Es key (SOME message))``),
+ASM_REWRITE_TAC [deciphS_one_one]);
+
+val _ = save_thm("exercise15_6_1a_thm",exercise15_6_1a_thm);
+# # # # <<HOL message: inventing new type variable names: 'a>>
+val exercise15_6_1a_thm =
+    []
+|- !(key :symKey) (enMsg :'a symMsg) (message :'a).
+     (deciphS key enMsg = SOME message) <=>
+     (enMsg = Es key (SOME message)):
+   thm
+> > > val exercise15_6_1b_thm =
+TAC_PROOF(
+([],
+``! keyAlice k text.
+(deciphS keyAlice (Es k (SOME text)) =
+SOME "This is from Alice") <=>
+(k = keyAlice) /\ (text = "This is from Alice")``),
+ASM_REWRITE_TAC [deciphS_one_one] THEN
+PROVE_TAC[]
+);
+# # # # # # # # # Meson search level: ........................
+val exercise15_6_1b_thm =
+    []
+|- !(keyAlice :symKey) (k :symKey) (text :string).
+     (deciphS keyAlice (Es k (SOME text)) =
+      SOME "This is from Alice") <=>
+     (k = keyAlice) /\ (text = "This is from Alice"):
+   thm
+> val exercise15_6_2a_thm =
+TAC_PROOF(
+([],
+``! P message.
+(deciphP (pubK P) enMsg = SOME message)<=>
+(enMsg = Ea (privK P) (SOME message))``),
+PROVE_TAC[deciphP_one_one]
+);
+
+# # # # # # # <<HOL message: inventing new type variable names: 'a, 'b>>
+Meson search level: ..........
+val exercise15_6_2a_thm =
+    []
+|- !(P :'a) (message :'b).
+     (deciphP (pubK P) (enMsg :('b, 'a) asymMsg) = SOME message) <=>
+     (enMsg = Ea (privK P) (SOME message)):
+   thm
+> > val exercise15_6_2b_thm =
+TAC_PROOF(
+([],
+``! key text.
+(deciphP (pubK Alice) (Ea key (SOME text)) =
+SOME "This is from Alice") <=>
+(key = privK Alice) ∧ (text = "This is from Alice")``),
+ASM_REWRITE_TAC[deciphP_one_one] THEN
+ASM_REWRITE_TAC[option_CLAUSES])
+;
+# # # # # # # # # <<HOL message: inventing new type variable names: 'a>>
+val exercise15_6_2b_thm =
+    []
+|- !(key :'a pKey) (text :string).
+     (deciphP (pubK (Alice :'a)) (Ea key (SOME text)) =
+      SOME "This is from Alice") <=>
+     (key = privK Alice) /\ (text = "This is from Alice"):
+   thm
+> val exercise15_6_3_thm =
+TAC_PROOF(
+([],
+``! signature.signVerify (pubK Alice) signature
+(SOME "This is from Alice") <=>
+(signature =
+sign (privK Alice) (hash (SOME "This is from Alice")))``),
+ASM_REWRITE_TAC[signVerify_one_one]);
+# # # # # # # <<HOL message: inventing new type variable names: 'a>>
+val exercise15_6_3_thm =
+    []
+|- !(signature :(string digest, 'a) asymMsg).
+     signVerify (pubK (Alice :'a)) signature
+       (SOME "This is from Alice") <=>
+     (signature = sign (privK Alice) (hash (SOME "This is from Alice"))):
+   thm
+> 
