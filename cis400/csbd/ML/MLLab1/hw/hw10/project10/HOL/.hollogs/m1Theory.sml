@@ -54,7 +54,7 @@ Saved theorem _____ "output_induction"
 <<HOL message: Defined type: "output">>
 Saved theorem _____ "output_distinct_clauses"
 Exporting theory "m1" ... done.
-Theory "m1" took 0.00400s to build
+Theory "m1" took 0.01200s to build
 Theory: m1
 
 Parents:
@@ -260,3 +260,4 @@ Theorems:
       |- ∀P. P S0 ∧ P S1 ∧ P S2 ⇒ ∀a. P a
     state_nchotomy
       |- ∀a. (a = S0) ∨ (a = S1) ∨ (a = S2)
+Completed load of m1Script

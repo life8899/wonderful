@@ -1,3 +1,5 @@
+$(HOLDIR)/sigobj/Arbnum
+$(HOLDIR)/sigobj/DB
 $(HOLDIR)/sigobj/Feedback
 $(HOLDIR)/sigobj/Globals
 $(HOLDIR)/sigobj/GrammarDeltas
@@ -5,15 +7,14 @@ $(HOLDIR)/sigobj/GrammarSpecials
 $(HOLDIR)/sigobj/Overlay
 $(HOLDIR)/sigobj/Parse
 $(HOLDIR)/sigobj/Portable
-$(HOLDIR)/sigobj/Redblackmap
+$(HOLDIR)/sigobj/SharingTables
 $(HOLDIR)/sigobj/Term
 $(HOLDIR)/sigobj/Theory
-$(HOLDIR)/sigobj/TheoryReader
 $(HOLDIR)/sigobj/Thm
 $(HOLDIR)/sigobj/Type
 $(HOLDIR)/sigobj/term_grammar
 $(HOLDIR)/sigobj/type_grammar
-/home/caesar/Documents/development/github/wonderful/cis400/csbd/ML/MLLab1/hw/hw10/project10/HOL/counterTheory
-/home/caesar/Documents/development/github/wonderful/cis400/csbd/ML/MLLab1/hw/hw10/project10/HOL/counterTheory
-/home/caesar/Documents/development/github/wonderful/cis400/csbd/ML/MLLab1/hw/hw10/project10/HOL/smTheory
-/home/caesar/Documents/development/github/wonderful/cis400/csbd/ML/MLLab1/hw/hw10/project10/HOL/counterTheory.sml
+/home/csbd/Documents/COURSES/github/wonderful/cis400/csbd/ML/MLLab1/hw/hw10/project10/HOL/counterTheory
+/home/csbd/Documents/COURSES/github/wonderful/cis400/csbd/ML/MLLab1/hw/hw10/project10/HOL/counterTheory
+/home/csbd/Documents/COURSES/github/wonderful/cis400/csbd/ML/MLLab1/hw/hw10/project10/HOL/smTheory
+/home/csbd/Documents/COURSES/github/wonderful/cis400/csbd/ML/MLLab1/hw/hw10/project10/HOL/counterTheory.sml

@@ -3,5 +3,5 @@ $(HOLDIR)/sigobj/Overlay
 $(HOLDIR)/sigobj/Term
 $(HOLDIR)/sigobj/Thm
 $(HOLDIR)/sigobj/Type
-/home/caesar/Documents/development/github/wonderful/cis400/csbd/ML/MLLab1/hw/hw10/project10/HOL/sminfRules
-/home/caesar/Documents/development/github/wonderful/cis400/csbd/ML/MLLab1/hw/hw10/project10/HOL/sminfRules.sig
+/home/csbd/Documents/COURSES/github/wonderful/cis400/csbd/ML/MLLab1/hw/hw10/project10/HOL/sminfRules
+/home/csbd/Documents/COURSES/github/wonderful/cis400/csbd/ML/MLLab1/hw/hw10/project10/HOL/sminfRules.sig

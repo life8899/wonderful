@@ -1,3 +1,5 @@
+$(HOLDIR)/sigobj/Arbnum
+$(HOLDIR)/sigobj/DB
 $(HOLDIR)/sigobj/EnumType
 $(HOLDIR)/sigobj/Feedback
 $(HOLDIR)/sigobj/Globals
@@ -6,10 +8,9 @@ $(HOLDIR)/sigobj/GrammarSpecials
 $(HOLDIR)/sigobj/Overlay
 $(HOLDIR)/sigobj/Parse
 $(HOLDIR)/sigobj/Portable
-$(HOLDIR)/sigobj/Redblackmap
+$(HOLDIR)/sigobj/SharingTables
 $(HOLDIR)/sigobj/Term
 $(HOLDIR)/sigobj/Theory
-$(HOLDIR)/sigobj/TheoryReader
 $(HOLDIR)/sigobj/Thm
 $(HOLDIR)/sigobj/Type
 $(HOLDIR)/sigobj/TypeBase
@@ -17,7 +18,7 @@ $(HOLDIR)/sigobj/TypeBasePure
 $(HOLDIR)/sigobj/computeLib
 $(HOLDIR)/sigobj/term_grammar
 $(HOLDIR)/sigobj/type_grammar
-/home/caesar/Documents/development/github/wonderful/cis400/csbd/ML/MLLab1/hw/hw10/project10/HOL/m1Theory
-/home/caesar/Documents/development/github/wonderful/cis400/csbd/ML/MLLab1/hw/hw10/project10/HOL/m1Theory
-/home/caesar/Documents/development/github/wonderful/cis400/csbd/ML/MLLab1/hw/hw10/project10/HOL/smTheory
-/home/caesar/Documents/development/github/wonderful/cis400/csbd/ML/MLLab1/hw/hw10/project10/HOL/m1Theory.sml
+/home/csbd/Documents/COURSES/github/wonderful/cis400/csbd/ML/MLLab1/hw/hw10/project10/HOL/m1Theory
+/home/csbd/Documents/COURSES/github/wonderful/cis400/csbd/ML/MLLab1/hw/hw10/project10/HOL/m1Theory
+/home/csbd/Documents/COURSES/github/wonderful/cis400/csbd/ML/MLLab1/hw/hw10/project10/HOL/smTheory
+/home/csbd/Documents/COURSES/github/wonderful/cis400/csbd/ML/MLLab1/hw/hw10/project10/HOL/m1Theory.sml

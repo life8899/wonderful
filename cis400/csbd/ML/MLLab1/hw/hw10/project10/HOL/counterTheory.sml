@@ -1,20 +1,49 @@
 structure counterTheory :> counterTheory =
 struct
-
-  val _ = if !Globals.print_thy_loads
-    then TextIO.print "Loading counterTheory ... "
-    else ()
-
+  val _ = if !Globals.print_thy_loads then TextIO.print "Loading counterTheory ... " else ()
   open Type Term Thm
-  local open smTheory in end;
+  infixr -->
 
-  structure TDB = struct
-    val thydata = 
-      TheoryReader.load_thydata "counter"
-        (holpathdb.subst_pathvars "/home/caesar/Documents/development/github/wonderful/cis400/csbd/ML/MLLab1/hw/hw10/project10/HOL/counterTheory.dat")
-    fun find s = Redblackmap.find (thydata,s)
+  fun C s t ty = mk_thy_const{Name=s,Thy=t,Ty=ty}
+  fun T s t A = mk_thy_type{Tyop=s, Thy=t,Args=A}
+  fun V s q = mk_var(s,q)
+  val U     = mk_vartype
+  (* Parents and ML dependencies *)
+  local open smTheory
+  in end;
+  val _ = Theory.link_parents
+          ("counter",
+          Arbnum.fromString "1510852533",
+          Arbnum.fromString "204439")
+          [("sm",
+           Arbnum.fromString "1510852530",
+           Arbnum.fromString "364245")];
+  val _ = Theory.incorporate_types "counter" [];
+
+  val idvector = 
+    let fun ID(thy,oth) = {Thy = thy, Other = oth}
+    in Vector.fromList
+  []
+  end;
+  local open SharingTables
+  in
+  val tyvector = build_type_vector idvector
+  []
+  end
+  val _ = Theory.incorporate_consts "counter" tyvector [];
+
+  local open SharingTables
+  in
+  val tmvector = build_term_vector idvector tyvector
+  []
+  end
+  structure ThmBind = struct
+    val DT = Thm.disk_thm
+    val read = Term.read_raw tmvector
   end
 
+
+  val _ = DB.bindl "counter" []
 
   local open GrammarSpecials Parse
     fun UTOFF f = Feedback.trace("Parse.unicode_trace_off_complaints",0)f
@@ -34,5 +63,4 @@ struct
 
 val _ = if !Globals.print_thy_loads then TextIO.print "done\n" else ()
 val _ = Theory.load_complete "counter"
-
 end

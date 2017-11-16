@@ -23,7 +23,7 @@ Saved theorem _____ "Trans_TR_lemma"
 Saved theorem _____ "TR_Trans_lemma"
 Saved theorem _____ "Trans_Equiv_TR"
 Exporting theory "sm" ... done.
-Theory "sm" took 0.31600s to build
+Theory "sm" took 0.79600s to build
 Theory: sm
 
 Parents:
@@ -175,3 +175,4 @@ Theorems:
            (a0 = a0') ∧ (a1 = a1') ∧ (a2 = a2')
     datatype_configuration
       |- DATATYPE (configuration CFG)
+Completed load of smScript
