@@ -1,0 +1,33 @@
+\newcommand{\HOLmOneDate}{16 November 2017}
+\newcommand{\HOLmOneTime}{12:09}
+\begin{SaveVerbatim}{HOLmOneDatatypescommand}
+\HOLFreeVar{command} = \HOLConst{i0} \HOLTokenBar{} \HOLConst{i1}
+\end{SaveVerbatim}
+\newcommand{\HOLmOneDatatypescommand}{\UseVerbatim{HOLmOneDatatypescommand}}
+\begin{SaveVerbatim}{HOLmOneDatatypesoutput}
+\HOLFreeVar{output} = \HOLConst{o0} \HOLTokenBar{} \HOLConst{o1}
+\end{SaveVerbatim}
+\newcommand{\HOLmOneDatatypesoutput}{\UseVerbatim{HOLmOneDatatypesoutput}}
+\begin{SaveVerbatim}{HOLmOneDatatypesstate}
+\HOLFreeVar{state} = \HOLConst{S0} \HOLTokenBar{} \HOLConst{S1} \HOLTokenBar{} \HOLConst{S2}
+\end{SaveVerbatim}
+\newcommand{\HOLmOneDatatypesstate}{\UseVerbatim{HOLmOneDatatypesstate}}
+\newcommand{\HOLmOneDatatypes}{
+\HOLmOneDatatypescommand\HOLmOneDatatypesoutput\HOLmOneDatatypesstate}
+\begin{SaveVerbatim}{HOLmOneTheoremscommandXXdistinctXXclauses}
+\HOLTokenTurnstile{} \HOLConst{i0} \HOLSymConst{\HOLTokenNotEqual{}} \HOLConst{i1}
+\end{SaveVerbatim}
+\newcommand{\HOLmOneTheoremscommandXXdistinctXXclauses}{\UseVerbatim{HOLmOneTheoremscommandXXdistinctXXclauses}}
+\begin{SaveVerbatim}{HOLmOneTheoremsoutputXXdistinctXXclauses}
+\HOLTokenTurnstile{} \HOLConst{o0} \HOLSymConst{\HOLTokenNotEqual{}} \HOLConst{o1}
+\end{SaveVerbatim}
+\newcommand{\HOLmOneTheoremsoutputXXdistinctXXclauses}{\UseVerbatim{HOLmOneTheoremsoutputXXdistinctXXclauses}}
+\begin{SaveVerbatim}{HOLmOneTheoremsstateXXdistinctXXclauses}
+\HOLTokenTurnstile{} \HOLConst{S0} \HOLSymConst{\HOLTokenNotEqual{}} \HOLConst{S1} \HOLSymConst{\HOLTokenConj{}} \HOLConst{S0} \HOLSymConst{\HOLTokenNotEqual{}} \HOLConst{S2} \HOLSymConst{\HOLTokenConj{}} \HOLConst{S1} \HOLSymConst{\HOLTokenNotEqual{}} \HOLConst{S2}
+\end{SaveVerbatim}
+\newcommand{\HOLmOneTheoremsstateXXdistinctXXclauses}{\UseVerbatim{HOLmOneTheoremsstateXXdistinctXXclauses}}
+\newcommand{\HOLmOneTheorems}{
+\HOLThmTag{m1}{command_distinct_clauses}\HOLmOneTheoremscommandXXdistinctXXclauses
+\HOLThmTag{m1}{output_distinct_clauses}\HOLmOneTheoremsoutputXXdistinctXXclauses
+\HOLThmTag{m1}{state_distinct_clauses}\HOLmOneTheoremsstateXXdistinctXXclauses
+}
